@@ -1,0 +1,8 @@
+The source I've found for campaign finance data is OpenSecrets.org.  
+They seem to have a robust suite of developer tools, including an API.  
+They offer bulk downloading of data if you create a free account.  
+Data includes:
+  - donors (including Super PACs, individual donors, companies, and labor unions) to every presidential and congressional campaign since ~2000, including how much they donated.  
+  - personal finance disclosures for all members of congress, including how much money they make, what they invest in, and gifts they've received
+  - spending on lobbying (including how many lobbyists there are total per year, total spending by lobbyists per year, which bills in Congress have the most lobbyists) 
+  - Information on "revolving door" lobbying, i.e. which members of Congress and White House staffers went on to work for lobbying firms.  
