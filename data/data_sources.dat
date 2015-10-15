@@ -1,0 +1,12 @@
+http://www.opensecrets.org/
+    API: http://www.opensecrets.org/resources/create/apis.php
+         https://github.com/opensecrets/python-crpapi
+
+FEC campaign finance disclosure portal: http://fec.gov/pindex.shtml
+    API: http://developer.nytimes.com/docs/read/campaign_finance_api
+
+
+maybe useful:
+
+potentially for linking individuals to corporations:
+    http://api.opencorporates.com/documentation/API-Reference
