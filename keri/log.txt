@@ -1,0 +1,6 @@
+10 22 2015
+
+to do (w Joe): 
+1. curate data
+2. enumerate possible features
+3. determine which features will be used in model
