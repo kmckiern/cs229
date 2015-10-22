@@ -4,3 +4,6 @@ to do (w Joe):
 1. curate data
 2. enumerate possible features
 3. determine which features will be used in model
+
+maybe do:
+1. look at distribution of NW Nominate scores as a function of candidate and party across time
