@@ -6,4 +6,4 @@ to do (w Joe):
 3. determine which features will be used in model
 
 maybe do:
-1. look at distribution of NW Nominate scores as a function of candidate and party across time
+1. look at distribution of DW-Nominate scores as a function of candidate and party across time
