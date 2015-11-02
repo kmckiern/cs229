@@ -1,6 +1,9 @@
 #!/bin/env python
 
 """
+example usage (to write data to file, and open ipython):
+    >> python py_call.py --ak (key) --write --ip
+
 NOTES:
 - many of these are accessible only for: 2012, 2014, 2016
 - generalize how to get candidate data by parsing some of the lists in ../ref/
@@ -17,7 +20,7 @@ parser.add_argument('--pref', type=str, help='output file directory preface', de
 parser.add_argument('--yr', type=str, help='query year', default='2012')
 parser.add_argument('--ak', type=str, help='api key')
 parser.add_argument('--write_dicts', action='store_true', help='write candidate data to dat file', default=False)
-parser.add_argument('--nb', action='store_true', help='open ipython after variable declaration', default=False)
+parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', default=False)
 args = parser.parse_args()
 
 def json_dict(d):
@@ -72,7 +75,7 @@ def main():
             dict_to_dat(of, i)
     
     # if i want to interact with the data
-    if args.nb:
+    if args.ip:
         IPython.embed()
 
 if __name__ == '__main__':
