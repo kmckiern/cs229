@@ -7,3 +7,61 @@ to do (w Joe):
 
 maybe do:
 1. look at distribution of DW-Nominate scores as a function of candidate and party across time
+
+------------------------------------------------------------
+11 01 2015
+
+dicussion on the limitations and uses of PCA:
+http://www.stat.cmu.edu/~cshalizi/350/lectures/13/lecture-{10,13}.pdf
+
+interesting points:
+  PCA guarantees that the first q components will do a better (mean-square) job of reconstructing the original data than any
+other linear method using only q components.
+ the component scores give the optimal linear multidimensional scaling
+ PCA is purely a descriptive technique; in itself it makes no prediction about
+what future data will look like.
+
+PCs are the eigenvectors of the sample covariance matrix, V
+V = (1/n)*X^T*X
+converges to V_0 (true convariance matrix) as n->\inf
+
+minimize projection residuals
+maximize sample mean <w,x>^2 via some lagrange multiplier shyt
+
+pc heat maps, should have basins
+
+matrix of vote correlations?
+
+example of application:
+Gene-expression profiles to predict distant metastasis of lymph-node-negative primary breast cancer
+analysis of gene expression for cancerous patterns
+
+TO DO
+you: look at finance data and see what we can assemble in terms of features/the code necessary to do that
+me: figure out DW-nominate and identifying peeps we want to look at specifically 
+and then we'd interface the two and throw it into a PCA routine?
+
+figure out how to call one of the apis in order to query vote outcome and financial sources
+
+using opensecretsapi:
+git clone git@github.com:opensecrets/python-crpapi.git
+
+HACKS NEEDED
+error   WSGIServerException: [Errno 8] nodename nor servname provided, or not known
+fix     https://github.com/PostDispatchInteractive/python-crpapi/commit/a816e5f2b1e618ea5fd7737692a3ca2e6e5aaf04
+
+can skip this by cloning this version instead:
+maybe branch and commit: https://github.com/PostDispatchInteractive/python-crpapi
+
+error   CRPApiError: <!DOCTYPE html>
+        <p>The owner of this website (www.opensecrets.org) has banned your access based on your browser's signature (23ec67391e14012b-ua48).</p>
+fix     http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+install
+sign up for key: http://www.opensecrets.org/api/admin/
+200 api calls per day
+
+ conda install -c https://conda.anaconda.org/asmeurer xmltodict
+
+npelosi = 'N00007360'
+
