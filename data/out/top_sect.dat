@@ -1,0 +1,119 @@
+[
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "pacs": "24500", 
+      "sector_name": "Agribusiness", 
+      "sectorid": "A", 
+      "total": "24500"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "108300", 
+      "pacs": "71000", 
+      "sector_name": "Communic/Electronics", 
+      "sectorid": "B", 
+      "total": "179300"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "6500", 
+      "pacs": "7500", 
+      "sector_name": "Construction", 
+      "sectorid": "C", 
+      "total": "14000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "pacs": "47000", 
+      "sector_name": "Defense", 
+      "sectorid": "D", 
+      "total": "47000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "25325", 
+      "pacs": "25500", 
+      "sector_name": "Energy/Nat Resource", 
+      "sectorid": "E", 
+      "total": "50825"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "274250", 
+      "pacs": "142500", 
+      "sector_name": "Finance/Insur/RealEst", 
+      "sectorid": "F", 
+      "total": "416750"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "61550", 
+      "pacs": "242000", 
+      "sector_name": "Health", 
+      "sectorid": "H", 
+      "total": "303550"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "131017", 
+      "pacs": "20500", 
+      "sector_name": "Lawyers & Lobbyists", 
+      "sectorid": "K", 
+      "total": "151517"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "1000", 
+      "pacs": "37500", 
+      "sector_name": "Transportation", 
+      "sectorid": "M", 
+      "total": "38500"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "157050", 
+      "pacs": "66500", 
+      "sector_name": "Misc Business", 
+      "sectorid": "N", 
+      "total": "223550"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "pacs": "281500", 
+      "sector_name": "Labor", 
+      "sectorid": "P", 
+      "total": "281500"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "144616", 
+      "pacs": "55500", 
+      "sector_name": "Ideology/Single-Issue", 
+      "sectorid": "Q", 
+      "total": "200116"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "192675", 
+      "pacs": "12000", 
+      "sector_name": "Other", 
+      "sectorid": "W", 
+      "total": "204675"
+    }
+  }
+]

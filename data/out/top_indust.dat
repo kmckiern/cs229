@@ -1,0 +1,82 @@
+[
+  {
+    "@attributes": {
+      "indivs": "25000", 
+      "org_name": "Occidental Petroleum", 
+      "pacs": "10000", 
+      "total": "35000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "20000", 
+      "org_name": "Gallo Winery", 
+      "pacs": "0", 
+      "total": "20000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "14800", 
+      "org_name": "Mackenzie Patterson Fuller", 
+      "pacs": "0", 
+      "total": "14800"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "10500", 
+      "org_name": "Susman Godfrey Llp", 
+      "pacs": "0", 
+      "total": "10500"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "250", 
+      "org_name": "Wells Fargo", 
+      "pacs": "10000", 
+      "total": "10250"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "org_name": "AFLAC Inc", 
+      "pacs": "10000", 
+      "total": "10000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "org_name": "American Academy of Dermatology Assn", 
+      "pacs": "10000", 
+      "total": "10000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "org_name": "American Assn for Justice", 
+      "pacs": "10000", 
+      "total": "10000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "org_name": "American Assn of Nurse Anesthetists", 
+      "pacs": "10000", 
+      "total": "10000"
+    }
+  }, 
+  {
+    "@attributes": {
+      "indivs": "0", 
+      "org_name": "American College of Cardiology", 
+      "pacs": "10000", 
+      "total": "10000"
+    }
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "@attributes": {
+    "asset_count": "64", 
+    "asset_high": "199473000", 
+    "asset_low": "42356066", 
+    "data_year": "2013", 
+    "member_id": "N00007360", 
+    "name": "Pelosi, Nancy", 
+    "net_high": "192122990", 
+    "net_low": "9606066", 
+    "origin": "Center for Responsive Politics", 
+    "positions_held_count": "11", 
+    "source": "http://www.opensecrets.org/pfds/summary.php?cid=N00007360&year=2012", 
+    "transaction_count": "12", 
+    "tx_high": "711000", 
+    "tx_low": "264012", 
+    "update_timestamp": ""
+  }, 
+  "assets": {
+    "asset": [
+      {
+        "@attributes": {
+          "holdings_high": "25000000", 
+          "holdings_low": "5000001", 
+          "industry": "Real Estate", 
+          "name": "Commercial Property/San Francisco, CA", 
+          "sector": "Finance/Insur/RealEst", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "25000000", 
+          "holdings_low": "5000001", 
+          "industry": "Real Estate", 
+          "name": "Home & Vineyard/St Helena/Napa, CA", 
+          "sector": "Finance/Insur/RealEst", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "25000000", 
+          "holdings_low": "5000001", 
+          "industry": "", 
+          "name": "Nine Forty Five Battery LLC", 
+          "sector": "", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "25000000", 
+          "holdings_low": "5000001", 
+          "industry": "Real Estate", 
+          "name": "Russell Ranch LLC", 
+          "sector": "Finance/Insur/RealEst", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "25000000", 
+          "holdings_low": "5000001", 
+          "industry": "Recreation/Live Entertainment", 
+          "name": "United Football League", 
+          "sector": "Misc Business", 
+          "subsidiary_of": ""
+        }
+      }
+    ]
+  }, 
+  "positions": {
+    "position": [
+      {
+        "@attributes": {
+          "organization": "American University Women & Politics Institute", 
+          "title": "Honorary Advisory Board"
+        }
+      }, 
+      {
+        "@attributes": {
+          "organization": "Close Up Foundation", 
+          "title": "Board of Advisors"
+        }
+      }, 
+      {
+        "@attributes": {
+          "organization": "International Women's Democracy Center", 
+          "title": "Congressional Advisory Board"
+        }
+      }, 
+      {
+        "@attributes": {
+          "organization": "Kennedy Center for the Performing Arts", 
+          "title": "Board of Trustees Member Ex Officio"
+        }
+      }, 
+      {
+        "@attributes": {
+          "organization": "Lead America", 
+          "title": "Honorary Board of Advisors"
+        }
+      }
+    ]
+  }, 
+  "transactions": {
+    "transaction": [
+      {
+        "@attributes": {
+          "asset_name": "United Football League Sacramento Mountain Lions T", 
+          "tx_action": "Purchased", 
+          "tx_date": "Aug  2 2013", 
+          "value_high": "250000", 
+          "value_low": "100001"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "United Football League Sacramento Mountain Lions T", 
+          "tx_action": "Purchased", 
+          "tx_date": "Jul 18 2013", 
+          "value_high": "100000", 
+          "value_low": "50001"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "United Football League Sacramento Mountain Lions T", 
+          "tx_action": "Purchased", 
+          "tx_date": "Oct 21 2013", 
+          "value_high": "100000", 
+          "value_low": "50001"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "United Football League Sacramento Mountain Lions T", 
+          "tx_action": "Purchased", 
+          "tx_date": "Sep 30 2013", 
+          "value_high": "50000", 
+          "value_low": "15001"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "Active Network Inc", 
+          "tx_action": "Sold", 
+          "tx_date": "Nov 26 2013", 
+          "value_high": "50000", 
+          "value_low": "15001"
+        }
+      }
+    ]
+  }
+}

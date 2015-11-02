@@ -1,0 +1,17 @@
+{
+  "cand_name": "Pelosi, Nancy", 
+  "cash_on_hand": "449327.33", 
+  "chamber": "H", 
+  "cid": "N00007360", 
+  "cycle": "2012", 
+  "debt": "0", 
+  "first_elected": "1987", 
+  "last_updated": "12/31/2012", 
+  "next_election": "2012", 
+  "origin": "Center for Responsive Politics", 
+  "party": "D", 
+  "source": "http://www.opensecrets.org/politicians/summary.php?cid=N00007360&cycle=2012", 
+  "spent": "2001647.66", 
+  "state": "CA", 
+  "total": "2300344.47"
+}
