@@ -59,9 +59,19 @@ fix     http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2
 
 install
 sign up for key: http://www.opensecrets.org/api/admin/
-200 api calls per day
+200 api calls per day per method
 
- conda install -c https://conda.anaconda.org/asmeurer xmltodict
+conda install -c https://conda.anaconda.org/asmeurer xmltodict
 
 npelosi = 'N00007360'
+
+------------------------------------------------------------
+11 08 2015
+
+objective: given candidate, return vector of normalized financial contributions 
+
+
+to figure out:
+time.  which yr?
+normalizing vector elements
 

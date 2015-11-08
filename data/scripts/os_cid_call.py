@@ -12,7 +12,6 @@ NOTES:
 from crpapi import CRP, CRPApiError
 import argparse
 import json
-import IPython
 
 parser = argparse.ArgumentParser(description='get voting and financial information for an input candidate')
 parser.add_argument('--cid', type=str, help='CRP CID', default='N00007360')
@@ -76,7 +75,13 @@ def main():
     
     # if i want to interact with the data
     if args.ip:
+        import IPython
         IPython.embed()
+
+    '''
+    not used: 
+
+    '''
 
 if __name__ == '__main__':
     main()
