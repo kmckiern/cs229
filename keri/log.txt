@@ -74,4 +74,5 @@ objective: given candidate, return vector of normalized financial contributions
 to figure out:
 time.  which yr?
 normalizing vector elements
+pca on matrix - does it have to be square?
 

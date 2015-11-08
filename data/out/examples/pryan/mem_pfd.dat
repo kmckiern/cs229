@@ -1,0 +1,144 @@
+{
+  "@attributes": {
+    "asset_count": "68", 
+    "asset_high": "8780000", 
+    "asset_low": "2282072", 
+    "data_year": "2013", 
+    "member_id": "N00004357", 
+    "name": "Ryan, Paul", 
+    "net_high": "8780000", 
+    "net_low": "2282072", 
+    "origin": "Center for Responsive Politics", 
+    "positions_held_count": "3", 
+    "source": "http://www.opensecrets.org/pfds/summary.php?cid=N00004357&year=2012", 
+    "transaction_count": "65", 
+    "tx_high": "93000", 
+    "tx_low": "2065", 
+    "update_timestamp": ""
+  }, 
+  "assets": {
+    "asset": [
+      {
+        "@attributes": {
+          "holdings_high": "5000000", 
+          "holdings_low": "1000001", 
+          "industry": "", 
+          "name": "1/3 Remainder Interest in Excepted Trust", 
+          "sector": "", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "500000", 
+          "holdings_low": "200002", 
+          "industry": "", 
+          "name": "TIAA-CREF Tuition Financing Inc", 
+          "sector": "", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "265000", 
+          "holdings_low": "101002", 
+          "industry": "Misc Energy", 
+          "name": "Ava O Ltd", 
+          "sector": "Energy/Nat Resource", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "250000", 
+          "holdings_low": "100001", 
+          "industry": "Unknown", 
+          "name": "Fidelity Contrafund", 
+          "sector": "Unknown", 
+          "subsidiary_of": ""
+        }
+      }, 
+      {
+        "@attributes": {
+          "holdings_high": "250000", 
+          "holdings_low": "100001", 
+          "industry": "", 
+          "name": "10% Interest in Gravel Rights Investment Entity", 
+          "sector": "", 
+          "subsidiary_of": ""
+        }
+      }
+    ]
+  }, 
+  "positions": {
+    "position": [
+      {
+        "@attributes": {
+          "organization": "CMR LLC", 
+          "title": "Non-Compensated Member"
+        }
+      }, 
+      {
+        "@attributes": {
+          "organization": "Ryan LP", 
+          "title": "Limited Partner"
+        }
+      }, 
+      {
+        "@attributes": {
+          "organization": "Ryan-Hutter Investment Partnership", 
+          "title": "General Partner"
+        }
+      }
+    ]
+  }, 
+  "transactions": {
+    "transaction": [
+      {
+        "@attributes": {
+          "asset_name": "Nuveen Intermediate Duration Municipal Bond Fund", 
+          "tx_action": "Purchased", 
+          "tx_date": "Sep 20 2013", 
+          "value_high": "15000", 
+          "value_low": "1001"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "PIMCO Total Return Fund", 
+          "tx_action": "Sold", 
+          "tx_date": "Sep 20 2013", 
+          "value_high": "15000", 
+          "value_low": "1001"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "3M Co", 
+          "tx_action": "Sold", 
+          "tx_date": "Jan 28 2013", 
+          "value_high": "1000", 
+          "value_low": "1"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "Vacant Land", 
+          "tx_action": "Sold", 
+          "tx_date": "Dec 31 2013", 
+          "value_high": "1000", 
+          "value_low": "1"
+        }
+      }, 
+      {
+        "@attributes": {
+          "asset_name": "Hartford Mid Cap Fund", 
+          "tx_action": "Purchased", 
+          "tx_date": "Dec 16 2013", 
+          "value_high": "1000", 
+          "value_low": "1"
+        }
+      }
+    ]
+  }
+}
