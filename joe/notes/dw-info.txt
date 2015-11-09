@@ -1,0 +1,29 @@
+****************
+* DW-NOM NOTES *
+****************
+
+Carroll, Lewis, Lo, Poole, and Rosenthal, 'Measuring Bias and Uncertainty in DW-NOMINATE. Ideal Point Estimates via the Parametric Bootstrap'
+
+DW-NOMINATE is based on normally distributed errors rather than logit errors, which were originally used due to computrational limitations in the 1980s.
+
+Can be used to analyze any body that meets in a series of legislative terms over time.
+
+Scales the legislators and roll call midpoints to be in the unit hypersphere.
+
+"In their original D-NOMINATE work on the U.S. House and Senate, Poole and Rosenthal (1991; 1997; 2001; 2007) found that the linear model in two dimensions was the best combination of explanatory power and parsimony."
+
+Ideal point estimated along two dimensions. "Previous research has demonstrated that the first dimension locations reveal standard left-right or economic cleavages, while the second dimension locations reflect social and sectional divisions."
+
+*************
+* WIKIPEDIA *
+*************
+
+Ideal points reporesent an individual's most preferred outcome.The ideal point for an individual maximizes the utility function, which is normally distributed. 
+
+NOMINATE clusters together ideologically similar legislators, based on the degree of agreement between their roll call voting records.
+
+By contrast to NOMINATE scores, DW-NOMINATE scores may be used to directly comparse members of difference Congresses across time.
+
+"Political blogger Nate Silver regularly uses DW-NOMINATE scores to gauge the ideological location of major political figures and institutions."
+
+http://voteview.com/dwnomin.htm 
