@@ -52,9 +52,12 @@ def parse_database(congress_start, congress_stop, epsilon):
 
     with open(FN_IDEAL_POINT_DATA, 'r') as f_dw:
         # line template for the numeric fields
+        comment_line = "# [congress_number] [ideal_pt_dimension_1] [ideal_point_dimension_2] [state] [party] [name]\n"
         f_out_line_template = "{:03d}\t{: .4f}\t{: .4f}"
         f_out_moderate = open('../out/MODERATES.dat', 'w')
         f_out_margins  = open('../out/MARGINS.dat', 'w')
+        f_out_moderate.write(comment_line)
+        f_out_margins.write(comment_line)
 
         for line in f_dw:
             fields = line.split()
@@ -99,6 +102,7 @@ def parse_database(congress_start, congress_stop, epsilon):
                 line_to_write = f_out_line_template.format(congress_number, 
                                                       ideal_pt_dim_1,
                                                       ideal_pt_dim_2) + \
+                                                      '\t' + state + \
                                                       '\t' + party + \
                                                       '\t' + name + '\n'
                 if type == 'MODERATE':
