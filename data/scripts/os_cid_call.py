@@ -4,6 +4,8 @@
 example usage (to write data to file, and open ipython):
     >> python py_call.py --ak (key) --write --ip
 
+for a given candidate, get vector of financial information
+
 NOTES:
 - many of these are accessible only for: 2012, 2014, 2016
 - generalize how to get candidate data by parsing some of the lists in ../ref/
@@ -12,13 +14,16 @@ NOTES:
 from crpapi import CRP, CRPApiError
 import argparse
 import json
+import pandas as pd
+import numpy as np
 
-parser = argparse.ArgumentParser(description='get voting and financial information for an input candidate')
+parser = argparse.ArgumentParser(description='get financial information for an input candidate')
 parser.add_argument('--cid', type=str, help='CRP CID', default='N00007360')
-parser.add_argument('--pref', type=str, help='output file directory preface', default='/Users/kerimckiernan/Documents/class/F15/working/cs229/data/out/')
 parser.add_argument('--yr', type=str, help='query year', default='2012')
 parser.add_argument('--ak', type=str, help='api key')
+parser.add_argument('--categories', type=str, help='sector code database file', default='../ref/CRP_Categories.txt')
 parser.add_argument('--write_dicts', action='store_true', help='write candidate data to dat file', default=False)
+parser.add_argument('--pref', type=str, help='output file directory preface', default='/Users/kerimckiernan/Documents/class/F15/working/cs229/data/out/')
 parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', default=False)
 args = parser.parse_args()
 
@@ -28,36 +33,40 @@ def json_dict(d):
 def dict_to_dat(fn, d):
     print >>open(fn,'w+'), json_dict(d)
 
+def d_norm(categories, data):
+    num = len(categories)
+
+    fin_data = np.zeros((2, num))
+    for d in data:
+        d_key = d['@attributes']['sector_name']
+        col = categories.index(d_key)
+        fin_data[0, col] = float(d['@attributes']['indivs'])
+        fin_data[1, col] = float(d['@attributes']['pacs'])
+
+    row_sums = fin_data.sum(axis=1)
+    fin_data = fin_data / row_sums[:, np.newaxis]
+
+    return fin_data
+
 def main():
     CRP.apikey = args.ak
     cid = args.cid
     yr = args.yr
     pref = args.pref
-    
+
     #---------- CANDIDATE META INFO ----------#
     '''
     contribution information on a candidate for indicated cycle
     '''
     c_sum = CRP.candSummary.get(cid=cid, cycle=yr)
     
-    #---------- FINANCE STREAMS ----------#
-    '''
-    member personal financial disclosure statement
-    '''
-    mem_pfd = CRP.memPFDprofile.get(cid=cid, year=yr)
-    '''
-    top contributors to a candidate/member for indicated period
-    '''
-    top_cont = CRP.candContrib.get(cid=cid, cycle=yr)
-    '''
-    top industries to a candidate/member for indicated period
-    '''
-    top_indust = CRP.candContrib.get(cid=cid, cycle=yr)
+    #---------- CANDIDATE FINANCE DATA ----------#
     '''
     top sectors to a candidate/member for indicated period
     '''
     top_sect = CRP.candSector.get(cid=cid, cycle=yr)
 
+    #---------- write data? ----------#
     if args.write_dicts:
         labels = {
             0   : 'c_sum',
@@ -73,15 +82,18 @@ def main():
             of = pref + labels[ndx] + '.dat'
             dict_to_dat(of, i)
     
-    # if i want to interact with the data
+    #---------- GET FINANCE VECTOR ----------#
+    categories = pd.read_csv(args.categories, sep='\t', skiprows=8)
+    '''
+    top sector normalized
+    '''
+    cats = list(set(categories['Sector']))
+    sect_fin_data = d_norm(cats, top_sect)
+
+    #---------- interact with data? ----------#
     if args.ip:
         import IPython
         IPython.embed()
-
-    '''
-    not used: 
-
-    '''
 
 if __name__ == '__main__':
     main()

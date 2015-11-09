@@ -76,3 +76,8 @@ time.  which yr?
 normalizing vector elements
 pca on matrix - does it have to be square?
 
+
+via https://www.opensecrets.org/lobby/list_indus.php
+The Center uses a hierarchical coding system to classify contributions by industry and interest group. At the top level are 13 sectors — ten covering business groups and one each for "labor," "ideology / single issues," and "other." At the middle level are about 100 industries, more detailed than the broad sectors. At the most detailed level are more than 400 categories.
+
+i think i'm going vectorize by industry
