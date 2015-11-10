@@ -1,9 +1,12 @@
 # [congress_number] [ideal_pt_dimension_1] [ideal_point_dimension_2] [state] [party] [name]
 100	-0.0400	 0.9180	AL	D	nichols b
+100	-0.2120	 0.9780	AL	D	bevill t
 100	-0.1540	 0.9110	AL	D	flippo r
 100	-0.0650	 0.4410	AL	D	erdreich b
 100	-0.0870	 0.6630	AL	D	harris c
 100	-0.0290	 0.5250	AR	D	robinson t
+100	 0.2290	-0.2490	CA	R	pashayan c
+100	-0.2190	 0.0340	CA	D	anderson g
 100	-0.1270	 0.1070	CO	D	campbell b
 100	-0.0940	-0.5920	CT	R	mckinney s
 100	 0.0450	-0.9700	CT	R	shays c
@@ -11,11 +14,15 @@
 100	 0.0610	-0.2350	CT	R	johnson n
 100	-0.1290	-0.1730	DE	D	carper t
 100	-0.0020	 0.8610	FL	D	hutto e
+100	-0.2150	 0.9770	FL	D	grant b
 100	-0.0890	 0.2100	FL	D	bennett c
 100	-0.1510	 0.9280	FL	D	chappell b
 100	-0.1320	-0.0790	FL	D	mackay b
+100	-0.2400	 0.1700	FL	D	gibbons s
 100	-0.1090	 0.4330	FL	D	nelson c
+100	-0.2030	 0.4090	FL	D	mica d
 100	-0.1410	 0.7360	GA	D	thomas l
+100	-0.2080	 0.8040	GA	D	hatcher c
 100	 0.0320	 0.6860	GA	D	ray r
 100	-0.1300	 0.7530	GA	D	darden g
 100	-0.1270	 0.7070	GA	D	rowland j
@@ -23,12 +30,16 @@
 100	-0.0150	 0.7520	GA	D	barnard d
 100	 0.0780	-0.2170	HI	R	saiki p
 100	-0.0850	 0.2760	ID	D	stallings
+100	-0.2080	-0.1790	IL	D	russo m
 100	-0.1540	 0.3170	IL	D	lipinski w
 100	 0.1880	-0.4100	IL	R	porter j
+100	-0.2370	 0.6050	IL	D	costello j
 100	-0.1760	-0.2490	IN	D	sharp p
+100	 0.2230	 0.4180	IN	R	myers j
 100	-0.1550	 0.0610	IN	D	hamilton l
 100	-0.0870	-0.9700	IN	D	jacobs a
 100	 0.1360	-0.7510	IA	R	leach j
+100	 0.2420	-0.6600	IA	R	tauke t
 100	-0.0870	 0.0070	KS	D	slattery j
 100	 0.1740	-0.3090	KS	R	meyers j
 100	-0.1500	-0.0830	KS	D	glickman d
@@ -40,21 +51,33 @@
 100	-0.1160	 0.6830	LA	D	hayes j
 100	 0.0840	-0.3930	ME	R	snowe o
 100	-0.1090	 0.5560	MD	D	dyson r
+100	 0.2460	-0.2650	MD	R	bentley h
+100	-0.2040	 0.1670	MD	D	mcmillen t
 100	-0.0270	 0.6180	MD	D	byron b
 100	-0.0520	-0.5740	MD	R	morella c
 100	-0.0910	-0.5890	MA	R	conte s
 100	 0.1150	-0.3480	MI	R	pursell c
+100	 0.2290	-0.5680	MI	R	henry p
+100	-0.2400	-0.2130	MI	D	carr b
+100	 0.2480	-0.3110	MI	R	schuette b
 100	 0.0790	-0.0450	MI	R	davis r
+100	 0.2270	 0.0140	MI	R	broomfield
 100	-0.0560	-0.4880	MN	D	penny t
+100	-0.2470	-0.9690	MN	D	sikorski g
 100	-0.0110	 0.9990	MS	D	montgomery
 100	-0.1440	 0.7950	MO	D	skelton i
+100	 0.2340	-0.2170	MO	R	coleman e
 100	-0.1970	 0.4290	MO	D	volkmer h
+100	 0.2080	-0.2430	NE	R	bereuter d
+100	 0.2040	 0.1650	NE	R	smith v
 100	-0.1830	 0.3280	NV	D	bilbray j
 100	-0.1610	-0.1940	NJ	D	hughes w
 100	 0.0740	 0.0300	NJ	R	smith c
 100	 0.1250	-0.5570	NJ	R	roukema m
 100	 0.0400	-0.2000	NJ	R	rinaldo m
 100	 0.1930	-0.3430	NJ	R	gallo d
+100	 0.2360	-0.4250	NJ	R	courter j
+100	 0.2020	-0.2000	NJ	R	saxton h
 100	 0.1640	-0.0580	NY	R	lent n
 100	 0.1460	-0.3240	NY	R	mcgrath r
 100	-0.0460	-0.5340	NY	R	green s
@@ -63,6 +86,7 @@
 100	 0.0420	-0.3540	NY	R	gilman b
 100	-0.0940	 0.5710	NY	D	stratton s
 100	 0.0330	-0.6160	NY	R	boehlert s
+100	 0.2090	-0.1280	NY	R	martin d
 100	 0.1680	-0.0020	NY	R	wortley g
 100	-0.0190	-0.2220	NY	R	horton f
 100	 0.1220	 0.0240	NY	R	houghton a
@@ -70,37 +94,52 @@
 100	-0.1330	 0.4910	NC	D	lancaster
 100	-0.1970	 0.0630	NC	D	price d
 100	-0.1490	 0.1510	NC	D	neal s
+100	-0.2060	 0.1800	NC	D	clarke j
 100	-0.1880	-0.2650	ND	D	dorgan b
 100	-0.1820	-0.0020	OH	D	luken t
 100	 0.1780	-0.1210	OH	R	gradison b
+100	-0.2400	-0.2180	OH	D	eckart d
 100	 0.1810	 0.0080	OH	R	wylie c
+100	 0.2060	-0.0770	OH	R	regula r
+100	-0.2380	-0.0970	OH	D	traficant
 100	-0.1160	 0.2130	OH	D	applegate
 100	-0.1700	 0.7840	OK	D	watkins w
 100	-0.1100	 0.3670	OK	D	mccurdy d
 100	-0.0300	 0.6330	OK	D	english g
+100	 0.2220	 0.1700	PA	R	schulze r
 100	-0.1460	 0.1720	PA	D	yatron g
 100	 0.1850	-0.2110	PA	R	weldon c
 100	 0.1300	-0.1650	PA	R	mcdade j
 100	 0.1700	-0.7480	PA	R	coughlin l
+100	 0.2290	 0.0510	PA	R	ritter d
+100	-0.2310	 0.5200	PA	D	gaydos j
 100	 0.1480	-0.5460	PA	R	ridge t
 100	-0.0760	-0.3640	PA	D	murphy a
 100	 0.1540	-0.0960	PA	R	clinger w
 100	-0.0350	-0.5630	RI	R	schneider
 100	 0.1570	 0.0180	SC	R	ravenel a
+100	-0.2100	 0.2980	SC	D	derrick b
 100	-0.0580	 0.3350	SC	D	patterson
 100	-0.1910	 0.2990	SC	D	spratt j
 100	-0.1090	 0.4700	SC	D	tallon r
 100	-0.1550	 0.0580	SD	D	johnson t
+100	 0.2340	 0.2720	TN	R	quillen j
 100	 0.1260	 0.1960	TN	R	duncan j
 100	-0.0560	 0.5020	TN	D	lloyd m
 100	-0.1700	 0.3600	TN	D	cooper j
+100	-0.2330	 0.5410	TN	D	boner b
+100	-0.2010	 0.3410	TN	D	clement b
+100	-0.2100	 0.2110	TN	D	gordon b
 100	-0.1760	 0.7260	TX	D	chapman j
 100	-0.1810	 0.5680	TX	D	wilson c
 100	 0.0980	 0.9840	TX	D	hall r
+100	-0.2120	 0.4940	TX	D	pickle j
 100	-0.0020	 0.9820	TX	D	leath j
 100	 0.0930	 0.9710	TX	D	stenholm c
 100	-0.1310	 0.3860	TX	D	andrews m
+100	-0.2460	-0.1850	UT	D	owens w
 100	-0.0480	-0.4930	VT	R	jeffords j
+100	 0.2190	 0.3580	VA	R	bateman h
 100	-0.1480	 0.6740	VA	D	pickett o
 100	-0.1220	 0.5400	VA	D	sisisky n
 100	 0.1430	 1.0390	VA	D	daniel d
@@ -108,174 +147,97 @@
 100	-0.1180	 0.1150	VA	D	olin j
 100	 0.1460	-0.3420	WA	R	miller j
 100	 0.1200	-0.0670	WA	R	morrison s
+100	 0.2180	-0.4700	WA	R	chandler r
 100	 0.1820	-0.1750	WI	R	gunderson
 101	-0.1570	 0.8570	AL	D	browder g
-101	-0.1510	 0.9080	AL	D	flippo r
-101	-0.0630	 0.4070	AL	D	erdreich b
-101	-0.0870	 0.6630	AL	D	harris c
 101	 0.1310	-0.4360	CA	R	campbell t
 101	 0.0000	 0.1880	CA	D	condit g
-101	-0.1270	 0.1070	CO	D	campbell b
-101	 0.0900	-0.9680	CT	R	shays c
+101	-0.2380	 0.0490	CA	D	lehman r
 101	 0.1420	-0.2440	CT	R	rowland j
-101	 0.0870	-0.2570	CT	R	johnson n
-101	-0.1340	-0.1720	DE	D	carper t
-101	 0.0210	 0.8610	FL	D	hutto e
-101	-0.0920	 0.1890	FL	D	bennett c
-101	-0.1100	 0.4150	FL	D	nelson c
-101	-0.1410	 0.7360	GA	D	thomas l
-101	 0.0170	 0.6860	GA	D	ray r
-101	-0.1760	 0.7050	GA	D	darden g
+101	-0.2090	 0.0260	GA	D	jones b
 101	-0.1230	 0.7020	GA	D	rowland j
-101	-0.1410	 0.7410	GA	D	jenkins e
-101	-0.0060	 0.7520	GA	D	barnard d
-101	 0.0780	-0.2170	HI	R	saiki p
-101	-0.0850	 0.2760	ID	D	stallings
-101	-0.1570	 0.3500	IL	D	lipinski w
+101	-0.2140	 0.1280	IL	D	sangmeister
 101	-0.1300	 0.1960	IL	D	poshard g
-101	-0.1800	-0.2310	IN	D	sharp p
-101	-0.1520	 0.0870	IN	D	hamilton l
-101	-0.0880	-0.9820	IN	D	jacobs a
-101	 0.1480	-0.7330	IA	R	leach j
-101	-0.0980	 0.0130	KS	D	slattery j
-101	 0.1900	-0.3300	KS	R	meyers j
-101	-0.1620	-0.0340	KS	D	glickman d
-101	-0.0030	 0.5800	KY	D	hubbard c
-101	-0.1840	 0.1300	KY	D	mazzoli r
-101	 0.0360	 0.7020	LA	D	tauzin w
-101	-0.0090	 0.5730	LA	D	huckaby j
-101	-0.0880	 0.7750	LA	D	hayes j
-101	 0.0940	-0.3710	ME	R	snowe o
-101	-0.1090	 0.5350	MD	D	dyson r
-101	-0.0250	 0.6250	MD	D	byron b
-101	-0.0300	-0.6080	MD	R	morella c
-101	-0.0950	-0.5810	MA	R	conte s
-101	 0.1450	-0.2810	MI	R	pursell c
-101	 0.0880	-0.0170	MI	R	davis r
-101	-0.0460	-0.3470	MN	D	penny t
-101	-0.0290	 0.9990	MS	D	montgomery
+101	-0.2100	 0.1090	IN	D	long j
 101	 0.0350	 0.8830	MS	D	parker m
 101	 0.0730	 0.6100	MS	D	taylor g
-101	-0.1480	 0.7830	MO	D	skelton i
+101	 0.2220	-0.2100	NE	R	bereuter
 101	-0.1970	 0.0150	NE	D	hoagland p
-101	-0.1830	 0.3280	NV	D	bilbray j
-101	-0.1680	-0.1880	NJ	D	hughes w
 101	-0.1860	-0.0150	NJ	D	pallone f
-101	 0.1000	 0.0330	NJ	R	smith c
-101	 0.1470	-0.5550	NJ	R	roukema m
-101	 0.0600	-0.1480	NJ	R	rinaldo m
-101	 0.1880	-0.3270	NJ	R	gallo d
 101	 0.1640	-0.0490	NM	R	schiff s
-101	 0.1730	-0.0100	NY	R	lent n
-101	 0.1330	-0.2960	NY	R	mcgrath r
 101	 0.1800	-0.4590	NY	R	molinari s
-101	-0.0280	-0.4810	NY	R	green s
-101	 0.0460	-0.2240	NY	R	fish h
-101	 0.0590	-0.3530	NY	R	gilman b
-101	 0.0610	-0.6010	NY	R	boehlert s
 101	 0.1510	-0.0150	NY	R	walsh j
-101	-0.0170	-0.2010	NY	R	horton f
-101	 0.1380	-0.0030	NY	R	houghton a
-101	-0.0850	 0.5590	NC	D	valentine
-101	-0.1330	 0.4910	NC	D	lancaster
-101	-0.1530	 0.1510	NC	D	neal s
-101	-0.1760	-0.2590	ND	D	dorgan b
-101	-0.1900	 0.0120	OH	D	luken t
 101	 0.1810	-0.0490	OH	R	gradison w
 101	 0.1770	 0.3250	OH	R	gillmor p
-101	 0.1820	 0.0340	OH	R	wylie c
-101	-0.1790	-0.0120	OH	D	traficant
-101	-0.1220	 0.2200	OH	D	applegate
-101	-0.1990	 0.7720	OK	D	watkins w
-101	-0.1150	 0.3370	OK	D	mccurdy d
-101	-0.0390	 0.6230	OK	D	english g
-101	-0.1390	 0.1850	PA	D	yatron g
-101	 0.1480	-0.1300	PA	R	mcdade j
 101	 0.1760	-0.7250	PA	R	coughlin r
-101	 0.1770	-0.5270	PA	R	ridge t
-101	-0.0670	-0.4170	PA	D	murphy a
-101	 0.1760	-0.0300	PA	R	clinger w
 101	 0.1280	-0.6460	RI	R	machtley r
-101	-0.0170	-0.5290	RI	R	schneider
-101	 0.1570	 0.0180	SC	R	ravenel a
-101	-0.0580	 0.3350	SC	D	patterson
-101	-0.0970	 0.5220	SC	D	tallon r
-101	-0.1770	 0.0690	SD	D	johnson t
-101	-0.0550	 0.4860	TN	D	lloyd m
-101	-0.1810	 0.4050	TN	D	cooper j
-101	-0.1990	 0.3490	TN	D	clement b
 101	-0.1230	 0.6540	TN	D	tanner j
-101	-0.1880	 0.7180	TX	D	chapman j
-101	-0.1740	 0.5690	TX	D	wilson c
-101	 0.0950	 0.9890	TX	D	hall r
-101	-0.0490	 0.9710	TX	D	leath j
 101	-0.0370	 0.8020	TX	D	geren p
 101	-0.0780	 0.9970	TX	D	sarpalius
 101	-0.1020	 0.9120	TX	D	laughlin g
-101	 0.0570	 0.9850	TX	D	stenholm c
-101	-0.1420	 0.3780	TX	D	andrews m
 101	 0.0460	-0.4420	VT	R	smith p
-101	-0.1510	 0.6800	VA	D	pickett o
-101	-0.1190	 0.5290	VA	D	sisisky n
-101	-0.1360	 0.4960	VA	D	payne l
-101	-0.1410	 0.1610	VA	D	olin j
-101	 0.1460	-0.3420	WA	R	miller j
-101	 0.1080	-0.0660	WA	R	morrison s
-101	 0.1860	-0.1190	WI	R	gunderson
+101	-0.2460	 0.1750	WI	D	aspin l
 102	-0.1570	 0.8570	AL	D	browder
+102	-0.2320	 0.9750	AL	D	bevill
 102	-0.1310	 0.6320	AL	D	cramer
 102	-0.0620	 0.3730	AL	D	erdreich
 102	-0.0870	 0.6630	AL	D	harris
-102	 0.1930	-0.5080	CA	R	campbell t
 102	-0.0310	 0.2560	CA	D	condit
 102	-0.1690	 0.1560	CA	D	dooley
-102	-0.1920	 0.0810	CA	D	lehman r
-102	-0.1270	 0.1070	CO	D	campbell b
+102	-0.2000	 0.0780	CA	D	anderson
 102	 0.1360	-0.9670	CT	R	shays
-102	 0.1130	-0.2790	CT	R	johnson n
 102	-0.1390	-0.1710	DE	D	carper
 102	 0.0440	 0.8620	FL	D	hutto
+102	-0.2460	 0.4700	FL	D	peterson p
 102	-0.0950	 0.1680	FL	D	bennett
-102	-0.1410	 0.7360	GA	D	thomas l
+102	-0.2140	 0.0100	FL	D	bacchus
+102	-0.2470	 0.7860	GA	D	hatcher
 102	 0.0020	 0.6860	GA	D	ray
+102	-0.2230	 0.6570	GA	D	darden
 102	-0.1190	 0.6970	GA	D	rowland r
 102	-0.1550	 0.7360	GA	D	jenkins
 102	 0.0030	 0.7520	GA	D	barnard
-102	-0.0850	 0.2760	ID	D	stallings
+102	-0.2310	 0.2780	ID	D	larocco
+102	-0.2260	-0.1730	IL	D	russo
 102	-0.1610	 0.3830	IL	D	lipinski
+102	 0.2160	-0.4430	IL	R	porter
 102	-0.1610	 0.3100	IL	D	poshard
 102	-0.1850	-0.2130	IN	D	sharp
 102	-0.1310	 0.2730	IN	D	roemer
+102	-0.2100	 0.1090	IN	D	long
+102	 0.2340	 0.4870	IN	R	myers
 102	-0.1500	 0.1140	IN	D	hamilton
 102	-0.0880	-0.9940	IN	D	jacobs
-102	 0.1600	-0.7150	IA	R	leach j
 102	-0.1100	 0.0200	KS	D	slattery
+102	 0.2060	-0.3510	KS	R	meyers
 102	-0.1740	 0.0140	KS	D	glickman
 102	 0.0090	 0.5810	KY	D	hubbard
 102	-0.1850	 0.1630	KY	D	mazzoli
 102	 0.0440	 0.7390	LA	D	tauzin
 102	-0.0090	 0.5730	LA	D	huckaby
-102	-0.0600	 0.8660	LA	D	hayes j
 102	 0.1040	-0.3480	ME	R	snowe
+102	 0.2430	-0.4790	MD	R	gilchrest
 102	-0.0220	 0.6330	MD	D	byron
 102	-0.0080	-0.6430	MD	R	morella
 102	 0.1750	-0.2140	MI	R	pursell
-102	 0.0980	 0.0120	MI	R	davis r
+102	 0.2290	-0.5680	MI	R	henry
+102	-0.2120	 0.0070	MI	D	carr
 102	-0.0360	-0.2050	MN	D	penny
 102	-0.1090	 0.7330	MN	D	peterson c
-102	-0.0480	 0.9990	MS	D	montgomery
 102	 0.0350	 0.8830	MS	D	parker
-102	 0.0490	 0.6880	MS	D	taylor g
 102	-0.1520	 0.7710	MO	D	skelton
+102	-0.2260	 0.5800	MO	D	volkmer
 102	-0.1970	 0.0150	NE	D	hoagland
 102	-0.1830	 0.3280	NV	D	bilbray
 102	-0.1240	-0.0530	NH	D	swett
 102	-0.1480	-0.1010	NJ	D	andrews r
 102	-0.1750	-0.1830	NJ	D	hughes
-102	 0.1260	 0.0360	NJ	R	smith c
+102	-0.2170	-0.0170	NJ	D	pallone
 102	 0.1690	-0.5520	NJ	R	roukema
 102	 0.0790	-0.0960	NJ	R	rinaldo
 102	 0.1820	-0.3120	NJ	R	gallo
+102	 0.2460	-0.1650	NJ	R	saxton
+102	-0.2460	 0.0420	NJ	D	guarini
 102	 0.1840	-0.0630	NM	R	schiff
 102	 0.1830	 0.0380	NY	R	lent
 102	 0.1200	-0.2690	NY	R	mcgrath
@@ -286,438 +248,202 @@
 102	 0.1790	-0.0040	NY	R	walsh
 102	-0.0150	-0.1800	NY	R	horton
 102	 0.1540	-0.0310	NY	R	houghton
-102	-0.0890	 0.5300	NC	D	valentine
-102	-0.1330	 0.4910	NC	D	lancaster
-102	-0.1580	 0.1510	NC	D	neal s
-102	-0.1640	-0.2530	ND	D	dorgan b
 102	-0.1020	 0.2010	OH	D	luken c
 102	 0.1850	 0.0230	OH	R	gradison
+102	 0.2050	 0.3300	OH	R	gillmor
+102	-0.2380	-0.1770	OH	D	eckart
 102	 0.1840	 0.0610	OH	R	wylie
-102	-0.1200	 0.0730	OH	D	traficant
-102	-0.1280	 0.2270	OH	D	applegate
 102	-0.0790	 0.7420	OK	D	brewster
 102	-0.1210	 0.3060	OK	D	mccurdy
 102	-0.0480	 0.6120	OK	D	english
+102	 0.2220	 0.3140	PA	R	schulze
 102	-0.1330	 0.1980	PA	D	yatron
+102	 0.2250	-0.1600	PA	R	weldon
 102	 0.1650	-0.0950	PA	R	mcdade
 102	 0.1830	-0.7020	PA	R	coughlin
+102	 0.2340	 0.2380	PA	R	ritter
+102	-0.2120	 0.5600	PA	D	gaydos
+102	 0.2050	-0.5080	PA	R	ridge
 102	-0.0590	-0.4710	PA	D	murphy
 102	 0.1990	 0.0350	PA	R	clinger
 102	 0.1280	-0.6460	RI	R	machtley
 102	 0.1570	 0.0180	SC	R	ravenel
-102	-0.0580	 0.3350	SC	D	patterson
+102	-0.2190	 0.2860	SC	D	derrick
+102	-0.2080	 0.3020	SC	D	spratt
 102	-0.0860	 0.5740	SC	D	tallon
-102	-0.1980	 0.0790	SD	D	johnson t
+102	 0.2430	 0.2770	TN	R	quillen
 102	-0.0530	 0.4710	TN	D	lloyd
 102	-0.1920	 0.4500	TN	D	cooper
 102	-0.1970	 0.3570	TN	D	clement
+102	-0.2010	 0.2710	TN	D	gordon
 102	-0.1330	 0.6730	TN	D	tanner
 102	-0.1990	 0.7110	TX	D	chapman
-102	-0.1660	 0.5700	TX	D	wilson c
-102	 0.0910	 0.9940	TX	D	hall r
+102	-0.2200	 0.4660	TX	D	pickle
+102	-0.2070	 0.5310	TX	D	edwards c
 102	-0.0370	 0.8020	TX	D	geren
-102	-0.0780	 0.9970	TX	D	sarpalius
 102	-0.1020	 0.9120	TX	D	laughlin
 102	 0.0220	 1.0000	TX	D	stenholm
-102	-0.1520	 0.3700	TX	D	andrews m
 102	-0.0840	 0.6070	UT	D	orton
+102	 0.2390	 0.3580	VA	R	bateman
 102	-0.1540	 0.6870	VA	D	pickett
 102	-0.1160	 0.5180	VA	D	sisisky
-102	-0.1430	 0.4900	VA	D	payne l
 102	-0.1640	 0.2070	VA	D	olin
-102	 0.1460	-0.3420	WA	R	miller j
-102	 0.0960	-0.0660	WA	R	morrison s
-102	 0.1910	-0.0630	WI	R	gunderson
-103	-0.1570	 0.8570	AL	D	browder
-103	-0.1260	 0.6320	AL	D	cramer
+102	-0.2050	-0.0820	VA	D	moran
+102	-0.2280	 0.2360	WI	D	aspin
+103	-0.2040	-0.3440	AZ	D	coppersmith
 103	-0.1500	 0.2270	AR	D	lincoln
-103	-0.0610	 0.3230	CA	D	condit
-103	-0.1460	 0.1140	CA	D	lehman r
-103	-0.1670	 0.1510	CA	D	dooley
 103	-0.1730	-0.0630	CA	D	harman
 103	 0.1890	-0.5600	CA	R	horn
-103	 0.1810	-0.9650	CT	R	shays
-103	 0.1400	-0.3010	CT	R	johnson n
-103	 0.0670	 0.8630	FL	D	hutto
-103	-0.1160	 0.6920	GA	D	rowland r
+103	-0.2250	-0.2400	CA	D	schenk
+103	-0.2360	 0.3360	FL	D	thurman
+103	 0.2310	 0.0380	FL	R	diaz-balart
+103	-0.2480	 0.3750	GA	D	bishop
 103	-0.0250	 0.4510	GA	D	deal
 103	-0.1530	 0.1830	GA	D	johnson d
-103	-0.1640	 0.4160	IL	D	lipinski
-103	-0.1920	 0.4230	IL	D	poshard
-103	-0.1890	-0.1950	IN	D	sharp
-103	-0.1370	 0.2950	IN	D	roemer
-103	-0.1470	 0.1410	IN	D	hamilton
-103	-0.0880	-1.0050	IN	D	jacobs
-103	 0.1710	-0.6980	IA	R	leach j
-103	-0.1210	 0.0270	KS	D	slattery
-103	-0.1860	 0.0620	KS	D	glickman
-103	-0.1850	 0.1950	KY	D	mazzoli
 103	-0.1390	 0.3170	KY	D	baesler
-103	 0.0520	 0.7760	LA	D	tauzin
-103	-0.0330	 0.9570	LA	D	hayes j
-103	 0.1150	-0.3260	ME	R	snowe
-103	 0.0130	-0.6780	MD	R	morella
-103	-0.1980	 0.1180	MI	D	carr
-103	-0.0250	-0.0630	MN	D	penny
+103	 0.2340	-0.3210	MA	R	blute
+103	 0.2090	-0.6160	MA	R	torkildsen
+103	-0.2050	 0.6210	MI	D	barcia
 103	-0.1890	-0.0430	MN	D	minge
-103	-0.1150	 0.7790	MN	D	peterson c
-103	-0.0660	 0.9990	MS	D	montgomery
-103	 0.0350	 0.8830	MS	D	parker
-103	 0.0260	 0.7650	MS	D	taylor g
-103	-0.1560	 0.7580	MO	D	skelton
 103	-0.1760	 0.6000	MO	D	danner
-103	-0.1970	 0.0150	NE	D	hoagland
-103	-0.1830	 0.3280	NV	D	bilbray
-103	-0.1240	-0.0530	NH	D	swett
-103	-0.1700	-0.1020	NJ	D	andrews r
-103	-0.1820	-0.1770	NJ	D	hughes
-103	 0.1520	 0.0390	NJ	R	smith c
-103	 0.1910	-0.5500	NJ	R	roukema
-103	 0.1770	-0.2960	NJ	R	gallo
-103	 0.0530	-0.1440	NY	R	fish
-103	 0.0930	-0.3490	NY	R	gilman
-103	 0.1170	-0.5700	NY	R	boehlert
-103	 0.1700	-0.0580	NY	R	houghton
-103	-0.0920	 0.5000	NC	D	valentine
-103	-0.1330	 0.4910	NC	D	lancaster
-103	-0.1620	 0.1510	NC	D	neal s
+103	-0.2430	-0.0450	NJ	D	torricelli
+103	 0.2460	-0.1620	NY	R	quinn
 103	-0.1920	-0.1050	OH	D	mann
-103	-0.0610	 0.1570	OH	D	traficant
-103	-0.1340	 0.2340	OH	D	applegate
 103	-0.1620	-0.2880	OH	D	fingerhut
-103	-0.0790	 0.7420	OK	D	brewster
-103	-0.1260	 0.2760	OK	D	mccurdy
-103	-0.0570	 0.6020	OK	D	english
 103	-0.1820	 0.5280	PA	D	holden
 103	 0.1970	-0.2480	PA	R	greenwood
-103	 0.1820	-0.0600	PA	R	mcdade
+103	-0.2470	 0.6100	PA	D	murtha
 103	-0.1890	-0.4020	PA	D	margolies-m
-103	-0.0500	-0.5240	PA	D	murphy
-103	 0.1280	-0.6460	RI	R	machtley
-103	 0.1570	 0.0180	SC	R	ravenel
-103	-0.0510	 0.4560	TN	D	lloyd
-103	-0.1950	 0.3650	TN	D	clement
-103	-0.1960	 0.3010	TN	D	gordon
-103	-0.1420	 0.6930	TN	D	tanner
-103	-0.1590	 0.5710	TX	D	wilson c
-103	 0.0880	 0.9980	TX	D	hall r
-103	-0.0370	 0.8020	TX	D	geren
-103	-0.0780	 0.9970	TX	D	sarpalius
-103	-0.1020	 0.9120	TX	D	laughlin
-103	-0.0130	 1.0140	TX	D	stenholm
-103	-0.1620	 0.3610	TX	D	andrews m
-103	-0.0840	 0.6070	UT	D	orton
-103	-0.1570	 0.6930	VA	D	pickett
-103	-0.1130	 0.5080	VA	D	sisisky
-103	-0.1510	 0.4840	VA	D	payne l
+103	-0.2200	 0.0390	PA	D	mchale
+103	-0.2480	 0.7040	TX	D	ortiz
+103	-0.2210	-0.2310	UT	D	shepherd
+103	-0.2360	-0.1910	VA	D	byrne
+103	-0.2200	-0.2260	WA	D	cantwell
 103	-0.1540	-0.1010	WI	D	barca
-103	 0.1960	-0.0070	WI	R	gunderson
-104	-0.1570	 0.8570	AL	D	browder
-104	-0.1210	 0.6320	AL	D	cramer
-104	-0.1500	 0.2270	AR	D	lincoln
-104	-0.0920	 0.3900	CA	D	condit
-104	-0.1640	 0.1450	CA	D	dooley
-104	-0.1880	-0.0630	CA	D	harman
-104	 0.1660	-0.3230	CT	R	johnson n
-104	-0.0250	 0.4510	GA	D	deal
-104	-0.1680	 0.4500	IL	D	lipinski
-104	-0.1430	 0.3170	IN	D	roemer
-104	-0.1440	 0.1680	IN	D	hamilton
-104	-0.0890	-1.0170	IN	D	jacobs
-104	 0.1830	-0.6800	IA	R	leach j
-104	-0.1390	 0.3170	KY	D	baesler
-104	 0.0600	 0.8130	LA	D	tauzin
-104	-0.0050	 1.0490	LA	D	hayes j
-104	 0.0350	-0.7120	MD	R	morella
-104	-0.1890	 0.6170	MI	D	barcia
-104	-0.1890	-0.0430	MN	D	minge
-104	-0.1210	 0.8260	MN	D	peterson c
-104	-0.0850	 1.0000	MS	D	montgomery
-104	 0.0350	 0.8830	MS	D	parker
-104	 0.0020	 0.8430	MS	D	taylor g
-104	-0.1600	 0.7460	MO	D	skelton
-104	-0.1760	 0.6000	MO	D	danner
-104	-0.1920	-0.1030	NJ	D	andrews r
-104	 0.1780	 0.0420	NJ	R	smith c
 104	 0.1550	-0.0330	NY	R	forbes
-104	 0.1100	-0.3470	NY	R	gilman
-104	 0.1450	-0.5550	NY	R	boehlert
-104	 0.1860	-0.0850	NY	R	houghton
-104	-0.0030	 0.2420	OH	D	traficant
-104	-0.0790	 0.7420	OK	D	brewster
-104	-0.1870	 0.5650	PA	D	holden
-104	 0.1990	-0.0260	PA	R	mcdade
+104	 0.2200	 0.1090	OR	R	bunn
 104	-0.1800	 0.3790	PA	D	doyle
-104	-0.1930	 0.3730	TN	D	clement
-104	-0.1910	 0.3310	TN	D	gordon
-104	-0.1520	 0.7120	TN	D	tanner
-104	-0.1520	 0.5720	TX	D	wilson c
-104	 0.0850	 1.0030	TX	D	hall r
-104	-0.0370	 0.8020	TX	D	geren
-104	-0.1020	 0.9120	TX	D	laughlin
-104	-0.0480	 1.0280	TX	D	stenholm
-104	-0.0840	 0.6070	UT	D	orton
-104	-0.1600	 0.6990	VA	D	pickett
-104	-0.1100	 0.4970	VA	D	sisisky
-104	-0.1580	 0.4770	VA	D	payne l
-105	-0.1160	 0.6330	AL	D	cramer
-105	-0.1220	 0.4580	CA	D	condit
-105	-0.1620	 0.1400	CA	D	dooley
-105	 0.1920	-0.3450	CT	R	johnson n
+104	-0.2460	 0.4860	PA	D	mascara
+105	-0.2430	 0.8760	AR	D	berry
+105	-0.2400	 0.0960	AR	D	snyder
+105	-0.2330	-0.1400	CA	D	tauscher
+105	-0.2050	-0.0050	CT	D	maloney
 105	-0.1440	 0.4520	FL	D	boyd
-105	-0.1710	 0.4830	IL	D	lipinski
-105	-0.1490	 0.3390	IN	D	roemer
-105	-0.1420	 0.1950	IN	D	hamilton
-105	 0.1950	-0.6620	IA	R	leach j
 105	-0.1530	 0.2610	IA	D	boswell
-105	-0.1390	 0.3170	KY	D	baesler
 105	-0.1040	 0.7190	LA	D	john
-105	 0.0560	-0.7470	MD	R	morella
-105	-0.1730	 0.6120	MI	D	barcia
-105	-0.1890	-0.0430	MN	D	minge
-105	-0.1270	 0.8720	MN	D	peterson c
-105	-0.0210	 0.9210	MS	D	taylor g
-105	-0.1640	 0.7330	MO	D	skelton
-105	-0.1760	 0.6000	MO	D	danner
-105	 0.1550	-0.0330	NY	R	forbes
-105	 0.1270	-0.3460	NY	R	gilman
-105	 0.1730	-0.5400	NY	R	boehlert
+105	-0.2300	-0.1920	NY	D	mccarthy
 105	-0.1360	 0.7500	NC	D	mcintyre
-105	 0.0560	 0.3270	OH	D	traficant
-105	-0.1930	 0.6010	PA	D	holden
-105	-0.1900	 0.3810	TN	D	clement
-105	-0.1870	 0.3610	TN	D	gordon
-105	-0.1620	 0.7310	TN	D	tanner
+105	-0.2330	 0.5560	TX	D	sandlin
 105	-0.1690	 0.6060	TX	D	turner
-105	 0.0820	 1.0080	TX	D	hall r
-105	-0.0830	 1.0430	TX	D	stenholm
-105	-0.1640	 0.7050	VA	D	pickett
-105	-0.1070	 0.4860	VA	D	sisisky
 105	 0.1120	 0.9940	VA	D	goode
+105	-0.2410	 0.2420	VA	D	boucher
 105	-0.1980	-0.1190	WA	D	smith a
-106	-0.1110	 0.6330	AL	D	cramer
-106	-0.1530	 0.5250	CA	D	condit
-106	-0.1590	 0.1350	CA	D	dooley
-106	-0.1480	 0.4650	FL	D	boyd
-106	-0.1750	 0.5160	IL	D	lipinski
-106	-0.1550	 0.3610	IN	D	roemer
-106	-0.1680	 0.3070	IA	D	boswell
+105	-0.2380	-0.1900	WI	D	kind
+106	-0.2430	 0.2460	CA	D	martinez
+106	-0.2050	-0.0050	CT	D	maloney j
+106	-0.2010	 0.7540	IL	D	phelps d
+106	-0.2030	 0.3870	IN	D	hill b
+106	-0.2480	 0.3370	KS	D	moore d
 106	-0.0510	 0.7340	KY	D	lucas k
-106	-0.1040	 0.7190	LA	D	john
-106	 0.0780	-0.7820	MD	R	morella
-106	-0.1560	 0.6070	MI	D	barcia
-106	-0.1890	-0.0430	MN	D	minge
-106	-0.1330	 0.9190	MN	D	peterson c
 106	-0.0990	 0.9760	MS	D	shows r
-106	-0.0450	 0.9990	MS	D	taylor g
-106	-0.1680	 0.7210	MO	D	skelton
-106	-0.1760	 0.6000	MO	D	danner
-106	 0.1550	-0.0330	NY	R	forbes
-106	-0.1470	 0.3460	NY	D	forbes
-106	 0.1440	-0.3440	NY	R	gilman
-106	-0.1310	 0.7500	NC	D	mcintyre
-106	 0.1150	 0.4120	OH	D	traficant
-106	-0.1980	 0.6370	PA	D	holden
-106	-0.1880	 0.3890	TN	D	clement
-106	-0.1820	 0.3910	TN	D	gordon
-106	-0.1720	 0.7510	TN	D	tanner
-106	-0.1690	 0.6060	TX	D	turner
-106	 0.0790	 1.0130	TX	D	hall r
-106	-0.1180	 1.0570	TX	D	stenholm
-106	-0.1670	 0.7110	VA	D	pickett
-106	-0.1040	 0.4750	VA	D	sisisky
-106	 0.1120	 0.9940	VA	D	goode
-107	-0.1060	 0.6330	AL	D	cramer
-107	-0.1830	 0.5930	CA	D	condit
-107	-0.1560	 0.1290	CA	D	dooley
-107	-0.1520	 0.4780	FL	D	boyd
-107	-0.1790	 0.5490	IL	D	lipinski
-107	-0.1610	 0.3830	IN	D	roemer
-107	-0.1450	 0.3730	IN	D	hill b
-107	-0.1840	 0.3530	IA	D	boswell
-107	-0.0510	 0.7340	KY	D	lucas k
-107	-0.1040	 0.7190	LA	D	john
-107	 0.1000	-0.8160	MD	R	morella
-107	-0.1400	 0.6020	MI	D	barcia
-107	-0.1390	 0.9650	MN	D	peterson c
-107	-0.0990	 0.9760	MS	D	shows r
-107	-0.0690	 1.0770	MS	D	taylor g
-107	-0.1720	 0.7090	MO	D	skelton
-107	 0.1610	-0.3420	NY	R	gilman
-107	-0.1260	 0.7500	NC	D	mcintyre
-107	 0.1740	 0.4970	OH	D	traficant
+106	-0.2440	 0.3730	ND	D	pomeroy
+106	-0.2470	 0.4500	OH	D	hall t
+106	-0.2330	 0.3110	TX	D	lampson
+107	-0.2020	 0.7130	AR	D	ross
+107	-0.2470	 0.0660	FL	D	davis
+107	-0.2300	-0.0850	NY	D	israel
 107	-0.1600	 0.5940	OK	D	carson
-107	-0.1860	 0.3960	TN	D	clement
-107	-0.1770	 0.4210	TN	D	gordon
-107	-0.1820	 0.7700	TN	D	tanner
-107	-0.1690	 0.6060	TX	D	turner
-107	 0.0760	 1.0180	TX	D	hall r
-107	-0.1590	 0.4230	TX	D	lampson
-107	-0.1540	 1.0710	TX	D	stenholm
 107	-0.1320	 0.6460	UT	D	matheson
-108	-0.1010	 0.6330	AL	D	cramer
-108	-0.1800	 0.7520	AR	D	ross
-108	-0.1540	 0.1240	CA	D	dooley
-108	-0.1570	 0.4910	FL	D	boyd
+108	-0.2270	 0.4250	AL	D	davis
+108	-0.2050	 0.4930	CA	D	cardoza
+108	-0.2410	 0.0030	FL	D	davis
 108	-0.1140	 0.9600	GA	D	marshall
 108	-0.1950	 0.3860	GA	D	scott
 108	-0.1550	-0.0620	HI	D	case
-108	-0.1820	 0.5830	IL	D	lipinski
 108	-0.0870	 0.3580	IN	D	hill
-108	-0.1990	 0.4000	IA	D	boswell
+108	 0.2310	-0.6080	IA	R	leach
+108	-0.2380	 0.2690	KS	D	moore
 108	-0.0510	 0.7340	KY	D	lucas
+108	-0.2270	 0.6210	KY	D	chandler
 108	-0.0870	 0.9330	LA	D	alexander
-108	-0.1040	 0.7190	LA	D	john
+108	-0.2410	 0.1540	MD	D	ruppersbe
 108	-0.1450	 1.0110	MN	D	peterson
 108	-0.0920	 1.1550	MS	D	taylor
-108	-0.1760	 0.6960	MO	D	skelton
-108	-0.1210	 0.7510	NC	D	mcintyre
-108	-0.1600	 0.5940	OK	D	carson
+108	 0.2420	 0.7420	NC	R	jones
 108	-0.1740	 0.7110	SD	D	herseth
 108	-0.1750	 0.8260	TN	D	davis
-108	-0.1720	 0.4520	TN	D	gordon
-108	-0.1920	 0.7890	TN	D	tanner
-108	-0.1690	 0.6060	TX	D	turner
 108	 0.0720	 1.0220	TX	D	hall
-108	-0.0860	 0.5350	TX	D	lampson
-108	-0.1890	 1.0860	TX	D	stenholm
-108	-0.1250	 0.7230	UT	D	matheson
-109	-0.0960	 0.6340	AL	D	cramer
-109	-0.1580	 0.7920	AR	D	ross
+108	-0.2070	 0.5310	TX	D	edwards
+108	-0.2350	-0.0500	WA	D	smith
+109	-0.2270	 0.4250	AL	D	davis
 109	-0.1750	 0.5610	CA	D	costa
-109	-0.1610	 0.5040	FL	D	boyd
-109	-0.1140	 0.9600	GA	D	marshall
+109	-0.2350	 0.5730	CO	D	salazar
+109	-0.2350	-0.0610	FL	D	davis
 109	-0.0570	 0.6050	GA	D	barrow
-109	-0.1550	-0.0620	HI	D	case
 109	-0.1820	 0.6810	IL	D	bean
 109	-0.1630	 0.8870	LA	D	melancon
-109	-0.1510	 1.0580	MN	D	peterson
-109	-0.1160	 1.2320	MS	D	taylor
-109	-0.1800	 0.6840	MO	D	skelton
-109	-0.1160	 0.7510	NC	D	mcintyre
 109	-0.0800	 0.9870	OK	D	boren
-109	-0.1740	 0.7110	SD	D	herseth
 109	-0.1750	 0.8260	TN	D	davis
-109	-0.1680	 0.4820	TN	D	gordon
 109	-0.1640	 0.6770	TX	D	cuellar
-109	-0.1190	 0.8000	UT	D	matheson
-109	-0.1950	 0.2700	VA	D	boucher
-110	-0.0910	 0.6340	AL	D	cramer
+110	-0.2270	 0.4250	AL	D	davis
 110	-0.0310	 0.7260	AZ	D	mitchell
 110	-0.0950	 0.7180	AZ	D	giffords
-110	-0.1360	 0.8320	AR	D	ross
-110	-0.1730	 0.6510	CA	D	costa
-110	-0.1660	 0.5170	FL	D	boyd
 110	-0.1540	 0.7710	FL	D	mahoney
-110	-0.1140	 0.9600	GA	D	marshall
-110	-0.0780	 0.7020	GA	D	barrow
-110	-0.1820	 0.6810	IL	D	bean
+110	-0.2220	 0.0720	FL	D	klein
+110	-0.2440	 0.6300	IL	D	foster
 110	-0.0990	 0.8010	IN	D	donnelly
 110	-0.1090	 0.9460	IN	D	ellsworth
-110	-0.0290	 0.3430	IN	D	hill
 110	-0.1880	 0.7560	KS	D	boyda
-110	-0.1980	 0.6440	KY	D	chandler
-110	-0.1630	 0.8870	LA	D	melancon
 110	 0.0060	 0.7400	LA	D	cazayoux
-110	-0.1570	 1.1040	MN	D	peterson
 110	 0.0080	 0.8810	MS	D	childers
-110	-0.1390	 1.3100	MS	D	taylor
-110	-0.1830	 0.6720	MO	D	skelton
 110	-0.1910	 0.6980	NY	D	gillibrand
 110	-0.1960	 0.5950	NY	D	arcuri
-110	 0.1620	 0.7770	NC	R	jones
-110	-0.1110	 0.7520	NC	D	mcintyre
 110	-0.0490	 0.6170	NC	D	shuler
 110	-0.1510	 0.6990	OH	D	space
-110	-0.0800	 0.9870	OK	D	boren
 110	-0.1370	 0.9740	PA	D	altmire
+110	-0.2240	-0.0400	PA	D	sestak
 110	-0.1120	 0.8150	PA	D	carney
-110	-0.1740	 0.7110	SD	D	herseth
 110	-0.1750	 0.8260	TN	D	davis
-110	-0.1630	 0.5120	TN	D	gordon
-110	-0.0120	 0.6470	TX	D	lampson
-110	-0.1750	 0.7230	TX	D	cuellar
-110	-0.1120	 0.8770	UT	D	matheson
-110	-0.1830	 0.2770	VA	D	boucher
+110	-0.2490	 0.7370	WV	D	rahall
 111	 0.0620	 0.9980	AL	D	bright
 111	-0.0270	 0.7670	AL	D	griffith
+111	-0.2270	 0.4250	AL	D	davis
 111	-0.1860	 0.7900	AZ	D	kirkpatrick
-111	-0.0310	 0.7260	AZ	D	mitchell
-111	-0.0950	 0.7180	AZ	D	giffords
-111	-0.1140	 0.8710	AR	D	ross
-111	-0.1710	 0.7400	CA	D	costa
-111	-0.1700	 0.5290	FL	D	boyd
+111	-0.2170	 0.8690	CO	D	markey
 111	-0.1430	 0.5040	FL	D	kosmas
-111	-0.1140	 0.9600	GA	D	marshall
-111	-0.1000	 0.7990	GA	D	barrow
+111	 0.2320	 0.5260	HI	R	djou
 111	 0.0680	 0.9980	ID	D	minnick
-111	-0.1820	 0.6810	IL	D	bean
-111	-0.0990	 0.8010	IN	D	donnelly
-111	-0.1090	 0.9460	IN	D	ellsworth
-111	 0.0300	 0.3290	IN	D	hill
-111	-0.1830	 0.6560	KY	D	chandler
-111	-0.1630	 0.8870	LA	D	melancon
 111	 0.0030	 0.5340	MD	D	kratovil
-111	-0.1630	 1.1500	MN	D	peterson
-111	 0.0080	 0.8810	MS	D	childers
-111	-0.1630	 1.3880	MS	D	taylor
-111	-0.1870	 0.6590	MO	D	skelton
+111	-0.2400	 0.1320	MI	D	peters
 111	-0.1310	 0.8750	NJ	D	adler
 111	-0.1630	 0.9400	NM	D	teague
 111	-0.1740	 0.7660	NY	D	mcmahon
 111	-0.0820	 0.5720	NY	D	murphy
 111	-0.1680	 0.7440	NY	D	owens
-111	-0.1960	 0.5950	NY	D	arcuri
 111	-0.1630	 0.0540	NY	D	maffei
-111	 0.1220	 0.7950	NC	R	jones
-111	-0.1060	 0.7520	NC	D	mcintyre
 111	-0.1440	 0.5560	NC	D	kissell
-111	-0.0490	 0.6170	NC	D	shuler
 111	-0.1680	 0.4550	OH	D	driehaus
 111	-0.1840	 0.6970	OH	D	boccieri
-111	-0.1510	 0.6990	OH	D	space
-111	-0.0800	 0.9870	OK	D	boren
+111	-0.2380	 0.5710	OR	D	schrader
 111	-0.1790	 0.7060	PA	D	dahlkemper
-111	-0.1370	 0.9740	PA	D	altmire
-111	-0.1120	 0.8150	PA	D	carney
+111	-0.2260	 0.7110	PA	D	murphy
 111	-0.1740	 0.7110	SD	D	herseth s
 111	-0.1750	 0.8260	TN	D	davis
-111	-0.1580	 0.5420	TN	D	gordon
-111	-0.1860	 0.7680	TX	D	cuellar
-111	-0.1050	 0.9540	UT	D	matheson
 111	-0.0250	 0.8660	VA	D	nye
 111	-0.1000	 0.5800	VA	D	perriello
-111	-0.1720	 0.2840	VA	D	boucher
 112	-0.0880	 0.1250	AZ	D	barber
-112	-0.0930	 0.9110	AR	D	ross
-112	-0.1680	 0.8290	CA	D	costa
-112	-0.1220	 0.8960	GA	D	barrow
-112	-0.0990	 0.8010	IN	D	donnelly
-112	-0.1690	 0.6670	KY	D	chandler
-112	-0.1690	 1.1970	MN	D	peterson
-112	-0.1680	 0.7440	NY	D	owens
-112	 0.0820	 0.8130	NC	R	jones
-112	-0.1010	 0.7520	NC	D	mcintyre
-112	-0.1440	 0.5560	NC	D	kissell
-112	-0.0490	 0.6170	NC	D	shuler
-112	-0.0800	 0.9870	OK	D	boren
-112	-0.1370	 0.9740	PA	D	altmire
-112	-0.1970	 0.8140	TX	D	cuellar
-112	-0.0980	 1.0310	UT	D	matheson
+112	-0.2360	 0.7280	GA	D	bishop
+112	-0.2190	 0.5400	NY	D	hochul
 113	-0.1860	 0.7900	AZ	D	kirkpatric
-113	-0.0880	 0.1250	AZ	D	barber
 113	-0.1100	 0.2510	AZ	D	sinema
-113	-0.1660	 0.9190	CA	D	costa
+113	-0.2030	 0.1650	CA	D	bera
+113	-0.2060	 0.4240	CA	D	ruiz
 113	-0.1540	 0.0000	CA	D	peters
 113	-0.1390	 0.3060	FL	D	murphy
 113	-0.1870	 0.1950	FL	D	garcia
-113	-0.1430	 0.9930	GA	D	barrow
+113	-0.2350	 0.7680	GA	D	bishop
 113	-0.1840	-0.0240	IL	D	schneider
-113	-0.1750	 1.2430	MN	D	peterson
+113	-0.2010	 0.3530	IL	D	bustos
+113	-0.2400	 0.1320	MI	D	peters
 113	-0.1870	 0.3440	NY	D	maloney
-113	-0.1680	 0.7440	NY	D	owens
-113	-0.1630	 0.0540	NY	D	maffei
-113	 0.0420	 0.8310	NC	R	jones
-113	-0.0960	 0.7530	NC	D	mcintyre
 113	-0.1940	 0.7540	TX	D	gallego
-113	-0.0910	 1.1080	UT	D	matheson

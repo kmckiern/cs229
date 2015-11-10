@@ -49,6 +49,7 @@ def parse_database(congress_start, congress_stop, epsilon):
     nm_start = 29
     nm_end = 43
     state_codes = load_state_codes()
+    saved = {}
 
     with open(FN_IDEAL_POINT_DATA, 'r') as f_dw:
         # line template for the numeric fields
@@ -74,7 +75,6 @@ def parse_database(congress_start, congress_stop, epsilon):
                     type = 'MARGINS'
                 else:
                     continue
-                
                 try:
                     state = state_codes[int(line[state_code_start:state_code_end])]
                 except:
@@ -98,6 +98,12 @@ def parse_database(congress_start, congress_stop, epsilon):
                 else:
                     name = segment_fields[0] + ' ' + segment_fields[1][0]
                 #else: raise RuntimeError('Name ' + name_segment + ' is cray.')
+
+                # we will only pull one ideal point per candidate for
+                # now, though it is possible that there are election
+                # data for multiple campaigns
+                if name in saved and saved[name] == state: continue
+                else: saved[name] = state
 
                 line_to_write = f_out_line_template.format(congress_number, 
                                                       ideal_pt_dim_1,
