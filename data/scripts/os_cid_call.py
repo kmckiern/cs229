@@ -54,12 +54,6 @@ def main():
     yr = args.yr
     pref = args.pref
 
-    #---------- CANDIDATE META INFO ----------#
-    '''
-    contribution information on a candidate for indicated cycle
-    '''
-    c_sum = CRP.candSummary.get(cid=cid, cycle=yr)
-    
     #---------- CANDIDATE FINANCE DATA ----------#
     '''
     top sectors to a candidate/member for indicated period
@@ -68,6 +62,12 @@ def main():
 
     #---------- write data? ----------#
     if args.write_dicts:
+        #---------- CANDIDATE META INFO ----------#
+        '''
+        contribution information on a candidate for indicated cycle
+        '''
+        c_sum = CRP.candSummary.get(cid=cid, cycle=yr)
+    
         labels = {
             0   : 'c_sum',
             1   : 'mem_pfd',
@@ -77,7 +77,8 @@ def main():
         }
         
         # trying to decide features, going to write choices to file
-        data_dicts = [c_sum, mem_pfd, top_cont, top_indust, top_sect]
+        data_dicts = [c_sum, top_sect]
+        # data_dicts.append([mem_pfd, top_sect]
         for ndx, i in enumerate(data_dicts):
             of = pref + labels[ndx] + '.dat'
             dict_to_dat(of, i)
