@@ -9,7 +9,7 @@ import argparse
 import pandas as pd
 
 parser = argparse.ArgumentParser(description='get voting and financial information for an input candidate')
-parser.add_argument('--id_file', type=str, help='crp ids xls file', default='../ref/CRP_IDs.xls')
+parser.add_argument('--id_file', type=str, help='crp ids xls file', default='../../data/candidates/CRP_IDs.xls')
 parser.add_argument('--field', type=str, help='query by which field', default='CRPName')
 parser.add_argument('--val', type=str, help='field value (eg. \'Ryan, Paul\'', default='Ryan, Paul')
 parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', default=False)

@@ -19,13 +19,13 @@ import numpy as np
 
 parser = argparse.ArgumentParser(description='get financial information for an input candidate')
 parser.add_argument('--cid', type=str, help='CRP CID', default='N00007360')
-parser.add_argument('--yr', type=str, help='query year', default='2012')
+parser.add_argument('--yr', type=str, help='query year', default='2014')
 parser.add_argument('--ak', type=str, help='api key')
 parser.add_argument('--categories', type=str, help='sector code database file', default='../../data/candidates/CRP_Categories.txt')
 parser.add_argument('--write_dicts', action='store_true', help='write candidate data to dat file', default=False)
 parser.add_argument('--pref', type=str, help='output file directory preface', default='../../data/out/examples/npelosi/')
 parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', default=False)
-args = parser.parse_args()
+args, unknown = parser.parse_known_args()
 
 def json_dict(d):
     return json.dumps(d, sort_keys=True, indent=2)
@@ -37,6 +37,7 @@ def d_norm(categories, data):
     num = len(categories)
 
     fin_data = np.zeros((2, num))
+    features = []
     for d in data:
         d_key = d['@attributes']['sector_name']
         col = categories.index(d_key)
@@ -48,17 +49,25 @@ def d_norm(categories, data):
 
     return fin_data
 
-def main():
+def main(args):
     CRP.apikey = args.ak
     cid = args.cid
     yr = args.yr
     pref = args.pref
 
+    #---------- GET FINANCE VECTOR ----------#
+    categories = pd.read_csv(args.categories, sep='\t', skiprows=8)
+    '''
+    top sector normalized
+    '''
+    cats = list(set(categories['Sector']))
+
     #---------- CANDIDATE FINANCE DATA ----------#
     '''
     top sectors to a candidate/member for indicated period
     '''
-    top_sect = CRP.candSector.get(cid=cid, cycle=yr)
+    top_sect = CRP.candSector.get(cid=cid, year=yr)
+    sect_fin_data = d_norm(cats, top_sect)
 
     #---------- write data? ----------#
     if args.write_dicts:
@@ -67,7 +76,6 @@ def main():
         contribution information on a candidate for indicated cycle
         '''
         c_sum = CRP.candSummary.get(cid=cid, cycle=yr)
-    
         labels = {
             0   : 'c_sum',
             1   : 'mem_pfd',
@@ -75,7 +83,6 @@ def main():
             3   : 'top_indust',
             4   : 'top_sect',
         }
-        
         # trying to decide features, going to write choices to file
         data_dicts = [c_sum, top_sect]
         # data_dicts.append([mem_pfd, top_sect]
@@ -83,18 +90,17 @@ def main():
             of = pref + labels[ndx] + '.dat'
             dict_to_dat(of, i)
     
-    #---------- GET FINANCE VECTOR ----------#
-    categories = pd.read_csv(args.categories, sep='\t', skiprows=8)
-    '''
-    top sector normalized
-    '''
-    cats = list(set(categories['Sector']))
-    sect_fin_data = d_norm(cats, top_sect)
-
     #---------- interact with data? ----------#
     if args.ip:
         import IPython
         IPython.embed()
 
+    f_pac = [i + '_pac' for i in cats]
+    f_indiv = [i + '_indiv' for i in cats]
+    feature_labels = f_pac + f_indiv
+
+    return np.hstack(sect_fin_data), feature_labels
+
 if __name__ == '__main__':
-    main()
+    import sys
+    main(args)
