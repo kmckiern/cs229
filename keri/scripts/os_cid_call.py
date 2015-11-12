@@ -21,9 +21,10 @@ parser = argparse.ArgumentParser(description='get financial information for an i
 parser.add_argument('--cid', type=str, help='CRP CID', default='N00007360')
 parser.add_argument('--yr', type=str, help='query year', default='2012')
 parser.add_argument('--ak', type=str, help='api key')
+parser.add_argument('--categories', type=str, help='sector code database file', default='../../data/candidates/CRP_Categories.txt')
 parser.add_argument('--categories', type=str, help='sector code database file', default='../ref/CRP_Categories.txt')
 parser.add_argument('--write_dicts', action='store_true', help='write candidate data to dat file', default=False)
-parser.add_argument('--pref', type=str, help='output file directory preface', default='/Users/kerimckiernan/Documents/class/F15/working/cs229/data/out/')
+parser.add_argument('--pref', type=str, help='output file directory preface', default='../../data/out/examples/npelosi/')
 parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', default=False)
 args = parser.parse_args()
 
