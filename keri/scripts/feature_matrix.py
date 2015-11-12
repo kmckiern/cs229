@@ -43,7 +43,7 @@ def main():
     # put into data frame
     df = pd.DataFrame(fmtrx, columns=feature_lbls, index=cids)
     from_str = args.cf.split('/')[-1].split('.')[0]
-    df.save(args.pref + from_str + '_' + str(args.yr) + '_feat_matrix.pkl')
+    df.to_pickle(args.pref + from_str + '_' + str(args.yr) + '_feat_matrix.pkl')
 
 if __name__ == '__main__':
     main()
