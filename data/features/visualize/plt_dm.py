@@ -28,8 +28,27 @@ ax.invert_yaxis()
 ax.xaxis.tick_top()
 plt.xticks(rotation=90)
 plt.tight_layout()
-
 plt.xlim([0,data.shape[1]])
 plt.ylim([0,data.shape[0]])
-
 plt.savefig(sys.argv[2])
+
+
+from sklearn.decomposition import PCA
+n_comps = 5
+pca = PCA(n_components = n_comps)
+pca.fit(df)
+PCs = pca.components_
+fig, ax = plt.subplots()
+fig.set_size_inches(16, 4)
+heatmap = ax.pcolor(PCs, cmap='BuPu')
+ax.set_xticks(np.arange(PCs.shape[1]) + 0.5, minor=False)
+ax.set_yticks(np.arange(PCs.shape[0]) + 0.5, minor=False)
+ax.set_xticklabels(column_labels)
+ax.set_yticklabels(np.arange(n_comps))
+ax.invert_yaxis()
+ax.xaxis.tick_top()
+plt.xticks(rotation=90)
+plt.tight_layout()
+plt.xlim([0,PCs.shape[1]])
+plt.ylim([0,PCs.shape[0]])
+plt.savefig(sys.argv[3])
