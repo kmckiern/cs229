@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 NOV 2015 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 NOV 2015 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,30 +450,270 @@ File: dvipsnam.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/svgnam.def
 File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
+
+
+Package biblatex Warning: No "backend" specified, using Biber backend.
+(biblatex)                To use BibTeX, load biblatex with 
+(biblatex)                the "backend=bibtex" option.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex2.sty
+Package: biblatex2 2015/04/19 v3.0 programmable bibliographies (biber) (PK/JW/A
+B)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count139
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count140
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count141
+\c@listtotal=\count142
+\c@listcount=\count143
+\c@liststart=\count144
+\c@liststop=\count145
+\c@citecount=\count146
+\c@citetotal=\count147
+\c@multicitecount=\count148
+\c@multicitetotal=\count149
+\c@instcount=\count150
+\c@maxnames=\count151
+\c@minnames=\count152
+\c@maxitems=\count153
+\c@minitems=\count154
+\c@citecounter=\count155
+\c@savedcitecounter=\count156
+\c@uniquelist=\count157
+\c@uniquename=\count158
+\c@refsection=\count159
+\c@refsegment=\count160
+\c@maxextratitle=\count161
+\c@maxextratitleyear=\count162
+\c@maxextrayear=\count163
+\c@maxextraalpha=\count164
+\c@abbrvpenalty=\count165
+\c@highnamepenalty=\count166
+\c@lownamepenalty=\count167
+\c@maxparens=\count168
+\c@parenlevel=\count169
+\blx@tempcnta=\count170
+\blx@tempcntb=\count171
+\blx@tempcntc=\count172
+\blx@maxsection=\count173
+\blx@maxsegment@0=\count174
+\blx@notetype=\count175
+\blx@parenlevel@text=\count176
+\blx@parenlevel@foot=\count177
+\blx@sectionciteorder@0=\count178
+\labelnumberwidth=\skip56
+\labelalphawidth=\skip57
+\biblabelsep=\skip58
+\bibitemsep=\skip59
+\bibnamesep=\skip60
+\bibinitsep=\skip61
+\bibparsep=\skip62
+\bibhang=\skip63
+\blx@bcfin=\read3
+\blx@bcfout=\write4
+\c@mincomprange=\count179
+\c@maxcomprange=\count180
+\c@mincompwidth=\count181
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'chem-acs.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count182
+\c@savedafterword=\count183
+\c@annotator=\count184
+\c@savedannotator=\count185
+\c@author=\count186
+\c@savedauthor=\count187
+\c@bookauthor=\count188
+\c@savedbookauthor=\count189
+\c@commentator=\count190
+\c@savedcommentator=\count191
+\c@editor=\count192
+\c@savededitor=\count193
+\c@editora=\count194
+\c@savededitora=\count195
+\c@editorb=\count196
+\c@savededitorb=\count197
+\c@editorc=\count198
+\c@savededitorc=\count199
+\c@foreword=\count200
+\c@savedforeword=\count201
+\c@holder=\count202
+\c@savedholder=\count203
+\c@introduction=\count204
+\c@savedintroduction=\count205
+\c@namea=\count206
+\c@savednamea=\count207
+\c@nameb=\count208
+\c@savednameb=\count209
+\c@namec=\count210
+\c@savednamec=\count211
+\c@translator=\count212
+\c@savedtranslator=\count213
+\c@shortauthor=\count214
+\c@savedshortauthor=\count215
+\c@shorteditor=\count216
+\c@savedshorteditor=\count217
+\c@labelname=\count218
+\c@savedlabelname=\count219
+\c@institution=\count220
+\c@savedinstitution=\count221
+\c@lista=\count222
+\c@savedlista=\count223
+\c@listb=\count224
+\c@savedlistb=\count225
+\c@listc=\count226
+\c@savedlistc=\count227
+\c@listd=\count228
+\c@savedlistd=\count229
+\c@liste=\count230
+\c@savedliste=\count231
+\c@listf=\count232
+\c@savedlistf=\count233
+\c@location=\count266
+\c@savedlocation=\count267
+\c@organization=\count268
+\c@savedorganization=\count269
+\c@origlocation=\count270
+\c@savedoriglocation=\count271
+\c@origpublisher=\count272
+\c@savedorigpublisher=\count273
+\c@publisher=\count274
+\c@savedpublisher=\count275
+\c@language=\count276
+\c@savedlanguage=\count277
+\c@pageref=\count278
+\c@savedpageref=\count279
+\shorthandwidth=\skip64
+\shortjournalwidth=\skip65
+\shortserieswidth=\skip66
+\shorttitlewidth=\skip67
+\shortauthorwidth=\skip68
+\shorteditorwidth=\skip69
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2015/04/19 v3.0 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 
+\c@textcitecount=\count280
+\c@textcitetotal=\count281
+\c@textcitemaxnames=\count282
+\c@biburlnumpenalty=\count283
+\c@biburlucpenalty=\count284
+\c@biburllcpenalty=\count285
+\c@smartand=\count286
+)
+Package biblatex Info: Trying to load bibliography style 'chem-acs'...
+Package biblatex Info: ... file 'chem-acs.bbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chem/chem-acs.bbx
+File: chem-acs.bbx 2014/11/14 v1.1m biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count287
+\c@bbx:relatedtotal=\count288
+))))
+Package biblatex Info: Trying to load citation style 'chem-acs'...
+Package biblatex Info: ... file 'chem-acs.cbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chem/chem-acs.cbx
+File: chem-acs.cbx 2014/11/14 v1.1m biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2015/04/19 v3.0 biblatex citation style (PK/JW/AB)
+\c@cbx@tempcnta=\count289
+\c@cbx@tempcntb=\count290
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count291
+\@quotereset=\count292
+
 
 LaTeX Warning: Unused global option(s):
     [10].
 
-No file milestone.aux.
+(./milestone.aux
+
+LaTeX Warning: Label `fig:fmtrx' multiply defined.
+
+)
 \openout1 = `milestone.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -510,16 +750,16 @@ LaTeX Font Info:    ... okay on input line 38.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
+\scratchcounter=\count293
 \scratchdimen=\dimen150
 \scratchbox=\box59
-\nofMPsegments=\count140
-\nofMParguments=\count141
+\nofMPsegments=\count294
+\nofMParguments=\count295
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count142
+\MPscratchCnt=\count296
 \MPscratchDim=\dimen151
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -536,9 +776,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count145
+\c@lstlisting=\count299
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -546,53 +786,111 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count146
+\c@section@level=\count300
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
-\@outlinefile=\write4
-\openout4 = `milestone.out'.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
+(./milestone.out) (./milestone.out)
+\@outlinefile=\write5
+\openout5 = `milestone.out'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+\openout4 = `milestone.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'milestone.bbl' found.
+ (./milestone.bbl)
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
-[1
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+<../../data/features/visualize/mod_2014_fm.png, id=4, 1156.32pt x 794.97pt>
+File: ../../data/features/visualize/mod_2014_fm.png Graphic file (type png)
+
+<use ../../data/features/visualize/mod_2014_fm.png>
+Package pdftex.def Info: ../../data/features/visualize/mod_2014_fm.png used on 
+input line 42.
+(pdftex.def)             Requested size: 422.77664pt x 290.65291pt.
+ [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
+<../../data/features/visualize/pcs.png, id=20, 1156.32pt x 289.08pt>
+File: ../../data/features/visualize/pcs.png Graphic file (type png)
 
-(./milestone.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
+<use ../../data/features/visualize/pcs.png>
+Package pdftex.def Info: ../../data/features/visualize/pcs.png used on input li
+ne 48.
+(pdftex.def)             Requested size: 422.77664pt x 105.69196pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
+ [2 <../../data/features/visualize/mod_2014_fm.png> <../../data/features/visual
+ize/pcs.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+ (./milestone.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package rerunfilecheck Info: File `milestone.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-Package rerunfilecheck Warning: File `milestone.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: Checksums for `milestone.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
+Package logreq Info: Writing requests to 'milestone.run.xml'.
+\openout1 = `milestone.run.xml'.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 9394 strings out of 493089
- 137715 string characters out of 6134842
- 283689 words of memory out of 5000000
- 12776 multiletter control sequences out of 15000+600000
- 4850 words of font info for 18 fonts, out of 8000000 for 9000
+ 14675 strings out of 493089
+ 233087 string characters out of 6134842
+ 705835 words of memory out of 5000000
+ 17969 multiletter control sequences out of 15000+600000
+ 6550 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,40p,291b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,35p,1072b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on milestone.pdf (1 page, 21672 bytes).
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on milestone.pdf (2 pages, 262631 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
