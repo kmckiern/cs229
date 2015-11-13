@@ -30,8 +30,9 @@ plt.xticks(rotation=90)
 plt.tight_layout()
 plt.xlim([0,data.shape[1]])
 plt.ylim([0,data.shape[0]])
-plt.savefig(sys.argv[2])
 
+if len(sys.argv) > 3:
+    plt.savefig(sys.argv[2])
 
 from sklearn.decomposition import PCA
 n_comps = 5
@@ -51,4 +52,8 @@ plt.xticks(rotation=90)
 plt.tight_layout()
 plt.xlim([0,PCs.shape[1]])
 plt.ylim([0,PCs.shape[0]])
-plt.savefig(sys.argv[3])
+
+if len(sys.argv) > 3:
+    plt.savefig(sys.argv[3])
+
+IPython.embed()
