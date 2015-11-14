@@ -7,10 +7,9 @@
 \usepackage{amsmath,mathtools,listings,multicol,hyperref,enumerate}
 \usepackage[usenames,dvipsnames,svgnames,table,hyperref]{xcolor}
 
-\usepackage[style=chem-acs]{biblatex}
-\bibliography{milestone}
-
 \usepackage{color}
+\usepackage[backend=biber]{biblatex}
+\bibliography{milestone}
 
 \begin{document}
 \begin{center}
@@ -61,5 +60,7 @@ PCA was run on this feature matrix under a variety of conditions.  The `Other' c
 We see that there are several low variance components for both individial and PAC contributions: Defense, Candidate, Party Cmte, Joint Candidate Cmtes, and Unknown.  We could likely remove these values from our feature set when fitting a model.  The starkest difference between the PCs are in the Lawyers \& Lobbyists (high PAC variance, low individual variance) and Labor categories (low PAC variance, high individual variance).  These features may require special attention during model training. \\
 
 Armed with a refined feature set and tools to query these features, we aim to train a model to predict DW-NOMINATE scores.  We plan to use a supervised learning method, starting with linear regression.  The results of this model will help us determine whether we will need to try a more sophisticated training algorithm.  We also plan to relay with our mentor about our approach so far and our planned future directions. 
+
+\printbibliography
 
 \end{document}

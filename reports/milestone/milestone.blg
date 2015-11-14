@@ -1,9 +1,17 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'milestone.blg'
-[53] biber-darwin:276> INFO - === Fri Nov 13, 2015, 16:54:17
-[53] Biber.pm:333> INFO - Reading 'milestone.bcf'
-[157] Biber.pm:645> INFO - Found 0 citekeys in bib section 0
-[157] Utils.pm:146> WARN - The file 'milestone.bcf' does not contain any citations!
-[176] bbl.pm:505> INFO - Writing 'milestone.bbl' with encoding 'ascii'
-[177] bbl.pm:596> INFO - Output to milestone.bbl
-[177] Biber.pm:106> INFO - WARNINGS: 1
+[44] biber-darwin:276> INFO - === Fri Nov 13, 2015, 17:45:28
+[45] Biber.pm:333> INFO - Reading 'milestone.bcf'
+[147] Biber.pm:645> INFO - Found 3 citekeys in bib section 0
+[168] Biber.pm:2977> INFO - Processing section 0
+[187] Biber.pm:3115> INFO - Looking for bibtex format file 'milestone.bib' for section 0
+[189] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[191] bibtex.pm:895> INFO - Found BibTeX data source 'milestone.bib'
+[197] Utils.pm:146> WARN - The field 'location' in entry 'PR' cannot be null, deleting it
+[244] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[245] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[245] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[245] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[251] bbl.pm:505> INFO - Writing 'milestone.bbl' with encoding 'ascii'
+[252] bbl.pm:596> INFO - Output to milestone.bbl
+[252] Biber.pm:106> INFO - WARNINGS: 1

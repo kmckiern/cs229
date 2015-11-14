@@ -16,5 +16,60 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist{nty}{nty}
+    \entry{NOMBOOT}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7c1b6e11a4d509ebb68dcca24dbed359}{Carroll}{C\bibinitperiod}{Royce}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=b77f8b745db3b7e4576974b57f6bafd7}{Lewis}{L\bibinitperiod}{Jeffrey\bibnamedelima B}{J\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+        {{hash=09de20fc004436c5699225d13073908d}{Lo}{L\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=adf45641f15d01126abfb2f62ece0e2d}{Poole}{P\bibinitperiod}{Keith\bibnamedelima T}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+        {{hash=1451269397523626c1c93c961319e8a8}{Rosenthal}{R\bibinitperiod}{Howard}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {SPM-PMSAPSA}%
+      }
+      \strng{namehash}{4b27f7f6089549c6c746633c4f2aaa59}
+      \strng{fullhash}{6cb6c95b09e426a3e18b62ec23b1702f}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Political Analysis}
+      \field{number}{3}
+      \field{title}{Measuring bias and uncertainty in DW-NOMINATE ideal point estimates via the parametric bootstrap}
+      \field{volume}{17}
+      \field{year}{2009}
+      \field{pages}{261\bibrangedash 275}
+      \range{pages}{15}
+    \endentry
+    \entry{DWWEB}{misc}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://voteview.com/dwnomin.htm}}
+      \field{note}{Accessed: 2015.10.01}
+      \field{title}{DW-NOMINATE Scores With Bootstrapped Standard Errors}
+    \endentry
+    \entry{PR}{book}{}
+      \name{author}{2}{}{%
+        {{hash=f33676aaf8e77d25f1c8c00b9b9de35e}{Poole}{P\bibinitperiod}{K.T.}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=6fb0a56f3cfc66ef24b1e02d1c1476eb}{Rosenthal}{R\bibinitperiod}{H.}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{9b56e03296d07ed53fcadfe41f0e68ce}
+      \strng{fullhash}{9b56e03296d07ed53fcadfe41f0e68ce}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Congress: A Political-Economic History of Roll Call Voting}
+      \field{year}{2000}
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 

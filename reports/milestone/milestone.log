@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 NOV 2015 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 NOV 2015 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -453,11 +453,6 @@ File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
 
-
-Package biblatex Warning: No "backend" specified, using Biber backend.
-(biblatex)                To use BibTeX, load biblatex with 
-(biblatex)                the "backend=bibtex" option.
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex2.sty
 Package: biblatex2 2015/04/19 v3.0 programmable bibliographies (biber) (PK/JW/A
 B)
@@ -531,8 +526,6 @@ Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/blx-dm.def)
-Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'chem-acs.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count182
@@ -626,16 +619,6 @@ File: biblatex.def
 \c@biburllcpenalty=\count285
 \c@smartand=\count286
 )
-Package biblatex Info: Trying to load bibliography style 'chem-acs'...
-Package biblatex Info: ... file 'chem-acs.bbx' found.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chem/chem-acs.bbx
-File: chem-acs.bbx 2014/11/14 v1.1m biblatex bibliography style
-Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
-Package biblatex Info: ... file 'numeric-comp.bbx' found.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
-File: numeric-comp.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
@@ -648,19 +631,12 @@ Package biblatex Info: ... file 'standard.bbx' found.
 File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
 \c@bbx:relatedcount=\count287
 \c@bbx:relatedtotal=\count288
-))))
-Package biblatex Info: Trying to load citation style 'chem-acs'...
-Package biblatex Info: ... file 'chem-acs.cbx' found.
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex-chem/chem-acs.cbx
-File: chem-acs.cbx 2014/11/14 v1.1m biblatex citation style
-Package biblatex Info: Trying to load citation style 'numeric-comp'...
-Package biblatex Info: ... file 'numeric-comp.cbx' found.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
-File: numeric-comp.cbx 2015/04/19 v3.0 biblatex citation style (PK/JW/AB)
-\c@cbx@tempcnta=\count289
-\c@cbx@tempcntb=\count290
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2015/04/19 v3.0 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -672,7 +648,7 @@ Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
-))
+)
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
@@ -685,8 +661,8 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count291
-\@quotereset=\count292
+\@quotelevel=\count289
+\@quotereset=\count290
 
 
 LaTeX Warning: Unused global option(s):
@@ -699,20 +675,20 @@ LaTeX Warning: Label `fig:pc_all' multiply defined.
 )
 \openout1 = `milestone.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -750,16 +726,16 @@ LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count293
+\scratchcounter=\count291
 \scratchdimen=\dimen150
 \scratchbox=\box59
-\nofMPsegments=\count294
-\nofMParguments=\count295
+\nofMPsegments=\count292
+\nofMParguments=\count293
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count296
+\MPscratchCnt=\count294
 \MPscratchDim=\dimen151
-\MPnumerator=\count297
-\makeMPintoPDFobject=\count298
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -776,9 +752,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count299
+\c@lstlisting=\count297
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 14.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -786,11 +762,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count300
+\c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 14.
+LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \nameref on input line 14.
 
 (./milestone.out) (./milestone.out)
 \@outlinefile=\write5
@@ -805,85 +781,85 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'milestone.bbl' found.
  (./milestone.bbl)
-Package biblatex Info: Reference section=0 on input line 15.
-Package biblatex Info: Reference segment=0 on input line 15.
+Package biblatex Info: Reference section=0 on input line 14.
+Package biblatex Info: Reference segment=0 on input line 14.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-<../../data/features/visualize/features.png, id=5, 1156.32pt x 794.97pt>
+<../../data/features/visualize/features.png, id=9, 1156.32pt x 794.97pt>
 File: ../../data/features/visualize/features.png Graphic file (type png)
 
 <use ../../data/features/visualize/features.png>
 Package pdftex.def Info: ../../data/features/visualize/features.png used on inp
-ut line 42.
+ut line 41.
 (pdftex.def)             Requested size: 422.77664pt x 290.65291pt.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../../data/features/visualize/pcs_no_other.png, id=23, 1156.32pt x 289.08pt>
+<../../data/features/visualize/pcs_no_other.png, id=30, 1156.32pt x 289.08pt>
 File: ../../data/features/visualize/pcs_no_other.png Graphic file (type png)
 
 <use ../../data/features/visualize/pcs_no_other.png>
 Package pdftex.def Info: ../../data/features/visualize/pcs_no_other.png used on
- input line 48.
+ input line 47.
 (pdftex.def)             Requested size: 422.77664pt x 105.69196pt.
 
-<../../data/features/visualize/pcs_no_other_pac.png, id=24, 1156.32pt x 289.08p
+<../../data/features/visualize/pcs_no_other_pac.png, id=31, 1156.32pt x 289.08p
 t>
 File: ../../data/features/visualize/pcs_no_other_pac.png Graphic file (type png
 )
  <use ../../data/features/visualize/pcs_no_other_pac.png>
 Package pdftex.def Info: ../../data/features/visualize/pcs_no_other_pac.png use
-d on input line 53.
+d on input line 52.
 (pdftex.def)             Requested size: 422.77664pt x 105.69196pt.
 
-<../../data/features/visualize/pcs_no_other_indiv.png, id=25, 1156.32pt x 289.0
+<../../data/features/visualize/pcs_no_other_indiv.png, id=32, 1156.32pt x 289.0
 8pt>
 File: ../../data/features/visualize/pcs_no_other_indiv.png Graphic file (type p
 ng)
  <use ../../data/features/visualize/pcs_no_other_indiv.png>
 Package pdftex.def Info: ../../data/features/visualize/pcs_no_other_indiv.png u
-sed on input line 58.
+sed on input line 57.
 (pdftex.def)             Requested size: 422.77664pt x 105.69196pt.
  [2 <../../data/features/visualize/features.png> <../../data/features/visualize
 /pcs_no_other.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
 [3 <../../data/features/visualize/pcs_no_other_pac.png> <../../data/features/vi
 sualize/pcs_no_other_indiv.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
  (./milestone.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
 Package rerunfilecheck Info: File `milestone.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -893,16 +869,16 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'milestone.run.xml'.
 \openout1 = `milestone.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 14689 strings out of 493089
- 233643 string characters out of 6134842
- 706996 words of memory out of 5000000
- 17979 multiletter control sequences out of 15000+600000
- 6550 words of font info for 26 fonts, out of 8000000 for 9000
+ 14775 strings out of 493089
+ 234729 string characters out of 6134842
+ 707164 words of memory out of 5000000
+ 18069 multiletter control sequences out of 15000+600000
+ 7064 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,35p,1072b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,49p,1108b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -910,11 +886,13 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on milestone.pdf (3 pages, 357822 bytes).
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on milestone.pdf (3 pages, 385924 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
