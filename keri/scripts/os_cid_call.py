@@ -16,6 +16,7 @@ import argparse
 import json
 import pandas as pd
 import numpy as np
+import sys
 
 parser = argparse.ArgumentParser(description='get financial information for an input candidate')
 parser.add_argument('--cid', type=str, help='CRP CID', default='N00007360')
@@ -66,7 +67,11 @@ def main(args):
     '''
     top sectors to a candidate/member for indicated period
     '''
-    top_sect = CRP.candSector.get(cid=cid, year=yr)
+    try:
+        top_sect = CRP.candSector.get(cid=cid, year=yr)
+    except:
+        print cid
+        sys.exit()
     sect_fin_data = d_norm(cats, top_sect)
 
     #---------- write data? ----------#

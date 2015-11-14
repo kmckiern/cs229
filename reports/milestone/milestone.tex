@@ -34,17 +34,28 @@ The research of Poole and Rosenthal has focused on quantifying the political ide
 
 We have collated freely available campaign finance [cite] and DW-NOMINATE ideal point [cite] datasets and performed a principal component analysis on the feature set extracted therefrom. The original scope of our project has been narrowed due to a reduction in the size of our group. While originally we had planned to investigate anomalous voting behavior and the ability to predict it solely by examining campaign finance data, we have shifted our focus on training a model to predict DW-NOMINATE ideal points, which directly reflect ideological stances and inter-/intra-party divisions [cite]. This shift has been prompted by datasets that were relatively more sparse than expected as well as the challenge of collating them.\\
 
-\begin{figure}[H]
 \section*{PCA of features}
+Financial data for a set of moderate candidates (as determined by sampling from the DW-NOMINATE scores) was obtained using the Open Secrets python API.  Of the available data, we chose to partition finance streams by sector.  For each sector, individual and PAC contributions are available.  These values were normalized separately as, in some cases, the relative magnitudes were very large.  Useful normalization of these vectors (weight determination) remains a future direction for this project.  These results can be seen in figure \ref{fig:fmtrx}.
+\begin{figure}[H]
 \centering
-\includegraphics[width=.9\textwidth]{../../data/features/visualize/mod_2014_fm.png}
+\includegraphics[width=.9\textwidth]{../../data/features/visualize/features.png}
 \caption{\label{fig:fmtrx}Heatmap of feature matrix.}
 \end{figure}
-
+PCA was run on this feature matrix under a variety of conditions.  The 'Other' category was first removed, as it is nondescript and lead to skewed results.  Then, the top 5 principal components were calculated on the full matrix, PAC contributions only, and individual contributions only.
 \begin{figure}[H]
 \centering
-\includegraphics[width=.9\textwidth]{../../data/features/visualize/pcs.png}
-\caption{\label{fig:fmtrx}Heapmap of PCA eigenvectors of feature matrix.}
+\includegraphics[width=.9\textwidth]{../../data/features/visualize/pcs_no_other.png}
+\caption{\label{fig:pc_all}Heatmap of PCA eigenvectors of feature matrix without 'Other'.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{../../data/features/visualize/pcs_no_other_pac.png}
+\caption{\label{fig:pc_all}Heatmap of PCA eigenvectors of PAC feature matrix without 'Other'.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{../../data/features/visualize/pcs_no_other_indiv.png}
+\caption{\label{fig:pc_indiv}Heatmap of PCA eigenvectors of individual feature matrix without 'Other'.}
 \end{figure}
 
 \end{document}
