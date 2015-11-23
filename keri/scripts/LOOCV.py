@@ -3,6 +3,8 @@
 import argparse
 import pandas as pd
 import os
+import sys
+sys.path.append('/Users/kerimckiernan/Documents/class/F15/working/cs229/joe/scripts')
 
 parser = argparse.ArgumentParser(description='LOOCV over dataset')
 parser.add_argument('--fm', type=str, help='feature matrix', default='../../data/features/cand_parse_moderates_2014_feat_matrix.pkl')
@@ -27,7 +29,10 @@ def main():
     for ndx, d in enumerate(data):
         test = d
         train = np.delete(data, (ndx), axis=0)
-        model, error = train.main(train, test)
+        test_score = scores[ndx]
+        train_score = np.delete(scores, (ndx))
+
+        model, error = train(train, test, test_score, train_score)
         errors.append(error)
         models.append(model)
 
