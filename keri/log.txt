@@ -88,3 +88,13 @@ i think i'm going vectorize by industry
 combined dwn db and candidate db
 built feature matrix for subset of moderate candidates
 
+------------------------------------------------------------
+11 22 2015
+
+TO DO
+- write wrapper for LOOCV
+- run LOOCV on dataset for following models:
+    linear regression
+    SV regression
+
+
