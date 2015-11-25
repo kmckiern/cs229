@@ -26,8 +26,9 @@ def main():
     dwn0 = np.array(cands['dwn0'])
     dwn1 = np.array(cands['dwn1'])
 
+    print ('meh', data.T.shape, dwn0.shape)
     # train via LOOCV
-    nc = cands.shape[0]
+    nc = cands.shape[1]
     loo = cross_validation.LeaveOneOut(nc)
     lr = []
     svr = []
