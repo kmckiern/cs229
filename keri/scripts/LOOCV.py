@@ -5,10 +5,13 @@ import pandas as pd
 import os
 import sys
 sys.path.append('/Users/kerimckiernan/Documents/class/F15/working/cs229/joe/scripts')
+import IPython
 
 parser = argparse.ArgumentParser(description='LOOCV over dataset')
-parser.add_argument('--fm', type=str, help='feature matrix', default='../../data/features/cand_parse_moderates_2014_feat_matrix.pkl')
-parser.add_argument('--cf', type=str, help='file of candidates and CIDs', default='../../joe/out/test.dat')
+parser.add_argument('--fm', type=str, help='feature matrix',
+        default='../../data/features/cand_parse_moderates_2014_feat_matrix.pkl')
+parser.add_argument('--cf', type=str, help='file of candidates and
+        CIDs', default='../../joe/out/test.dat')
 parser.add_argument('--train', type=str, help='training method')
 args, unknown = parser.parse_known_args()
 

@@ -97,4 +97,11 @@ TO DO
     linear regression
     SV regression
 
+------------------------------------------------------------
+11 24 2015
+
+TO DO
+- update feature matrix with new candidates
+- link LOOCV and train scripts
+- run on new feature matrix
 

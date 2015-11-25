@@ -11,17 +11,21 @@ import numpy as np
 import os_cid_call
 import IPython
 
-parser = argparse.ArgumentParser(description='get financial information for an input candidate')
-parser.add_argument('--cf', type=str, help='file of candidates and CIDs', default='../../joe/out/test.dat')
+parser = argparse.ArgumentParser(description='get financial information for an'
+        'input candidate')
+parser.add_argument('--cf', type=str, help='file of candidates and CIDs',
+        default='../../joe/out/test_update.dat')
 parser.add_argument('--yr', type=str, help='query year', default='2014')
 parser.add_argument('--ak', type=str, help='api key')
-parser.add_argument('--categories', type=str, help='sector code database file', default='../../data/candidates/CRP_Categories.txt')
-parser.add_argument('--pref', type=str, help='output file directory preface', default='../../data/features/')
+parser.add_argument('--categories', type=str, help='sector code database file',
+        default='../../data/candidates/CRP_Categories.txt')
+parser.add_argument('--pref', type=str, help='output file directory preface',
+        default='../../data/features/')
 args = parser.parse_args()
 
 def main():
     # get candidate info
-    cols = ['name', 'state', 'CID', 'note']
+    cols = ['name', 'state', 'CID', 'dwn0', 'dwn0']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
     cids = list(cands['CID'])
     nc = cands.shape[0]
