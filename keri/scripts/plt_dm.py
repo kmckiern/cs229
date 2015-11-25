@@ -20,17 +20,18 @@ args = parser.parse_args()
 
 sns.set(font_scale=.8)
 sns.set_style(style='white')
-cm = 'YlGnBu_r'
+cm = 'coolwarm'
 
 def main():
     data_file = args.df
     data_name = data_file.split('.')[0]
     df = pd.read_pickle(data_file)
-    df = df.drop('Other_pac', 1)
-    df = df.drop('Other_indiv', 1)
     df_col = df.columns
 
-    ax = sns.heatmap(df, cmap=cm)
+    cmin = 0 #float(df.min().min())
+    cmax = df.max().max()
+
+    ax = sns.heatmap(df, vmin=cmin, vmax=cmax, cmap=cm)
     fig = plt.gcf()
     plt.xticks(rotation=90)
     plt.yticks(rotation=0)

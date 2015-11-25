@@ -36,18 +36,16 @@ def dict_to_dat(fn, d):
 
 def d_norm(categories, data):
     num = len(categories)
-
-    fin_data = np.zeros((2, num))
+    fin_data = np.zeros(num)
     features = []
     for d in data:
         d_key = d['@attributes']['sector_name']
+        if d_key == 'Other':
+            continue
         col = categories.index(d_key)
-        fin_data[0, col] = float(d['@attributes']['indivs'])
-        fin_data[1, col] = float(d['@attributes']['pacs'])
-
-    row_sums = fin_data.sum(axis=1)
-    fin_data = fin_data / row_sums[:, np.newaxis]
-
+        fin_data[col] = float(d['@attributes']['pacs']) + float(d['@attributes']['indivs'])
+    row_sums = fin_data.sum()
+    fin_data = fin_data / row_sums
     return fin_data
 
 def main(args):
@@ -62,6 +60,7 @@ def main(args):
     top sector normalized
     '''
     cats = list(set(categories['Sector']))
+    cats.remove('Other')
 
     #---------- CANDIDATE FINANCE DATA ----------#
     '''
@@ -100,11 +99,7 @@ def main(args):
         import IPython
         IPython.embed()
 
-    f_pac = [i + '_pac' for i in cats]
-    f_indiv = [i + '_indiv' for i in cats]
-    feature_labels = f_pac + f_indiv
-
-    return np.hstack(sect_fin_data), feature_labels
+    return np.hstack(sect_fin_data), cats
 
 if __name__ == '__main__':
     import sys
