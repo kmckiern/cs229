@@ -1,46 +1,49 @@
 #!/bin/env python
 
+import IPython
 import argparse
+import numpy as np
 import pandas as pd
 import os
 import sys
-sys.path.append('/Users/kerimckiernan/Documents/class/F15/working/cs229/joe/scripts')
-import IPython
+sys.path.append('../../joe/scripts/')
+from train import *
+from sklearn import cross_validation
 
 parser = argparse.ArgumentParser(description='LOOCV over dataset')
 parser.add_argument('--fm', type=str, help='feature matrix',
         default='../../data/features/cand_parse_moderates_2014_feat_matrix.pkl')
-parser.add_argument('--cf', type=str, help='file of candidates and
-        CIDs', default='../../joe/out/test.dat')
-parser.add_argument('--train', type=str, help='training method')
+parser.add_argument('--cf', type=str, help='file of candidates and'
+        'CIDs', default='../../joe/out/test_update.dat')
 args, unknown = parser.parse_known_args()
 
 def main():
-    data = np.array(pd.read_pickle(args.fm))
-    cols = ['name', 'state', 'CID', 'note', 'dwn0', 'dwn1']
+    # read in data
+    data = pd.read_pickle(args.fm)
+    cols = ['name', 'state', 'CID', 'dwn0', 'dwn1']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
-    scores = list(cands['dwn0'])
+    cids = np.array(cands['CID'])
+    dwn0 = np.array(cands['dwn0'])
+    dwn1 = np.array(cands['dwn1'])
 
-    method = args.train
-    if method == 'LR':
-        from whatevr import lr as train
-    if method == 'SVR':
-        from whatevr import svr as train
+    # train via LOOCV
+    nc = cands.shape[0]
+    loo = cross_validation.LeaveOneOut(nc)
+    lr = []
+    svr = []
+    for train_index, test_index in loo:
+        X_train, X_test = data.T[cids[train_index]], data.T[cids[test_index]]
+        Y_train, Y_test = dwn0[train_index], dwn0[test_index]
+        lr.append(linear_regression(np.array(X_train).T, Y_train, np.array(X_test).T, Y_test))
+        svr.append(SVR(np.array(X_train).T, Y_train, np.array(X_test).T, Y_test))
 
-    errors = []
-    models = []
-    for ndx, d in enumerate(data):
-        test = d
-        train = np.delete(data, (ndx), axis=0)
-        test_score = scores[ndx]
-        train_score = np.delete(scores, (ndx))
+    # get minimum error results
+    lr = np.array(lr)
+    lr_min_err = lr[lr[:,1].argmin()]
+    svr = np.array(svr)
+    svr_min_err = svr[svr[:,1].argmin()]
 
-        model, error = train(train, test, test_score, train_score)
-        errors.append(error)
-        models.append(model)
-
-    avg_error = np.average(np.array(errors))
-    best_model = models[errors.argmin()]
+    IPython.embed()
 
 if __name__ == '__main__':
     main()

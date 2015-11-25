@@ -10,12 +10,10 @@ import IPython
 parser = argparse.ArgumentParser(description='plot pd dataframe as heatmap')
 parser.add_argument('--df', type=str, help='pd df pickle')
 parser.add_argument('--cols', type=str, help='column range')
-parser.add_argument('--o', type=str, help='name of output file',
-        default='features.png')
+parser.add_argument('--opref', type=str, help='name of output file directory',
+        default='../../data/features/visualize/')
 parser.add_argument('--pca', type=int, help='number of PCA'
         'components', default=0)
-parser.add_argument('--pchm', type=str, help='name of PCA HM output file')
-parser.add_argument('--pcpg', type=str, help='name of PCA PG output file')
 args = parser.parse_args()
 
 sns.set(font_scale=.8)
@@ -23,6 +21,8 @@ sns.set_style(style='white')
 cm = 'coolwarm'
 
 def main():
+    opref = args.opref
+
     data_file = args.df
     data_name = data_file.split('.')[0]
     df = pd.read_pickle(data_file)
@@ -35,7 +35,7 @@ def main():
     fig = plt.gcf()
     plt.xticks(rotation=90)
     plt.yticks(rotation=0)
-    fig.savefig(args.o)
+    fig.savefig(opref + 'feature_hm.png', bbox_inches='tight')
 
     nc = args.pca
     if nc > 0:
@@ -51,14 +51,14 @@ def main():
         pc_hm = sns.heatmap(pc_df, cmap=cm)
         fig = plt.gcf()
         plt.yticks(rotation=0)
-        fig.savefig(args.pchm)
+        fig.savefig(opref + 'pc_hm.png', bbox_inches='tight')
 
         plt.clf()
         g = sns.PairGrid(pc_df)
         g.map_lower(plt.hexbin, gridsize=30, mincnt=1, cmap=cm,
                 edgecolor='none')
         g.map_diag(sns.kdeplot, lw=1, legend=False)
-        g.savefig(args.pcpg)
+        g.savefig(opref + 'pc_pg.png', bbox_inches='tight')
 
 if __name__ == '__main__':
     main()    
