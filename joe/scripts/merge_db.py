@@ -2,9 +2,9 @@
 
 import sys
 
-fn_cand_parse = '../../data/ref/cand_parse.dat'
-fn_moderates  = '../out/MODERATES.dat'
-fn_out = '../out/cand_parse_moderates.dat'
+fn_cand_parse = '../../data/candidates/cand_parse.dat'
+fn_moderates  = '../out/ALL.dat'
+fn_out = '../out/cand_parse_all.dat'
 
 def main():
     f_out = open(fn_out, 'w')
@@ -17,9 +17,10 @@ def main():
         if len(line[1]) == 2:
             # check to see if they are in my db
             for db_line in moderates:
-                if line[0].lower() in db_line[-1] and line[1] == db_line[-3]:
+                if line[0].lower() in db_line and line[1] == db_line[-3]:
                     # bingo, we need to mark them
-                    line_marked = '\t'.join(line) + '\t' + '*' + '\n'
+                    line_marked = '\t'.join(line) + '\t' + db_line[4] \
+                                  + '\t' + '\t'.join(db_line[1:3]) + '\n'
                     f_out.write(line_marked)
     f_out.close()
 
