@@ -32,10 +32,10 @@ def main():
     lr = []
     svr = []
     for train_index, test_index in loo:
-        X_train, X_test = data.T[cids[train_index]], data.T[cids[test_index]]
+        X_train, X_test = np.array(data.T[cids[train_index]]).T, np.array(data.T[cids[test_index]]).T
         Y_train, Y_test = dwn0[train_index], dwn0[test_index]
-        lr.append(linear_regression(np.array(X_train).T, Y_train, np.array(X_test).T, Y_test))
-        svr.append(SVR(np.array(X_train).T, Y_train, np.array(X_test).T, Y_test))
+        lr.append(linear_regression(X_train, Y_train, X_test, Y_test))
+        svr.append(SVR(X_train, Y_train, X_test, Y_test))
 
     # get minimum error results
     lr = np.array(lr)
