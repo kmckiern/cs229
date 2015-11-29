@@ -12,7 +12,7 @@ from sklearn import cross_validation
 
 parser = argparse.ArgumentParser(description='LOOCV over dataset')
 parser.add_argument('--fm', type=str, help='feature matrix',
-        default='../../data/features/cand_parse_moderates_2014_feat_matrix.pkl')
+        default='../../data/features/cand_parse_all_2014_feat_matrix.pkl')
 parser.add_argument('--cf', type=str, help='file of candidates and'
         'CIDs', default='../../joe/out/test_update.dat')
 args, unknown = parser.parse_known_args()
@@ -20,14 +20,14 @@ args, unknown = parser.parse_known_args()
 def main():
     # read in data
     data = pd.read_pickle(args.fm)
-    cols = ['name', 'state', 'CID', 'dwn0', 'dwn1']
+    cols = ['name', 'state', 'CID', 'party', 'dwn0', 'dwn1']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
     cids = np.array(cands['CID'])
     dwn0 = np.array(cands['dwn0'])
     dwn1 = np.array(cands['dwn1'])
 
     # train via LOOCV
-    nc = cands.shape[1]
+    nc = cands.shape[0]
     loo = cross_validation.LeaveOneOut(nc)
     lr = []
     svr = []

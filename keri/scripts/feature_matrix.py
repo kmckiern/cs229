@@ -25,7 +25,7 @@ args = parser.parse_args()
 
 def main():
     # get candidate info
-    cols = ['name', 'state', 'CID', 'dwn0', 'dwn0']
+    cols = ['name', 'state', 'CID', 'party', 'dwn0', 'dwn0']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
     cids = list(cands['CID'])
     nc = cands.shape[0]
