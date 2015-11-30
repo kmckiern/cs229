@@ -33,13 +33,15 @@ def main():
 
     if args.pltd:
         import seaborn as sns 
-        cm = sns.diverging_palette(20,220,n=2) #'coolwarm'
+        import matplotlib.pyplot as plt
+        cm = sns.diverging_palette(20, 220, n=2)
         sns.set(font_scale=.8)
         sns.set_style(style='white')
-        # IPython.embed()
         party_df = sns.lmplot(x='DWN-0', y='DWN-1', hue='party', data=cands,
-                fit_reg=False, palette=cm)
-        party_df.savefig('../../data/out/dwn.png', dpi=400)
+                fit_reg=False, palette=cm, legend=False)
+        plt.legend(loc='upper right')
+        plt.title('distribution of DW-NOMINATE scores by party')
+        party_df.savefig('../../data/out/dwn.png', dpi=400, bbox_inches='tight')
 
     # train via LOOCV
     nc = cands.shape[0]
