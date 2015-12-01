@@ -15,13 +15,13 @@ from operator import itemgetter
 
 parser = argparse.ArgumentParser(description='LOOCV over dataset')
 parser.add_argument('--fm', type=str, help='feature matrix',
-        default='../../data/features/cand_parse_all_2014_feat_matrix.pkl')
+        default='../../data/features/cand_parse_all_2014_feat_matrix_unnormed_trimmed.pkl')
 parser.add_argument('--cf', type=str, help='file of candidates and'
-        'CIDs', default='../../joe/out/test_update.dat')
+        ' CIDs', default='../../joe/out/cand_parse_all.dat')
 parser.add_argument('--pltd', action='store_true', help='plot dwn' 
-        'distribution', default=False)
+        ' distribution', default=False)
 parser.add_argument('--ipnb', action='store_true', help='open ipython'
-        'notebook', default=False)
+        ' notebook', default=False)
 args, unknown = parser.parse_known_args()
 
 def main():
@@ -32,7 +32,6 @@ def main():
     cids = np.array(cands['CID'])
     dwn0 = np.array(cands['DWN-0'])
     dwn1 = np.array(cands['DWN-1'])
-    party = np.array(cands['party'])
 
     if args.pltd:
         import seaborn as sns 
@@ -44,7 +43,7 @@ def main():
                 fit_reg=False, palette=cm, legend=False)
         plt.legend(loc='upper right')
         plt.title('distribution of DW-NOMINATE scores by party')
-        party_df.savefig('../../data/out/dwn.png', dpi=400, bbox_inches='tight')
+        party_df.savefig('../../data/out/dwn_nooutlier.png', dpi=400, bbox_inches='tight')
 
     # train via LOOCV
     nc = cands.shape[0]
