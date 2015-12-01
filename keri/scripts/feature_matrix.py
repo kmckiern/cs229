@@ -21,6 +21,8 @@ parser.add_argument('--categories', type=str, help='sector code database file',
         default='../../data/candidates/CRP_Categories.txt')
 parser.add_argument('--pref', type=str, help='output file directory preface',
         default='../../data/features/')
+parser.add_argument('--norm', action='store_true', help='normalize fin data',
+        default=False)
 args = parser.parse_args()
 
 def main():
@@ -47,7 +49,11 @@ def main():
     # put into data frame
     df = pd.DataFrame(fmtrx, columns=feature_lbls, index=cids)
     from_str = args.cf.split('/')[-1].split('.')[0]
-    df.to_pickle(args.pref + from_str + '_' + str(args.yr) + '_feat_matrix.pkl')
+    if args.norm:
+        df.to_pickle(args.pref + from_str + '_' + str(args.yr) + '_feat_matrix.pkl')
+    else:
+        df.to_pickle(args.pref + from_str + '_' + str(args.yr) +
+                '_feat_matrix_unnormed.pkl')
 
 if __name__ == '__main__':
     main()

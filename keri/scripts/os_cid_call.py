@@ -25,6 +25,7 @@ parser.add_argument('--ak', type=str, help='api key')
 parser.add_argument('--categories', type=str, help='sector code database file', default='../../data/candidates/CRP_Categories.txt')
 parser.add_argument('--write_dicts', action='store_true', help='write candidate data to dat file', default=False)
 parser.add_argument('--pref', type=str, help='output file directory preface', default='../../data/out/examples/npelosi/')
+parser.add_argument('--norm', action='store_true', help='normalize fin data', default=False)
 parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', default=False)
 args, unknown = parser.parse_known_args()
 
@@ -34,7 +35,7 @@ def json_dict(d):
 def dict_to_dat(fn, d):
     print >>open(fn,'w+'), json_dict(d)
 
-def d_norm(categories, data):
+def group_data(categories, data, norm=False):
     num = len(categories)
     fin_data = np.zeros(num)
     features = []
@@ -44,8 +45,9 @@ def d_norm(categories, data):
             continue
         col = categories.index(d_key)
         fin_data[col] = float(d['@attributes']['pacs']) + float(d['@attributes']['indivs'])
-    row_sums = fin_data.sum()
-    fin_data = fin_data / row_sums
+    if norm:
+        row_sums = fin_data.sum()
+        fin_data = fin_data / row_sums
     return fin_data
 
 def main(args):
@@ -71,7 +73,7 @@ def main(args):
     except:
         print cid
         sys.exit()
-    sect_fin_data = d_norm(cats, top_sect)
+    sect_fin_data = group_data(cats, top_sect, args.norm)
 
     #---------- write data? ----------#
     if args.write_dicts:

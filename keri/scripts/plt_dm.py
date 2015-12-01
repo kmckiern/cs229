@@ -29,7 +29,7 @@ def main():
     df_col = df.columns
 
     cmin = 0 #float(df.min().min())
-    cmax = df.max().max()
+    cmax = float(df.max().max())
 
     ax = sns.heatmap(df, vmin=cmin, vmax=cmax, cmap=cm)
     fig = plt.gcf()
