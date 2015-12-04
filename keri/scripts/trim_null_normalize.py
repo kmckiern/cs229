@@ -31,7 +31,7 @@ def main():
     # normalize on a per candidate basis
     df_trim_norm = df_trim.div(df_trim.sum(axis=1), axis=0)
 
-    df_file_out = df_file.replace('unnormed', 'trim_normed_test')
+    df_file_out = df_file.replace('unnormed', 'trim_normed')
     df_trim_norm.to_pickle(df_file_out)
 
 if __name__ == '__main__':

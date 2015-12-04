@@ -1,5 +1,8 @@
 #!/bin/env python
 
+import matplotlib
+matplotlib.use('Agg')
+
 import argparse
 import pandas as pd
 import numpy as np
