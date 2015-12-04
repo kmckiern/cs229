@@ -77,9 +77,9 @@ def main():
     classifier = svm.SVR()
 
     # parameter distributions
-    param_dist = {'degree': [2,3,4,5],
-                  'kernel': ['linear','poly','rbf','sigmoid'],
-                  'C': np.arange(90,130)}
+    param_dist = {'degree': [2,4],
+                  'kernel': ['poly','rbf'],
+                  'C': np.arange(90,120,10)}
 
     # create the search
     n_iter_search = 100
@@ -88,7 +88,7 @@ def main():
                                  #n_iter=n_iter_search,
                                  # cv=number of folds
                                  cv=5,
-                                 n_jobs=8)
+                                 n_jobs=-1)
     t0 = time.time()
     # for SVC, need to convert 
     # dw array to a boolean array for classification

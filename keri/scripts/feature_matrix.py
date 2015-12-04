@@ -16,7 +16,8 @@ parser = argparse.ArgumentParser(description='get financial information for an'
 parser.add_argument('--cf', type=str, help='file of candidates and CIDs',
         default='../../joe/out/test_update.dat')
 parser.add_argument('--yr', type=str, help='query year', default='2014')
-parser.add_argument('--ak', type=str, help='api key')
+parser.add_argument('--ak', type=str, help='api key',
+        default='4db73104ad1a3dc93ad29dda55286997')
 parser.add_argument('--categories', type=str, help='sector code database file',
         default='../../data/candidates/CRP_Categories.txt')
 parser.add_argument('--pref', type=str, help='output file directory preface',

@@ -21,7 +21,7 @@ import sys
 parser = argparse.ArgumentParser(description='get financial information for an input candidate')
 parser.add_argument('--cid', type=str, help='CRP CID', default='N00007360')
 parser.add_argument('--yr', type=str, help='query year', default='2014')
-parser.add_argument('--ak', type=str, help='api key')
+parser.add_argument('--ak', type=str, help='api key', default='4db73104ad1a3dc93ad29dda55286997')
 parser.add_argument('--categories', type=str, help='sector code database file', default='../../data/candidates/CRP_Categories.txt')
 parser.add_argument('--write_dicts', action='store_true', help='write candidate data to dat file', default=False)
 parser.add_argument('--pref', type=str, help='output file directory preface', default='../../data/out/examples/npelosi/')
@@ -101,6 +101,7 @@ def main(args):
         import IPython
         IPython.embed()
 
+    print (np.hstack(sect_fin_data), cats)
     return np.hstack(sect_fin_data), cats
 
 if __name__ == '__main__':
