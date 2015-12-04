@@ -30,7 +30,7 @@ def main():
             # check to see if they are in my db
             for db_line in peeps:
                 if line[0].lower() in db_line and \
-                   line[1] == db_line[-3] and
+                   line[1] == db_line[-3] and \
                    # TO DO: add condition for checking party affiliation
                    True:
                     # bingo, we need to mark them
