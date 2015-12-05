@@ -3,11 +3,10 @@
 import argparse, os, sys
 
 
-parser = argparse.ArgumentParser(description='pluck candidates from my
-        databse for whom we also have financial data')
-parser.add_argument('--fn_cand_parse', type=str, help="keri's cand parse file name", required=True)
+parser = argparse.ArgumentParser(description='pluck candidates from my databse for whom we also have financial data')
+parser.add_argument('--fn_cand_parse', type=str, help="keri's cand parse file", default='../../data/candidates/cand_parse.dat')
 parser.add_argument('--fn_dw_data', type=str, help='my dwn database filename', default='../out/ALL.dat')
-parser.add_argument('--fn_save', type=str, help='save to this file', required=True)
+parser.add_argument('--fn_save', type=str, help='save to this file', default='../out/cand_parse_all_fresh.dat')
 args = parser.parse_args()
 
 
@@ -26,17 +25,26 @@ def main():
 
     for line in cand_parse_raw:
         # exclude senate people and those with label 'pres'
-        if len(line[1]) == 2:
+        state = line[-3]
+
+        if len(state) == 2 and state != 'None':
+            last_name = line[0].lower()
+            party = line[-2]
+
             # check to see if they are in my db
             for db_line in peeps:
-                if line[0].lower() in db_line and \
-                   line[1] == db_line[-3] and \
-                   # TO DO: add condition for checking party affiliation
-                   True:
+                db_fields = db_line.split()
+
+                # match name
+                if last_name in db_line and \
+                   # and state
+                   state == db_fields[3] and \
+                   # and party
+                   party == db_fields[4]:
                     # bingo, we need to mark them
-                    line_marked = '\t'.join(line) + '\t' + db_line[4] \
-                                  + '\t' + '\t'.join(db_line[1:3]) + '\n'
-                    f_out.write(line_marked)
+                    line_to_write = '\t'.join(line) + '\t' + \
+                                    '\t'.join(db_line[1:3]) + '\n'
+                    f_out.write(line_to_write)
     f_out.close()
 
 
