@@ -24,6 +24,16 @@ parser.add_argument('--ipnb', action='store_true', help='open ipython'
         ' notebook', default=False)
 args, unknown = parser.parse_known_args()
 
+def report(grid_scores, n_top=10):
+        top_scores = sorted(grid_scores, key=itemgetter(1), reverse=True)[:n_top]
+        for i, score in enumerate(top_scores):
+            print("Model with rank: {0}".format(i + 1))
+            print("Mean validation score: {0:.3f} (std: {1:.3f})".format( \
+                score.mean_validation_score, np.std(score.cv_validation_scores)))
+            print("Parameters: {0}".format(score.parameters)) 
+            print("")
+
+
 def main():
     # read in data
     data = pd.read_pickle(args.fm)
@@ -45,75 +55,65 @@ def main():
         plt.title('distribution of DW-NOMINATE scores by party')
         party_df.savefig('../../data/out/dwn_nooutlier.png', dpi=400, bbox_inches='tight')
 
-    # train via LOOCV
-    nc = cands.shape[0]
-    loo = cross_validation.LeaveOneOut(nc)
-    lr = []
-    svr = []
-    for train_index, test_index in loo:
-        X_train, X_test = np.array(data.T[cids[train_index]]).T, np.array(data.T[cids[test_index]]).T
-        Y_train, Y_test = dwn0[train_index], dwn0[test_index]
-        lr.append(linear_regression(X_train, Y_train, X_test, Y_test))
-        svr.append(SVR(X_train, Y_train, X_test, Y_test))
-
-    # cross-validation and hyperparameter optimization
-    X_raw, Y_raw, Y2_raw = np.array(data), dwn0.T, dwn1.T
+    # training set and tragets 
+    X_raw, DWN_0, DWN_1 = np.array(data), dwn0.T, dwn1.T
     
-    # partition into training and test set
-    X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X_raw, Y_raw, test_size=0.2, random_state=0)
-    dat_iterable = cross_validation.train_test_split(X_raw, Y_raw, test_size=0.2, random_state=0)
-
-    def report(grid_scores, n_top=10):
-        top_scores = sorted(grid_scores, key=itemgetter(1), reverse=True)[:n_top]
-        for i, score in enumerate(top_scores):
-            print("Model with rank: {0}".format(i + 1))
-            print("Mean validation score: {0:.3f} (std: {1:.3f})".format( \
-                score.mean_validation_score, np.std(score.cv_validation_scores)))
-            print("Parameters: {0}".format(score.parameters)) 
-            print("")
-        return score.parameters
+    # partition data into training and test set for each dwn score
+    X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X_raw, DWN_0, test_size=0.2, random_state=0)
+    X_train_2, X_test_2, Y_train_2, Y_test_2 = cross_validation.train_test_split(X_raw, DWN_1, test_size=0.2, random_state=0)
 
     # randomized parameter search dat shit
-    classifier = svm.SVR()
+    clf = svm.SVR()
 
-    # parameter distributions
-    param_dist = {'degree': [2,4],
-                  'kernel': ['poly','rbf'],
-                  'C': np.arange(90,120,10)}
+    # parameter distributions. initially we will just search over
+    # different orders of magnitude of the parameters.
+    param_grid = [{'kernel': ['rbf'], 
+                    'gamma': [1e1, 1e0, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6],
+                        'C': [1e-2, 1e-1, 1, 10, 100, 1000]
+                   },
+
+                  {'kernel': ['linear'],
+                        'C': [1e-2, 1e-1, 1, 10, 100, 1000]
+                   },
+
+                  {'kernel': ['poly'],
+                        'C': [1e-2, 1e-1, 1, 10, 100, 1000],
+                   'degree': [2, 3, 4, 5]
+                   }
+                 ]
 
     # create the search
-    n_iter_search = 100
-    random_search = GridSearchCV(classifier, 
-                                 param_dist, 
-                                 #n_iter=n_iter_search,
-                                 # cv=number of folds
-                                 cv=5,
-                                 n_jobs=-1)
+    grid_search = GridSearchCV(clf, param_grid, cv=5, n_jobs=4)
+
     t0 = time.time()
+
     # for SVC, need to convert 
     # dw array to a boolean array for classification
-    y_temp = []
-    for i in Y_raw:
-        if i > 0: y_temp.append(1)
-        else: y_temp.append(0)
-    y_temp = np.array(y_temp)
+    if isinstance(clf, svm.SVR):
+        y_labels = []
 
-    # perform the search
-    random_search.fit(X_raw, Y_raw)
-    t1 = time.time()
-    print("RandomizedSearchCV took %.2f seconds for %d candidates" \
-                  " parameter settings." % ((t1 - t0), n_iter_search))
-    params_2_use = report(random_search.grid_scores_)
-    clf_new = svm.SVR(kernel=params_2_use['kernel'], 
-                      C=params_2_use['C'],
-                      degree=params_2_use['degree']).fit(X_train, Y_train)
-    print(clf_new.score(X_test, Y_test))
+        for i in DWN_0:
+            if i > 0: y_labels.append(1)
+            else: y_labels.append(0)
+    
+        y_labels = np.array(y_labels)
 
-    # get minimum error results
-    lr = np.array(lr)
-    lr_min_err = lr[lr[:,1].argmin()]
-    svr = np.array(svr)
-    svr_min_err = svr[svr[:,1].argmin()]
+    # perform the search on development subset of data
+    grid_search.fit(X_train, Y_train)
+    print("RandomizedSearchCV took %.2f seconds." % (time.time() - t0))
+
+    report(grid_search.grid_scores_)
+
+    #clf_new = svm.SVR(kernel=params_2_use['kernel'], 
+    #                  C=params_2_use['C'],
+    #                  degree=params_2_use['degree']).fit(X_train, Y_train)
+    #print(clf_new.score(X_test, Y_test))
+
+    ## get minimum error results
+    #lr = np.array(lr)
+    #lr_min_err = lr[lr[:,1].argmin()]
+    #svr = np.array(svr)
+    #svr_min_err = svr[svr[:,1].argmin()]
 
     if args.ipnb:
         IPython.embed()
