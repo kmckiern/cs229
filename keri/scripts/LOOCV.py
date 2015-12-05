@@ -83,22 +83,26 @@ def main():
     # create the search, one for each DWN dimension.
     grid_search_0 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
     grid_search_1 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
+    grid_search_SVC = GridSearchCV(svm.SVC(), param_grid, cv=5, n_jobs=4)
     t0 = time.time()
 
     # for SVC, need to convert 
     # dw array to a boolean array for classification
-    #if isinstance(clf, svm.SVR):
-    #    y_labels = []
-    #
-    #    for i in DWN_0:
-    #        if i > 0: y_labels.append(1)
-    #        else: y_labels.append(0)
-    # 
-    #    y_labels = np.array(y_labels)
+    Y_train_SVC, Y_test_SVC = [], []
+    
+    for i in range(len(Y_train)):
+
+        if Y_train[i] > 0: Y_train_SVC.append(1)
+        else: Y_train_SVC.append(0)
+        if Y_test[i] > 0: Y_test_SVC.append(1)
+        else: Y_test_SVC.append(0)
+    
+    Y_train_SCV, Y_test_SVC = np.array(Y_train_SVC, Y_test_SVC)
 
     # perform the search on development subset of data
     grid_search_0.fit(X_train, Y_train)
     grid_search_1.fit(X_train_2, Y_train_2)
+    grid_search_SVC.fit(X_train, Y_train_SVC)
     print('RandomizedSearchCV took % .2f seconds.' % (time.time() - t0))
     print('')
 
@@ -110,12 +114,19 @@ def main():
     report(grid_search_1.grid_scores_)
     print('')
 
+    print('Grid search for SVC:')
+    report(grid_search_SVC.grid_scores_)
+    print('')
+
     # use best performing training model to estimate the test set error
     clf_best_0 = grid_search_0.best_estimator_
     clf_best_1 = grid_search_1.best_estimator_
+    clf_best_SVC = grid_search_SVC.best_estimator_
     test_score_0 = clf_best_0.score(X_test, Y_test) 
     test_score_1 = clf_best_1.score(X_test_2, Y_test_2)
-    print('Test scores: (% .2f, % .2f) for DWN0 and DWN1, respectively.' % (test_score_0, test_score_1))
+    test_score_SVC = clf_best_SVC.score(X_test, Y_test_SVC)
+    print('Test scores: (% .2f, % .2f, % .2f) for DWN0, DWN1, and SVC, \
+           respectively.' % (test_score_0, test_score_1, test_score_SVC))
     print('Done.')
 
     if args.ipnb:
