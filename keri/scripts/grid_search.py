@@ -13,15 +13,12 @@ from sklearn import cross_validation, svm
 from sklearn.grid_search import RandomizedSearchCV, GridSearchCV
 from operator import itemgetter
 
-parser = argparse.ArgumentParser(description='LOOCV over dataset')
+parser = argparse.ArgumentParser(description='train the modelz')
 parser.add_argument('--fm', type=str, help='feature matrix',
-        default='../../data/features/cand_parse_all_2014_feat_matrix_unnormed_trimmed.pkl')
-parser.add_argument('--cf', type=str, help='file of candidates and'
-        ' CIDs', default='../../joe/out/cand_parse_all.dat')
-parser.add_argument('--pltd', action='store_true', help='plot dwn' 
-        ' distribution', default=False)
-parser.add_argument('--ipnb', action='store_true', help='open ipython'
-        ' notebook', default=False)
+        default='../../data/features/cand_parse_all_2014_feat_matrix_trim_normed.pkl')
+parser.add_argument('--cf', type=str, help='file of candidates and CIDs', default='../../joe/out/cand_parse_all.dat')
+parser.add_argument('--pltd', action='store_true', help='plot dwn distribution', default=False)
+parser.add_argument('--ipnb', action='store_true', help='open ipython notebook', default=False)
 args, unknown = parser.parse_known_args()
 
 
@@ -38,11 +35,22 @@ def report(grid_scores, n_top=10):
 def main():
     # read in data
     data = pd.read_pickle(args.fm)
+    data_IDs = list( data.index )
+
     cols = ['name', 'state', 'CID', 'party', 'DWN-0', 'DWN-1']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
-    cids = np.array(cands['CID'])
-    dwn0 = np.array(cands['DWN-0'])
-    dwn1 = np.array(cands['DWN-1'])
+
+    dw0 = []
+    dw1 = []
+
+    for id1 in data_IDs:
+        for i, id2 in enumerate( cands['CID'] ):
+            if id1 == id2:
+                dw0.append(cands['DWN-0'][i])
+                dw1.append(cands['DWN-1'][i])
+
+    dwn0 = np.array(dw0)
+    dwn1 = np.array(dw1)
 
     if args.pltd:
         import seaborn as sns 
@@ -91,19 +99,21 @@ def main():
     Y_train_SVC, Y_test_SVC = [], []
     
     for i in range(len(Y_train)):
-
         if Y_train[i] > 0: Y_train_SVC.append(1)
         else: Y_train_SVC.append(0)
+
+    for i in range(len(Y_test)):   
         if Y_test[i] > 0: Y_test_SVC.append(1)
         else: Y_test_SVC.append(0)
     
-    Y_train_SCV, Y_test_SVC = np.array(Y_train_SVC, Y_test_SVC)
+    Y_train_SCV, Y_test_SVC = np.array(Y_train_SVC), np.array(Y_test_SVC)
 
+    print('Performing search...')
     # perform the search on development subset of data
     grid_search_0.fit(X_train, Y_train)
     grid_search_1.fit(X_train_2, Y_train_2)
     grid_search_SVC.fit(X_train, Y_train_SVC)
-    print('RandomizedSearchCV took % .2f seconds.' % (time.time() - t0))
+    print('GridSearchCV took % .2f seconds.' % (time.time() - t0))
     print('')
 
     print('Grid search over DWN0:')
@@ -125,8 +135,7 @@ def main():
     test_score_0 = clf_best_0.score(X_test, Y_test) 
     test_score_1 = clf_best_1.score(X_test_2, Y_test_2)
     test_score_SVC = clf_best_SVC.score(X_test, Y_test_SVC)
-    print('Test scores: (% .2f, % .2f, % .2f) for DWN0, DWN1, and SVC, \
-           respectively.' % (test_score_0, test_score_1, test_score_SVC))
+    print('Test scores: (% .2f, % .2f, % .2f) for DWN0, DWN1, and SVC, respectively.' % (test_score_0, test_score_1, test_score_SVC))
     print('Done.')
 
     if args.ipnb:
