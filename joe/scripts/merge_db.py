@@ -11,6 +11,7 @@ args = parser.parse_args()
 
 
 def main():
+    already_seen = set([])
     f_out = open(args.fn_save, 'w')
 
     with open(args.fn_dw_data, 'r') as f_dwn:
@@ -26,6 +27,7 @@ def main():
     for line in cand_parse_raw:
         # exclude senate people and those with label 'pres'
         state = line[-3]
+        cand_ID = line[-1]
 
         if len(state) == 2 and state != 'None':
             last_name = line[0].lower()
@@ -33,18 +35,15 @@ def main():
 
             # check to see if they are in my db
             for db_line in peeps:
-                db_fields = db_line.split()
 
-                # match name
-                if last_name in db_line and \
-                   # and state
-                   state == db_fields[3] and \
-                   # and party
-                   party == db_fields[4]:
-                    # bingo, we need to mark them
-                    line_to_write = '\t'.join(line) + '\t' + \
-                                    '\t'.join(db_line[1:3]) + '\n'
-                    f_out.write(line_to_write)
+                if last_name in db_line and state == db_line[3] and party == db_line[4]:
+
+                    if not cand_ID in already_seen:
+                        already_seen.add(cand_ID)
+                        # bingo, we need to process them
+                        line_to_write = '\t'.join(line) + '\t' + \
+                                        '\t'.join(db_line[1:3]) + '\n'
+                        f_out.write(line_to_write)
     f_out.close()
 
 
