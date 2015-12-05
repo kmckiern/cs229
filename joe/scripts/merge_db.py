@@ -30,7 +30,7 @@ def main():
         cand_ID = line[-1]
 
         if len(state) == 2 and state != 'None':
-            last_name = line[0].lower()
+            last_name = line[1].lower()
             party = line[-2]
 
             # check to see if they are in my db
