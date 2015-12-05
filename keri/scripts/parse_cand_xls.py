@@ -11,8 +11,9 @@ dists = list(x['DistIDRunFor'])
 firsts = []
 lasts = []
 for i in names:
-    f, l = i.split(',')
-    firsts.append(f)
+    l, f = i.split(',')
+    f_only = f.split()[0]
+    firsts.append(f_only)
     lasts.append(l)
 
 # parse dist ID to get candidate state
