@@ -24,6 +24,7 @@ parser.add_argument('--ipnb', action='store_true', help='open ipython'
         ' notebook', default=False)
 args, unknown = parser.parse_known_args()
 
+
 def report(grid_scores, n_top=10):
         top_scores = sorted(grid_scores, key=itemgetter(1), reverse=True)[:n_top]
         for i, score in enumerate(top_scores):
@@ -62,9 +63,6 @@ def main():
     X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X_raw, DWN_0, test_size=0.2, random_state=0)
     X_train_2, X_test_2, Y_train_2, Y_test_2 = cross_validation.train_test_split(X_raw, DWN_1, test_size=0.2, random_state=0)
 
-    # randomized parameter search dat shit
-    clf = svm.SVR()
-
     # parameter distributions. initially we will just search over
     # different orders of magnitude of the parameters.
     param_grid = [{'kernel': ['rbf'], 
@@ -82,41 +80,47 @@ def main():
                    }
                  ]
 
-    # create the search
-    grid_search = GridSearchCV(clf, param_grid, cv=5, n_jobs=4)
-
+    # create the search, one for each DWN dimension.
+    grid_search_0 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
+    grid_search_1 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
     t0 = time.time()
 
     # for SVC, need to convert 
     # dw array to a boolean array for classification
-    if isinstance(clf, svm.SVR):
-        y_labels = []
-
-        for i in DWN_0:
-            if i > 0: y_labels.append(1)
-            else: y_labels.append(0)
-    
-        y_labels = np.array(y_labels)
+    #if isinstance(clf, svm.SVR):
+    #    y_labels = []
+    #
+    #    for i in DWN_0:
+    #        if i > 0: y_labels.append(1)
+    #        else: y_labels.append(0)
+    # 
+    #    y_labels = np.array(y_labels)
 
     # perform the search on development subset of data
-    grid_search.fit(X_train, Y_train)
-    print("RandomizedSearchCV took %.2f seconds." % (time.time() - t0))
+    grid_search_0.fit(X_train, Y_train)
+    grid_search_1.fit(X_train_2, Y_train_2)
+    print('RandomizedSearchCV took % .2f seconds.' % (time.time() - t0))
+    print('')
 
-    report(grid_search.grid_scores_)
+    print('Grid search over DWN0:')
+    report(grid_search_0.grid_scores_)
+    print('')
 
-    #clf_new = svm.SVR(kernel=params_2_use['kernel'], 
-    #                  C=params_2_use['C'],
-    #                  degree=params_2_use['degree']).fit(X_train, Y_train)
-    #print(clf_new.score(X_test, Y_test))
+    print('Grid search for DWN1:')
+    report(grid_search_1.grid_scores_)
+    print('')
 
-    ## get minimum error results
-    #lr = np.array(lr)
-    #lr_min_err = lr[lr[:,1].argmin()]
-    #svr = np.array(svr)
-    #svr_min_err = svr[svr[:,1].argmin()]
+    # use best performing training model to estimate the test set error
+    clf_best_0 = grid_search_0.best_estimator_
+    clf_best_1 = grid_search_1.best_estimator_
+    test_score_0 = clf_best_0.score(X_test, Y_test) 
+    test_score_1 = clf_best_1.score(X_test_2, Y_test_2)
+    print('Test scores: (% .2f, % .2f) for DWN0 and DWN1, respectively.' % (test_score_0, test_score_1))
+    print('Done.')
 
     if args.ipnb:
         IPython.embed()
+
 
 if __name__ == '__main__':
     main()
