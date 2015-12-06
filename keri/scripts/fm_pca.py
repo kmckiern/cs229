@@ -25,6 +25,7 @@ def main():
     # get data frame
     file_name = args.pref + args.cf
     df = pd.read_pickle(file_name)
+    rows = df.index
 
     # do PCA
     nc = args.pca
@@ -34,7 +35,7 @@ def main():
         pca.fit(df.T)
         PCs = pca.components_
         cols = ['PC ' + str(i) for i in range(PCs.shape[0])]
-        pc_df = pd.DataFrame(PCs.T, columns=cols)
+        pc_df = pd.DataFrame(PCs.T, index=rows, columns=cols)
         of = file_name.replace('.pkl', '_pc' + str(nc) + '.pkl')
         pc_df.to_pickle(of)
 
