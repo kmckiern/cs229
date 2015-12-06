@@ -15,9 +15,9 @@ from operator import itemgetter
 
 parser = argparse.ArgumentParser(description='LOOCV over dataset')
 parser.add_argument('--fm', type=str, help='feature matrix',
-        default='../../data/features/cand_parse_all_2014_feat_matrix_unnormed_trimmed.pkl')
+        default='../../data/features/cand_parse_all_fresh_2014_feat_matrix_trim_normed.pkl')
 parser.add_argument('--cf', type=str, help='file of candidates and'
-        ' CIDs', default='../../joe/out/cand_parse_all.dat')
+        ' CIDs', default='../../joe/out/split/cand_parse_all_freshG.dat')
 parser.add_argument('--pltd', action='store_true', help='plot dwn' 
         ' distribution', default=False)
 parser.add_argument('--ipnb', action='store_true', help='open ipython'
@@ -54,7 +54,7 @@ def main():
                 fit_reg=False, palette=cm, legend=False)
         plt.legend(loc='upper right')
         plt.title('distribution of DW-NOMINATE scores by party')
-        party_df.savefig('../../data/out/dwn_nooutlier.png', dpi=400, bbox_inches='tight')
+        party_df.savefig('../../data/out/dwn.png', dpi=400, bbox_inches='tight')
 
     # training set and tragets 
     X_raw, DWN_0, DWN_1 = np.array(data), dwn0.T, dwn1.T
