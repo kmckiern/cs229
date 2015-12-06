@@ -4,7 +4,7 @@
 for a list of candidates, generate a matrix of features
 """
 
-import os
+import os, sys
 import argparse
 import pandas as pd
 import numpy as np
@@ -58,6 +58,7 @@ def main():
     nan_indices = np.where(nans == True)[0]
     if len(nan_indices) == fmtrx.shape[0]:
         print ('out of api calls: ' + args.cf)
+        sys.exit()
 
     # put into data frame
     df = pd.DataFrame(fmtrx, columns=feature_lbls, index=cids)

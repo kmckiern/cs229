@@ -102,7 +102,7 @@ def main(args):
         import IPython
         IPython.embed()
 
-    print (np.hstack(sect_fin_data), cats)
+    # print (np.hstack(sect_fin_data), cats)
     return np.hstack(sect_fin_data), cats
 
 if __name__ == '__main__':
