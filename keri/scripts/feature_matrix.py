@@ -9,7 +9,6 @@ import argparse
 import pandas as pd
 import numpy as np
 import os_cid_call
-import IPython
 
 parser = argparse.ArgumentParser(description='get financial information for an'
         ' input candidate')
@@ -33,9 +32,11 @@ def main():
     cids = list(cands['CID'])
     nc = cands.shape[0]
 
-    scores = np.zeros((len(dwn0), 2)
-    scores[:,0] = cands['dwn0']
-    scores[:,1] = cands['dwn1']
+    dwn0 = cands['dwn0']
+    dwn1 = cands['dwn1']
+    scores = np.zeros((len(dwn0), 2))
+    scores[:,0] = dwn0
+    scores[:,1] = dwn1
 
     # to avoid module errors
     args.write_dicts = False

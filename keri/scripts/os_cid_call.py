@@ -71,7 +71,7 @@ def main(args):
     try:
         top_sect = CRP.candSector.get(cid=cid, year=yr)
     except:
-        print cid
+        print (args, cid)
         sys.exit()
     sect_fin_data = group_data(cats, top_sect, args.norm)
 
