@@ -1,190 +1,635 @@
 # [congress_number] [ideal_pt_dimension_1] [ideal_point_dimension_2] [state] [party] [name]
+100	 0.7380	-0.5510	NONE	R	reagan
 100	 0.7530	 0.4220	AZ	R	stump b
+100	 0.5390	-0.1050	AZ	R	kyl j
+100	 0.5700	 0.3650	CA	R	herger w
+100	-0.5460	-0.3940	CA	D	pelosi n
+100	-0.5080	-0.5080	CA	D	miller g
+100	-0.6170	-0.6970	CA	D	dellums r
+100	-0.6060	-0.5970	CA	D	stark f
+100	-0.5670	-0.3940	CA	D	edwards d
+100	 0.5830	 0.8280	CA	R	shumway n
+100	-0.6000	-0.0350	CA	D	roybal e
+100	-0.6880	-0.0390	CA	D	dymally m
+100	 0.5530	 0.1490	CA	R	dreier d
+100	 0.6960	-0.1410	CA	R	dannemeyer
+100	 0.5470	 0.0380	CA	R	badham r
+100	 0.6100	 0.2200	CA	R	lungren d
+100	 0.5130	-0.3180	FL	R	mack c
+100	-0.5730	-0.2230	GA	D	lewis j
+100	-0.6450	-0.3620	IL	D	hayes c
+100	-0.6590	-0.4980	IL	D	savage g
+100	-0.5400	-0.2320	IL	D	collins c
+100	-0.5130	-0.5680	IL	D	yates s
 100	 0.7780	 0.0480	IL	R	crane p
+100	 0.6340	 0.2520	IN	R	burton d
+100	-0.5630	 0.8220	KY	D	perkins c
+100	-0.6420	-0.6280	MI	D	conyers j
+100	-0.5300	-0.0310	MI	D	bonior d
+100	-0.6680	-0.5430	MI	D	crockett g
+100	-0.5050	 0.1630	MI	D	ford w
+100	-0.5350	 0.2640	MN	D	oberstar j
+100	-0.5120	-0.9390	MO	D	clay w
+100	 0.5550	-0.5460	NH	R	smith r
+100	-0.5280	-0.1450	NJ	D	rodino p
+100	-0.5220	-0.2480	NY	D	towns e
+100	-0.5600	-0.4810	NY	D	owens m
+100	-0.5210	-0.3930	NY	D	rangel c
+100	-0.5780	-0.6760	NY	D	weiss t
+100	-0.5360	-0.2480	NY	D	garcia r
+100	 0.5090	 0.2000	NC	R	coble h
+100	-0.5390	-0.2990	OH	D	stokes l
+100	 0.5320	-0.0670	OR	R	smith d
+100	 0.5650	-0.4940	PA	R	walker r
+100	 0.5780	 0.3470	TX	R	barton j
+100	 0.5210	 0.0170	TX	R	fields j
+100	-0.6020	-0.1670	TX	D	leland g
+100	 0.6700	 0.3260	TX	R	delay t
+100	 0.6990	 0.1010	TX	R	armey d
+100	 0.5170	 0.3410	UT	R	hansen j
+100	 0.6750	-0.3250	WI	R	sensenbrenn
+100	 0.6050	 0.0850	WY	R	cheney r
+101	 0.6490	-0.3210	NONE	R	bush
+101	 0.6410	 0.2500	CA	R	rohrabacher
+101	 0.5300	 0.3980	FL	R	stearns c
+101	-0.5720	-0.2250	GA	D	lewis j
 101	 0.8090	 0.1480	MO	R	hancock m
-102	 0.7580	-0.1150	CA	R	dannemeyer
+101	 0.5550	-0.5460	NH	R	smith r
+101	 0.5100	-0.6710	NH	R	douglas c
+101	-0.5720	-0.4450	NJ	D	payne d
+101	-0.7360	-0.4970	TX	D	washington
+101	 0.6940	 0.1010	TX	R	armey r
+101	-0.5980	-0.1430	WA	D	mcdermott
+102	 0.7440	 0.4210	AZ	R	stump
+102	 0.5390	-0.1050	AZ	R	kyl
+102	 0.5960	 0.3840	CA	R	herger
+102	-0.5220	-0.3790	CA	D	pelosi
+102	-0.6060	-0.6930	CA	D	dellums
+102	-0.6210	-0.5960	CA	D	stark
+102	 0.6480	 0.3050	CA	R	doolittle
+102	-0.5980	-0.0150	CA	D	roybal
+102	-0.7080	-0.1030	CA	D	waters
+102	 0.5020	 0.2670	CA	R	hunter
+102	 0.6350	 0.0390	CO	R	allard
+102	 0.5580	 0.2390	CO	R	hefley
+102	 0.5590	 0.3850	FL	R	stearns
+102	-0.5700	-0.2280	GA	D	lewis j
+102	-0.7030	-0.5230	IL	D	savage
+102	-0.5250	-0.5890	IL	D	yates
 102	 0.8000	 0.0490	IL	R	crane
+102	 0.6580	 0.2640	IN	R	burton
+102	 0.5170	 0.0700	KY	R	bunning
+102	-0.5630	 0.8220	KY	D	perkins
+102	-0.6310	-0.6120	MI	D	conyers
+102	-0.5220	 0.0590	MI	D	bonior
+102	-0.6180	-0.2190	MI	D	collins b
+102	-0.5300	 0.3410	MN	D	oberstar
+102	-0.5200	-1.0400	MO	D	clay
 102	 0.8090	 0.1480	MO	R	hancock
-102	 0.7610	-0.2900	WI	R	sensenbrenn
+102	 0.5240	-0.0840	MT	R	marlenee
+102	-0.5100	-0.2180	NY	D	towns
+102	-0.5950	-0.6540	NY	D	weiss
+102	 0.5040	-0.0530	NY	R	solomon
+102	 0.5530	 0.2410	NC	R	coble
+102	 0.5530	 0.2350	NC	R	taylor c
+102	 0.5270	 0.2280	OH	R	boehner
+102	-0.5180	-0.3060	OH	D	stokes
+102	-0.5780	 0.4760	OR	D	kopetski
+102	-0.5150	-0.1830	PA	D	blackwell
+102	 0.6250	-0.3330	PA	R	walker
+102	 0.6330	 0.6560	TX	R	johnson s
+102	 0.6000	 0.3490	TX	R	barton
+102	 0.6620	 0.3070	TX	R	delay
+102	 0.6890	 0.1010	TX	R	armey
+102	 0.5140	 0.3530	UT	R	hansen
+103	-0.5650	 0.4980	AL	D	hilliard
+103	-0.5190	-0.4830	CA	D	hamburg
+103	 0.5810	 0.1890	CA	R	baker b
+103	 0.5180	 1.0110	CA	R	pombo
+103	-0.5260	-0.3060	CA	D	becerra
 103	 0.8900	-0.1580	CA	R	royce
+103	-0.6070	 0.1050	CA	D	filner
+103	 0.5170	 0.2570	FL	R	mica
+103	-0.5220	 0.2840	FL	D	meek
+103	-0.5850	 0.2510	FL	D	hastings
+103	 0.5460	 0.3290	GA	R	linder
+103	-0.5690	-0.2310	GA	D	lewis j
+103	 0.5480	 0.2740	ID	R	crapo
+103	-0.5060	-0.3180	IL	D	rush
+103	 0.6330	 0.2020	IL	R	manzullo
+103	 0.6180	 0.3360	MD	R	bartlett
+103	 0.6870	-0.2550	MI	R	hoekstra
+103	-0.5030	-0.2350	MN	D	sabo
+103	 0.5540	 0.0200	MN	R	grams
+103	-0.5280	 0.4510	MS	D	thompson
+103	-0.5350	-0.3850	NY	D	velazquez
+103	-0.5310	-0.0570	NY	D	hinchey
+103	-0.5590	-0.3050	NC	D	watt
+103	 0.5210	 0.2860	OK	R	istook
+103	 0.5060	 0.3060	VA	R	goodlatte
 104	 0.8540	-0.0330	AZ	R	salmon
 104	 0.8030	 0.2430	AZ	R	shadegg
+104	 0.6390	 0.1700	AZ	R	hayworth
+104	 0.5970	 0.3010	CA	R	radanovich
+104	 0.6180	 0.1270	CA	R	seastrand
+104	 0.6720	-0.6460	CA	R	bilbray
 104	 0.8570	-0.2610	FL	R	scarborough
+104	 0.5950	 0.2770	FL	R	weldon
+104	-0.5670	-0.2330	GA	D	lewis j
+104	 0.7160	 0.4430	GA	R	barr
+104	 0.5150	 0.5800	GA	R	norwood
 104	 0.8260	 0.5640	ID	R	chenoweth
+104	-0.5330	-0.6630	IL	D	jackson
+104	 0.5670	-0.0670	IL	R	weller
+104	 0.6910	 0.1750	IN	R	mcintosh
+104	 0.6750	-0.0500	IN	R	souder
 104	 0.8190	 0.2520	IN	R	hostettler
+104	 0.6020	-0.1360	KS	R	brownback
+104	 0.6570	 0.2740	KS	R	tiahrt
+104	 0.5090	-0.2760	MD	R	ehrlich
+104	 0.5770	-0.1220	MI	R	chrysler
+104	 0.7070	 0.0150	MN	R	gutknecht
+104	 0.6240	 0.0990	NE	R	christensen
 104	 0.8830	-0.4700	NV	R	ensign
+104	 0.5160	-0.5370	NH	R	bass
+104	 0.6240	 0.6330	NC	R	funderburk
+104	 0.5290	 0.2450	NC	R	burr
+104	 0.6970	 0.1690	NC	R	myrick
 104	 0.7880	-0.1790	OH	R	chabot
+104	 0.7430	 0.1400	OK	R	largent
 104	 0.8840	 0.4670	OK	R	coburn
+104	 0.5040	 0.3910	OK	R	watts
 104	 0.9090	 0.2800	OR	R	cooley
+104	-0.5140	-0.1700	PA	D	fattah
 104	 0.9860	-0.1680	SC	R	sanford
+104	 0.5150	 0.2880	SC	R	graham
+104	 0.5890	 0.1930	TN	R	wamp
+104	 0.6740	 0.4080	TN	R	hilleary
+104	 0.5350	 0.3720	TN	R	bryant
 104	 1.0000	-0.0010	TX	R	stockman
+104	 0.6270	 0.3500	TX	R	thornberry
+104	 0.5510	-0.0750	WA	R	metcalf
+104	 0.5520	 0.3820	WA	R	hastings
+104	 0.5600	 0.0660	WA	R	tate
 104	 0.8620	-0.2490	WI	R	neumann
-105	 0.7720	 0.0980	CA	R	rohrabacher
+104	 0.6120	 0.4600	WY	R	cubin
+105	-0.6790	-0.7640	CA	D	lee
+105	 0.6320	-0.0610	CA	R	rogan
 105	 0.9320	 0.3620	CO	R	schaffer b
+105	 0.6060	 0.2840	FL	R	weldon
+105	-0.5640	 0.2210	FL	D	hastings
+105	-0.5660	-0.2360	GA	D	lewis j
+105	 0.5310	 0.2310	IL	R	shimkus
+105	 0.5450	-0.0020	IN	R	pease
+105	 0.5450	 0.4330	KS	R	moran
+105	 0.6450	 0.3960	KS	R	ryun
+105	 0.6130	 0.3090	KS	R	snowbarger
+105	 0.5820	 0.2820	MO	R	blunt
+105	 0.5830	 0.1430	MO	R	hulshof
+105	 0.5650	 0.4700	MT	R	hill
+105	 0.6490	-0.0650	NV	R	gibbons
+105	 0.7040	-0.2310	NH	R	sununu
+105	 0.6180	-0.1210	NY	R	fossella
+105	 0.6950	 0.1560	PA	R	pitts
+105	 0.6930	 0.3320	TX	R	sessions
+105	 0.5780	 0.3580	TX	R	brady
+105	 0.5170	-0.0110	TX	R	granger
 105	 0.8780	-0.1520	TX	R	paul
+105	 0.7050	 0.2120	UT	R	cannon
+105	 0.5530	 0.3930	WA	R	hastings
+106	 0.5320	-0.1750	CA	R	bono m
 106	 0.8720	 0.1300	CO	R	tancredo t
-106	 0.7520	 0.1360	MN	R	gutknecht
+106	 0.6180	 0.2920	FL	R	weldon
+106	-0.5540	 0.2060	FL	D	hastings
+106	-0.5640	-0.2390	GA	D	lewis j
+106	 0.5480	-0.0360	GA	R	isakson j
+106	 0.5110	 0.1390	ID	R	simpson m
+106	-0.5580	-0.2950	IL	D	schakowsky
+106	 0.6050	-0.6000	IL	R	biggert j
+106	 0.5490	 0.4300	KS	R	moran
+106	 0.5140	 0.5340	KY	R	lewis r
+106	 0.5940	 0.2090	LA	R	vitter d
+106	-0.5790	 0.1640	MA	D	capuano m
+106	 0.6640	-0.0010	NE	R	terry l
+106	-0.5220	-0.0910	OH	D	jones s
+106	 0.5120	-0.0330	OR	R	walden g
 106	 0.8550	 0.0840	PA	R	toomey p
 106	 0.7550	 0.1530	SC	R	demint j
+106	 0.5130	 0.2960	TX	R	smith l
+106	 0.5540	 0.4050	WA	R	hastings
 106	 0.7750	-0.1670	WI	R	ryan p
-107	 0.9810	-0.1340	NONE	R	bush
+106	-0.5250	-0.1620	WI	D	baldwin t
+106	 0.7190	-0.1910	WI	R	green m
 107	 0.9530	 0.1790	AZ	R	flake
-107	 0.7900	 0.5840	CO	R	hefley
-107	 0.7950	 0.3870	FL	R	miller
+107	 0.5200	 0.2950	AR	R	boozman
+107	 0.6410	 0.0380	CA	R	issa
+107	 0.5670	 0.0880	FL	R	crenshaw
+107	 0.6730	 0.0620	FL	R	keller
+107	 0.6200	 0.1820	FL	R	putnam
+107	 0.6290	 0.3000	FL	R	weldon
+107	-0.5440	 0.1910	FL	D	hastings
+107	-0.5630	-0.2410	GA	D	lewis j
 107	 0.8560	 0.2080	ID	R	otter
+107	 0.5290	-0.7720	IL	R	kirk
 107	 0.8170	 0.2060	IN	R	pence
 107	 0.8190	 0.4190	IN	R	kerns
-107	 0.7830	 0.0400	MI	R	smith n
+107	 0.5530	 0.4270	KS	R	moran
+107	 0.5870	 0.0450	MI	R	rogers
+107	 0.7450	-0.1290	MN	R	kennedy
 107	 0.7850	 0.2740	MO	R	akin
-107	 0.7560	 0.2040	UT	R	cannon
+107	 0.5360	 0.3860	MO	R	graves
+107	 0.5150	 0.2330	MT	R	rehberg
+107	 0.6480	-0.0640	OH	R	tiberi
+107	 0.7070	 0.2190	OK	R	sullivan
+107	 0.6180	 0.0630	PA	R	hart
+107	 0.5360	 0.2080	SC	R	brown
+107	 0.7210	 0.1280	SC	R	wilson
+107	 0.6790	 0.4340	TX	R	culberson
+107	 0.5620	 0.4520	VA	R	davis
+107	 0.6050	 0.1760	VA	R	schrock
+107	 0.5670	 0.3440	VA	R	forbes
+107	 0.7000	 0.2120	VA	R	cantor
+107	 0.5550	 0.4160	WA	R	hastings
+108	 0.5700	 0.3430	AL	R	bonner
 108	 0.9530	 0.3510	AZ	R	franks
+108	-0.5570	-0.2670	AZ	D	grijalva
+108	 0.6090	 0.3730	CA	R	doolittl
+108	-0.5740	-0.2590	CA	D	miller
+108	 0.6410	 0.3130	CA	R	radanovi
+108	 0.6380	 0.0940	CA	R	nunes
+108	 0.5830	 0.1950	CA	R	dreier
 108	 0.8700	-0.0160	CA	R	rohrabac
+108	 0.7220	 0.1110	CA	R	cox
+108	 0.7380	 0.3190	CO	R	musgrave
 108	 0.9200	 0.1520	CO	R	tancredo
+108	 0.7370	 0.0250	CO	R	beauprez
+108	 0.8080	 0.3200	FL	R	miller
+108	 0.5570	 0.2310	FL	R	brown-wai
+108	 0.6940	-0.1530	FL	R	harris
+108	 0.6400	 0.3080	FL	R	weldon
+108	-0.5340	 0.1760	FL	D	hastings
 108	 0.8380	 0.1530	FL	R	feeney
+108	 0.7010	-0.2400	FL	R	diaz-bala
+108	-0.5610	-0.2440	GA	D	lewis
+108	 0.5480	-0.0360	GA	R	isakson
+108	 0.6490	 0.4780	GA	R	gingrey
+108	 0.5300	 0.1680	GA	R	burns
+108	-0.5690	-0.2900	IL	D	schakows
+108	 0.6270	-0.5160	IL	R	biggert
 108	 0.7760	-0.0120	IN	R	chocola
 108	 0.8330	 0.3560	IN	R	hostettl
 108	 0.7930	 0.4790	IA	R	king
-108	 0.7520	-0.0060	MI	R	hoekstra
+108	 0.5570	 0.4230	KS	R	moran
+108	 0.5310	 0.5370	KY	R	lewis
+108	 0.5940	 0.2090	LA	R	vitter
+108	-0.5080	-0.5440	MA	D	frank
+108	-0.5650	 0.1180	MA	D	capuano
 108	 0.8560	 0.0590	MI	R	smith
+108	 0.6010	 0.0570	MI	R	rogers
+108	 0.5390	 0.0640	MI	R	knollenb
 108	 0.7970	 0.2580	MN	R	gutknech
+108	 0.7140	 0.0850	MN	R	kline
+108	 0.7450	-0.1290	MN	R	kennedy
+108	 0.6900	-0.0740	NE	R	terry
+108	 0.6670	-0.5900	NH	R	bradley
 108	 0.8670	 0.0540	NJ	R	garrett
+108	-0.5630	-0.5740	NJ	D	payne
+108	 0.5310	-0.4330	NJ	R	frelingh
+108	 0.5970	 0.1750	NM	R	pearce
+108	-0.5260	-0.5470	NY	D	owens
+108	-0.5250	-0.3830	NY	D	velazque
+108	 0.5370	 0.0750	NY	R	reynolds
+108	 0.5570	 0.1710	NC	R	ballenge
+108	 0.5790	 0.4660	NC	R	taylor
+108	 0.6140	 0.1900	OK	R	cole
+108	 0.5530	-0.0370	OR	R	walden
 108	 0.8550	 0.0840	PA	R	toomey
+108	 0.5350	 0.2540	SC	R	brown
+108	 0.7360	 0.1370	SC	R	wilson
 108	 0.8390	 0.2080	SC	R	barrett
 108	 0.7550	 0.1530	SC	R	demint
 108	 0.8800	 0.1330	TN	R	duncan
 108	 0.7920	 0.2330	TN	R	blackburn
+108	 0.7130	 0.5440	TX	R	johnson
 108	 0.9310	 0.1160	TX	R	hensarlin
+108	 0.6590	 0.4660	TX	R	culberso
+108	 0.6500	 0.3780	TX	R	brady
+108	 0.6830	 0.3950	TX	R	thornber
+108	 0.7090	 0.3960	TX	R	neugebauer
+108	 0.5410	 0.3590	TX	R	smith
+108	 0.6080	 0.3590	TX	R	burgess
+108	 0.6570	 0.3560	TX	R	carter
+108	 0.6460	 0.2660	UT	R	bishop
+108	 0.5620	 0.4520	VA	R	davis
+108	 0.6530	 0.2800	VA	R	goodlatt
+108	 0.5550	 0.4270	WA	R	hastings
+108	-0.6440	-0.1450	WA	D	mcdermot
 108	 0.7990	-0.1080	WI	R	ryan
+108	-0.5320	-0.1610	WI	D	baldwin
 108	 1.0190	-0.1820	WI	R	sensenbr
-109	 0.7760	 0.1970	AZ	R	hayworth
-109	 0.7570	 0.1110	CA	R	cox
-109	 0.9600	-0.0120	CA	R	campbell
-109	 0.7560	-0.5020	CA	R	bilbray
-109	 0.7590	 0.2940	FL	R	stearns
+108	 0.7190	-0.1910	WI	R	green
+109	 0.6360	 0.2260	CA	R	lungren
+109	-0.5830	-0.2280	CA	D	miller
+109	 0.5050	 0.2890	CA	R	lewis
+109	 0.8210	 0.2540	FL	R	miller
 109	 0.8420	 0.0260	FL	R	mack
+109	 0.6510	 0.3160	FL	R	weldon
+109	-0.5230	 0.1610	FL	D	hastings
+109	-0.5600	-0.2460	GA	D	lewis
 109	 0.8520	 0.1520	GA	R	price
-109	 0.7880	 0.2560	GA	R	linder
 109	 0.8120	 0.4330	GA	R	westmore
-109	 0.7680	-0.8510	MI	R	ehlers
-109	 0.7870	-0.9640	MN	R	ramstad
-109	 0.7660	-0.0370	NV	R	gibbons
-109	 0.7560	-0.3630	NY	R	fossella
-109	 0.7580	 0.1810	NC	R	myrick
+109	 0.6080	-0.5980	IL	R	johnson
+109	 0.5710	 0.3660	IN	R	sodrel
+109	 0.7800	 0.4800	IA	R	king
+109	 0.5610	 0.4200	KS	R	moran
+109	 0.5400	 0.5390	KY	R	lewis
+109	 0.5500	 0.4640	KY	R	davis
+109	 0.6290	 0.0500	LA	R	jindal
+109	 0.6160	 0.0700	MI	R	rogers
+109	 0.7450	-0.1290	MN	R	kennedy
+109	 0.5470	-0.0180	NE	R	fortenbe
+109	 0.7390	 0.6180	NC	R	foxx
 109	 0.7850	 0.3310	NC	R	mchenry
-109	 0.7630	 0.0870	PA	R	pitts
+109	 0.5830	 0.5050	NC	R	taylor
+109	 0.7230	-0.0150	OH	R	schmidt
+109	 0.5320	-0.5530	PA	R	fitzpatr
+109	 0.5340	 0.3010	SC	R	brown
 109	 0.7510	 0.1470	SC	R	wilson
+109	 0.5830	 0.4370	TX	R	gohmert
+109	 0.7070	 0.4530	TX	R	poe
+109	 0.7260	 0.5250	TX	R	johnson
+109	 0.6740	 0.3840	TX	R	brady
+109	 0.6250	 0.1030	TX	R	mccaul
+109	 0.6660	 0.5110	TX	R	conaway
+109	 0.7360	 0.4010	TX	R	neugebaue
+109	 0.5550	 0.3910	TX	R	smith
+109	 0.6610	 0.4860	TX	R	marchant
+109	 0.6810	 0.2560	UT	R	bishop
+109	 0.5620	 0.4520	VA	R	davis
+109	 0.5560	 0.3810	VA	R	drake
+109	 0.5560	 0.4380	WA	R	hastings
+109	 0.5720	 0.2500	WA	R	mcmorris
+109	 0.8110	-0.0780	WI	R	ryan
+109	-0.5020	-0.3910	WI	D	moore
+109	 0.7190	-0.1910	WI	R	green
+110	-0.5910	-0.1970	CA	D	miller
+110	 0.6680	 0.2460	CA	R	mccarthy
+110	 0.5220	 0.3120	CA	R	lewis
 110	 0.8530	 0.3800	CO	R	lamborn
+110	 0.8330	 0.1870	FL	R	miller
+110	 0.6320	-0.1000	FL	R	buchanan
+110	 0.6620	 0.3230	FL	R	weldon
+110	-0.5130	 0.1460	FL	D	hastings
+110	-0.5580	-0.2490	GA	D	lewis
+110	 0.8700	 0.0890	GA	R	price
 110	 0.9870	 0.1610	GA	R	broun
 110	 0.7970	 0.4180	ID	R	sali
+110	 0.6870	 0.0850	IL	R	roskam
 110	 0.7630	-0.8590	IL	R	johnson
-110	 0.7560	 0.3120	IN	R	burton
+110	 0.7670	 0.4820	IA	R	king
+110	 0.5650	 0.4170	KS	R	moran
+110	 0.5480	 0.5400	KY	R	lewis
+110	 0.5500	 0.4640	KY	R	davis
 110	 0.7840	 0.1970	LA	R	scalise
+110	-0.5620	-0.5700	MD	D	edwards
 110	 0.7950	 0.0020	MI	R	walberg
+110	 0.6300	 0.0830	MI	R	rogers
+110	 0.5420	 0.0620	MI	R	miller
+110	-0.5560	-0.6610	MN	D	ellison
 110	 0.8220	 0.1180	MN	R	bachmann
+110	 0.7050	 0.2500	NE	R	smith
 110	 0.8360	-0.3430	NV	R	heller
-110	 0.7960	 0.4170	NC	R	foxx
+110	-0.5560	-0.4380	NY	D	clarke
 110	 0.9210	 0.0580	OH	R	jordan
-110	 0.8040	 0.0200	SC	R	inglis
-110	 0.7700	 0.2780	TX	R	poe
-110	 0.7640	 0.4070	TX	R	neugebaue
-110	 0.7720	 0.0660	TX	R	burgess
-110	 0.7640	 0.3070	TX	R	sessions
+110	 0.7140	 0.2680	OH	R	latta
+110	 0.6300	 0.2650	OK	R	fallin
+110	 0.5030	 0.3180	PA	R	peterson
+110	 0.5340	 0.3480	SC	R	brown
+110	 0.7660	 0.1560	SC	R	wilson
+110	 0.7200	 0.3420	TN	R	davis
+110	 0.7400	 0.5060	TX	R	johnson
+110	 0.5820	 0.3790	TX	R	hall
+110	 0.6980	 0.3910	TX	R	brady
+110	 0.5690	 0.4220	TX	R	smith
+110	 0.7170	 0.2460	UT	R	bishop
+110	 0.5620	 0.4520	VA	R	davis
+110	 0.6670	-0.0810	VA	R	wittman
+110	 0.5570	 0.4500	WA	R	hastings
+110	 0.8230	-0.0480	WI	R	ryan
+110	-0.5080	-0.3760	WI	D	moore
 111	 0.9980	 0.0570	CA	R	mcclintock
-111	 0.7530	 0.1750	CA	R	issa
+111	-0.5990	-0.1660	CA	D	miller
+111	 0.6680	 0.2460	CA	R	mccarthy
+111	-0.5020	-0.3770	CA	D	chu
+111	 0.5380	 0.3340	CA	R	lewis
 111	 0.8270	-0.1690	CO	R	coffman
+111	 0.8460	 0.1200	FL	R	miller
 111	 0.7740	-0.0950	FL	R	posey
 111	 0.7520	-0.0250	FL	R	rooney
+111	-0.5030	 0.1310	FL	D	hastings
+111	-0.5570	-0.2520	GA	D	lewis
+111	 0.8890	 0.0260	GA	R	price
 111	 0.9990	 0.0530	GA	R	graves
-111	 0.7560	 0.2640	GA	R	gingrey
+111	 0.9180	-1.1190	IL	R	johnson
+111	 0.5430	 0.1290	IL	R	schock
 111	 0.9450	 0.1800	IN	R	stutzman
+111	 0.7540	 0.4840	IA	R	king
+111	 0.5690	 0.4130	KS	R	moran
 111	 0.8220	-0.1060	KS	R	jenkins
+111	 0.5550	 0.3230	KY	R	guthrie
+111	 0.5500	 0.4640	KY	R	davis
 111	 0.8140	 0.0840	LA	R	fleming
-111	 0.7520	-0.0710	MD	R	bartlett
+111	 0.7280	-0.0190	LA	R	cassidy
+111	-0.5620	-0.5700	MD	D	edwards
+111	-0.5190	-0.3720	MA	D	markey
+111	 0.6450	 0.0960	MI	R	rogers
+111	 0.6010	 0.0340	MI	R	miller
 111	 0.7630	-0.3110	MN	R	paulsen
-111	 0.7520	 0.4270	NC	R	coble
-111	 0.8200	 0.0850	TX	R	gohmert
+111	 0.5170	 0.5800	MS	R	harper
+111	 0.7070	 0.0590	MO	R	graves
+111	 0.6610	 0.2590	MO	R	luetkemeyer
+111	 0.7050	 0.2500	NE	R	smith
+111	 0.6910	-0.4400	NJ	R	lance
+111	 0.5590	 0.0760	NY	R	lee
+111	 0.6420	-0.2080	NY	R	reed
+111	 0.5750	 0.2520	OH	R	austria
+111	-0.5110	-0.1380	OH	D	fudge
+111	 0.5330	 0.3940	SC	R	brown
+111	 0.7810	 0.1650	SC	R	wilson
+111	 0.7420	 0.0110	TN	R	roe
 111	 0.7530	 0.4870	TX	R	johnson
-111	 0.7510	 0.3890	TX	R	conaway
-111	 0.7980	 0.2310	TX	R	marchant
+111	 0.6280	 0.3490	TX	R	hall
+111	 0.7220	 0.3970	TX	R	brady
+111	 0.5830	 0.4530	TX	R	smith
+111	 0.6860	 0.4150	TX	R	olson
 111	 0.7530	 0.2360	UT	R	bishop
 111	 0.9490	-0.0790	UT	R	chaffetz
+111	 0.5580	 0.4610	WA	R	hastings
+111	 0.6250	 0.2510	WA	R	mcmorris r
+111	 0.8350	-0.0190	WI	R	ryan
+111	-0.5140	-0.3610	WI	D	moore
 111	 0.9390	-0.0500	WY	R	lummis
 112	 0.8270	 0.1070	AL	R	brooks
 112	 0.8070	 0.0790	AZ	R	gosar
 112	 0.8570	 0.4700	AZ	R	quayle
 112	 0.8920	 0.0770	AZ	R	schweikert
+112	 0.6900	-0.0530	AR	R	griffin
+112	-0.6070	-0.1350	CA	D	miller
+112	-0.6560	-0.6910	CA	D	lee
+112	 0.6610	-0.0790	CA	R	denham
+112	 0.6680	 0.2460	CA	R	mccarthy
+112	-0.5130	-0.2970	CA	D	bass
+112	 0.5550	 0.3570	CA	R	lewis
+112	 0.7490	-0.2020	CO	R	tipton
 112	 0.7790	-0.1410	CO	R	gardner
+112	 0.8590	 0.0530	FL	R	miller
 112	 0.8200	-0.0070	FL	R	southerla
 112	 0.7670	-0.0290	FL	R	nugent
+112	 0.7010	 0.1120	FL	R	webster
+112	 0.5040	 0.1840	FL	R	young
 112	 0.7760	 0.2390	FL	R	ross
+112	 0.7180	 0.0330	FL	R	west
 112	 0.8200	 0.0590	FL	R	adams
-112	 0.7570	 0.6260	GA	R	kingston
+112	-0.5550	-0.2540	GA	D	lewis
+112	 0.9070	-0.0360	GA	R	price
 112	 0.9760	-0.2170	GA	R	woodall
+112	 0.7860	 0.2870	GA	R	scott
+112	 0.9990	 0.0530	GA	R	graves
 112	 0.9990	 0.0460	ID	R	labrador
 112	 0.9990	-0.0340	IL	R	walsh
+112	 0.5740	-0.5660	IL	R	dold
+112	 0.6070	-0.0830	IL	R	kinzinger
 112	 0.7660	 0.0510	IL	R	hultgren
 112	 1.0730	-1.3800	IL	R	johnson
-112	 0.7580	 0.1960	IL	R	manzullo
+112	 0.6960	-0.1700	IL	R	schilling
 112	 0.8430	 0.1760	IN	R	rokita
+112	 0.6190	 0.2200	IN	R	bucshon
+112	 0.7100	 0.2800	IN	R	young
+112	 0.7410	 0.4860	IA	R	king
 112	 0.9960	-0.0920	KS	R	huelskamp
 112	 0.8480	-0.1080	KS	R	yoder
 112	 0.8370	 0.3830	KS	R	pompeo
+112	 0.5500	 0.4640	KY	R	davis
 112	 0.9990	 0.0490	KY	R	massie
 112	 0.8880	-0.0670	LA	R	landry
 112	 0.8780	-0.0990	MD	R	harris
+112	-0.5620	-0.5700	MD	D	edwards
 112	 0.8800	-0.3230	MI	R	benishek
 112	 0.9110	-0.0670	MI	R	huizenga
 112	 0.9970	-0.0760	MI	R	amash
+112	 0.6590	 0.1080	MI	R	rogers
+112	 0.6600	 0.0060	MI	R	miller
+112	 0.6140	 0.1240	MN	R	cravaack
+112	 0.6180	 0.5690	MS	R	nunnelee
+112	 0.6440	 0.4840	MS	R	palazzo
+112	 0.7150	 0.2040	MO	R	hartzler
+112	 0.7490	-0.0220	MO	R	graves
 112	 0.7540	 0.4920	MO	R	long
+112	 0.7050	 0.2500	NE	R	smith
+112	 0.6500	 0.2130	NV	R	amodei
+112	 0.6720	-0.3070	NV	R	heck
+112	 0.6630	 0.1250	NH	R	guinta
+112	 0.6930	-0.7310	NH	R	bass
+112	-0.5560	-0.4380	NY	D	clarke
+112	 0.6140	-0.3500	NY	R	hayworth
+112	 0.5380	-0.8430	NY	R	gibson
+112	 0.6120	-0.5220	NY	R	hanna
 112	 0.7580	 0.2900	NY	R	buerkle
+112	 0.5870	 0.4420	NC	R	ellmers
 112	 0.7580	-0.1290	OH	R	johnson
-112	-0.7510	 0.4240	OH	D	kucinich
+112	 0.6070	-0.1430	OH	R	stivers
+112	 0.7140	-0.2270	OH	R	renacci
+112	 0.6310	 0.2760	OH	R	gibbs
 112	 0.7520	 0.3050	OK	R	lankford
+112	 0.5320	-0.5530	PA	R	fitzpatri
 112	 0.8950	 0.1390	SC	R	scott
+112	 0.7960	 0.1740	SC	R	wilson
 112	 0.9670	 0.1360	SC	R	duncan
 112	 0.9040	 0.1080	SC	R	gowdy
 112	 1.0000	 0.0050	SC	R	mulvaney
+112	 0.5210	 0.4650	SD	R	noem
 112	 1.0620	-0.1130	TN	R	duncan
+112	 0.6600	 0.4000	TN	R	fleischma
 112	 0.7720	 0.1820	TN	R	desjarlais
+112	 0.7280	 0.4170	TN	R	black
 112	 0.7670	 0.1390	TN	R	fincher
 112	 0.7660	 0.4680	TX	R	johnson
+112	 0.7460	 0.4040	TX	R	brady
 112	 0.8110	 0.1090	TX	R	flores
+112	 0.5970	 0.4850	TX	R	smith
+112	 0.6860	 0.5610	TX	R	canseco
+112	 0.7500	 0.1770	TX	R	farenthold
 112	 0.7880	 0.2270	UT	R	bishop
 112	 0.7950	-0.2890	VA	R	rigell
 112	 0.7990	 0.1630	VA	R	hurt
-112	 0.7700	 0.2600	VA	R	goodlatt
 112	 0.8670	-0.2690	VA	R	griffith
-112	 0.7640	 0.2410	WI	R	petri
+112	 0.7500	-0.4200	WA	R	herrera b
+112	 0.5590	 0.4720	WA	R	hastings
+112	 0.5080	 0.0870	WV	R	mckinley
+112	 0.8470	 0.0110	WI	R	ryan
 112	 0.8340	-0.2640	WI	R	duffy
 112	 0.9290	-0.1460	WI	R	ribble
+113	 0.6810	 0.6150	AL	R	byrne
+113	 0.5110	 0.4270	AK	R	young
 113	 0.9040	-0.2170	AR	R	cotton
+113	 0.7480	 0.4340	CA	R	lamalfa
+113	 0.6320	 0.3400	CA	R	cook
+113	-0.6160	-0.1040	CA	D	miller
+113	 0.5880	-0.2420	CA	R	valadao
+113	 0.6680	 0.2460	CA	R	mccarthy
+113	-0.5130	-0.2970	CA	D	bass
+113	-0.5020	 0.2320	CA	D	takano
+113	-0.5110	-0.0460	CA	D	lowenthal
+113	 0.8720	-0.0140	FL	R	miller
 113	 0.9560	 0.1200	FL	R	yoho
 113	 0.9230	-0.0670	FL	R	desantis
+113	 0.5200	 0.1930	FL	R	young
 113	 0.9490	-0.3150	FL	R	radel
 113	 0.9500	-0.2890	FL	R	clawson
+113	 0.9250	-0.0990	GA	R	price
 113	 0.7860	 0.2870	GA	R	scott
-113	 0.8930	-0.1130	GA	R	collins
+113	 0.9990	 0.0530	GA	R	graves
+113	 0.5940	 0.3680	IN	R	walorski
+113	 0.6340	 0.2220	IN	R	brooks
 113	 0.7920	 0.1330	IN	R	messer
+113	 0.7100	 0.2800	IN	R	young
+113	 0.7280	 0.4880	IA	R	king
+113	 0.5130	 0.5810	KY	R	rogers
+113	 0.7200	 0.0140	KY	R	barr
+113	 0.6360	 0.2420	LA	R	mcallister
+113	-0.5450	-0.2660	MA	D	clark
+113	 0.6740	 0.1210	MI	R	rogers
+113	 0.7190	-0.0220	MI	R	miller
 113	 0.9610	-0.0150	MI	R	bentivolio
+113	 0.6530	 0.3370	MO	R	wagner
 113	 0.7920	-0.1040	MO	R	graves
 113	 0.8310	-0.0050	MO	R	smith
-113	 0.7550	-0.2550	NE	R	terry
-113	 0.7930	-0.0350	NM	R	pearce
+113	 0.7170	 0.1780	MT	R	daines
+113	 0.7050	 0.2500	NE	R	smith
+113	 0.5660	 0.3720	NY	R	collins
 113	 0.9390	-0.2040	NC	R	hudson
 113	 0.8440	-0.0900	NC	R	pittenger
 113	 0.8330	 0.2260	NC	R	meadows
 113	 0.9110	-0.1740	NC	R	holding
 113	 0.7810	 0.2090	OH	R	wenstrup
 113	 0.7580	-0.1290	OH	R	johnson
+113	 0.5450	-0.1620	OH	R	joyce
 113	 0.9520	 0.1890	OK	R	bridenstin
+113	 0.6790	 0.5550	OK	R	mullin
 113	 0.8500	 0.0800	PA	R	perry
+113	 0.6610	 0.3210	PA	R	rothfus
+113	 0.8110	 0.1840	SC	R	wilson
 113	 0.9670	 0.1360	SC	R	duncan
 113	 0.8400	 0.1900	SC	R	rice
 113	 1.1080	-0.1740	TN	R	duncan
 113	 0.7800	 0.4490	TX	R	johnson
 113	 0.7700	 0.4110	TX	R	brady
-113	 0.7520	 0.4510	TX	R	thornber
 113	 0.9560	 0.1430	TX	R	weber
+113	 0.6120	 0.5160	TX	R	smith
 113	 0.7760	 0.3620	TX	R	williams
 113	 0.8240	 0.2170	UT	R	bishop
+113	 0.6710	 0.3870	UT	R	stewart
 113	 0.9510	-0.3100	VA	R	brat
+113	 0.5600	 0.4840	WA	R	hastings
+113	 0.8580	 0.0410	WI	R	ryan
+113	-0.6350	-0.2810	WI	D	pocan
