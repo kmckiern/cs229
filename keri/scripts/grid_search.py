@@ -35,6 +35,10 @@ def report(grid_scores, n_top=10):
 def main():
     # read in data
     data = pd.read_pickle(args.fm)
+    data_2 = pd.read_pickle('../../data/features/cand_parse_all_2012_feat_matrix_trim_normed.pkl')
+    data_3 = pd.read_pickle('../../data/features/cand_parse_all_2010_feat_matrix_trim_normed.pkl') 
+    data = pd.concat((data, data_2, data_3))
+
     data_IDs = list( data.index )
 
     cols = ['name', 'state', 'CID', 'party', 'DWN-0', 'DWN-1']
@@ -68,8 +72,8 @@ def main():
     X_raw, DWN_0, DWN_1 = np.array(data), dwn0.T, dwn1.T
     
     # partition data into training and test set for each dwn score
-    X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X_raw, DWN_0, test_size=0.2, random_state=0)
-    X_train_2, X_test_2, Y_train_2, Y_test_2 = cross_validation.train_test_split(X_raw, DWN_1, test_size=0.2, random_state=0)
+    X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X_raw, DWN_0, test_size=0.1, random_state=0)
+    X_train_2, X_test_2, Y_train_2, Y_test_2 = cross_validation.train_test_split(X_raw, DWN_1, test_size=0.1, random_state=0)
 
     # parameter distributions. initially we will just search over
     # different orders of magnitude of the parameters.
