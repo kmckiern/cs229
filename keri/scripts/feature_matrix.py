@@ -12,12 +12,12 @@ import os_cid_call
 import IPython
 
 parser = argparse.ArgumentParser(description='get financial information for an'
-        'input candidate')
+        ' input candidate')
 parser.add_argument('--cf', type=str, help='file of candidates and CIDs',
-        default='../../joe/out/test_update.dat')
+        default='../../joe/out/split/xaa')
 parser.add_argument('--yr', type=str, help='query year', default='2014')
 parser.add_argument('--ak', type=str, help='api key',
-        default='4db73104ad1a3dc93ad29dda55286997')
+        default='49f6c4fb24c044acdfcd42b5d559d343')
 parser.add_argument('--categories', type=str, help='sector code database file',
         default='../../data/candidates/CRP_Categories.txt')
 parser.add_argument('--pref', type=str, help='output file directory preface',
@@ -27,11 +27,15 @@ parser.add_argument('--norm', action='store_true', help='normalize fin data',
 args = parser.parse_args()
 
 def main():
-    # get candidate info
-    cols = ['name', 'state', 'CID', 'party', 'dwn0', 'dwn1']
+    # get candidate 
+    cols = ['f name', 'l name', 'state', 'party', 'CID', 'dwn0', 'dwn1']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
     cids = list(cands['CID'])
     nc = cands.shape[0]
+
+    scores = np.zeros((len(dwn0), 2)
+    scores[:,0] = cands['dwn0']
+    scores[:,1] = cands['dwn1']
 
     # to avoid module errors
     args.write_dicts = False
@@ -55,6 +59,10 @@ def main():
     else:
         df.to_pickle(args.pref + from_str + '_' + str(args.yr) +
                 '_feat_matrix_unnormed.pkl')
+    
+    # also dwn scores to a data frame pkl file
+    df_y = pd.DataFrame(scores, columns=cols[-2:], index=cids)
+    df_y.to_pickle(args.pref + from_str + '_' + str(args.yr) + '_scores.pkl')
 
 if __name__ == '__main__':
     main()
