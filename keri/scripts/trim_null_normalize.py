@@ -47,7 +47,6 @@ def main():
         df_file_out = df_file.replace('_feat_matrix_unnormed', '_scores')
         scores.to_pickle(df_file_out)
 
-    """
     # cut columns of all zeros
     df_trim = df_raw[df_raw.columns[(df_raw != 0).any()]]
 
@@ -56,7 +55,6 @@ def main():
 
     df_file_out = df_file.replace('unnormed', 'trim_normed')
     df_trim_norm.to_pickle(df_file_out)
-    """
 
 if __name__ == '__main__':
     main()
