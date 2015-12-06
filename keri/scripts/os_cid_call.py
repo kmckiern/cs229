@@ -70,10 +70,11 @@ def main(args):
     '''
     try:
         top_sect = CRP.candSector.get(cid=cid, year=yr)
+        sect_fin_data = group_data(cats, top_sect, args.norm)
     except:
-        print (args, cid)
-        sys.exit()
-    sect_fin_data = group_data(cats, top_sect, args.norm)
+        top_sect = np.empty(len(cats))
+        top_sect[:] = np.NAN
+        sect_fin_data = top_sect
 
     #---------- write data? ----------#
     if args.write_dicts:

@@ -52,8 +52,16 @@ def main():
             fmtrx = np.zeros((nc, nf))
         fmtrx[ndx,:] = features
 
+    # check for nans
+    check = fmtrx.T[0]
+    nans = np.isnan(check)
+    nan_indices = np.where(nans == True)[0]
+    if len(nan_indices) == fmtrx.shape[0]:
+        print ('out of api calls: ' + args.cf)
+
     # put into data frame
     df = pd.DataFrame(fmtrx, columns=feature_lbls, index=cids)
+    df = df.drop(df.index[nan_indices])
     from_str = args.cf.split('/')[-1].split('.')[0]
     if args.norm:
         df.to_pickle(args.pref + from_str + '_' + str(args.yr) + '_feat_matrix.pkl')
@@ -63,6 +71,7 @@ def main():
     
     # also dwn scores to a data frame pkl file
     df_y = pd.DataFrame(scores, columns=cols[-2:], index=cids)
+    df_y = df_y.drop(df_y.index[nan_indices])
     df_y.to_pickle(args.pref + from_str + '_' + str(args.yr) + '_scores.pkl')
 
 if __name__ == '__main__':
