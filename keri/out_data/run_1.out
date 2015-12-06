@@ -1,0 +1,402 @@
+Training set size: 225 samples
+Test set size: 150 samples
+
+Performing search...
+GridSearchCV took  158.22 seconds.
+
+Grid search over DWN0:
+Model with rank: 1
+Mean validation score: 0.626 (std: 0.053)
+Parameters: {'kernel': 'poly', 'C': 71, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 2
+Mean validation score: 0.626 (std: 0.050)
+Parameters: {'kernel': 'poly', 'C': 81, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 3
+Mean validation score: 0.625 (std: 0.047)
+Parameters: {'kernel': 'poly', 'C': 91, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 4
+Mean validation score: 0.625 (std: 0.056)
+Parameters: {'kernel': 'poly', 'C': 61, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 5
+Mean validation score: 0.624 (std: 0.052)
+Parameters: {'kernel': 'poly', 'C': 21, 'gamma': 1.0, 'degree': 2}
+
+Model with rank: 6
+Mean validation score: 0.624 (std: 0.044)
+Parameters: {'kernel': 'poly', 'C': 101, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 7
+Mean validation score: 0.623 (std: 0.042)
+Parameters: {'kernel': 'poly', 'C': 111, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 8
+Mean validation score: 0.623 (std: 0.056)
+Parameters: {'kernel': 'poly', 'C': 51, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 9
+Mean validation score: 0.622 (std: 0.039)
+Parameters: {'kernel': 'poly', 'C': 121, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 10
+Mean validation score: 0.621 (std: 0.059)
+Parameters: {'kernel': 'poly', 'C': 11, 'gamma': 1.0, 'degree': 2}
+
+
+Grid search for DWN1:
+Model with rank: 1
+Mean validation score: 0.141 (std: 0.083)
+Parameters: {'kernel': 'poly', 'C': 191, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 2
+Mean validation score: 0.141 (std: 0.082)
+Parameters: {'kernel': 'poly', 'C': 181, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 3
+Mean validation score: 0.140 (std: 0.080)
+Parameters: {'kernel': 'poly', 'C': 171, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 4
+Mean validation score: 0.140 (std: 0.079)
+Parameters: {'kernel': 'poly', 'C': 161, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 5
+Mean validation score: 0.139 (std: 0.077)
+Parameters: {'kernel': 'poly', 'C': 151, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 6
+Mean validation score: 0.138 (std: 0.076)
+Parameters: {'kernel': 'poly', 'C': 141, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 7
+Mean validation score: 0.136 (std: 0.075)
+Parameters: {'kernel': 'poly', 'C': 131, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 8
+Mean validation score: 0.136 (std: 0.086)
+Parameters: {'kernel': 'poly', 'C': 11, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 9
+Mean validation score: 0.134 (std: 0.073)
+Parameters: {'kernel': 'poly', 'C': 121, 'gamma': 0.1, 'degree': 2}
+
+Model with rank: 10
+Mean validation score: 0.133 (std: 0.101)
+Parameters: {'kernel': 'poly', 'C': 21, 'gamma': 1.0, 'degree': 3}
+
+
+Grid search for SVC:
+Model with rank: 1
+Mean validation score: 0.902 (std: 0.030)
+Parameters: {'kernel': 'rbf', 'C': 11, 'gamma': 1.0}
+
+Model with rank: 2
+Mean validation score: 0.902 (std: 0.042)
+Parameters: {'kernel': 'linear', 'C': 181}
+
+Model with rank: 3
+Mean validation score: 0.902 (std: 0.042)
+Parameters: {'kernel': 'linear', 'C': 191}
+
+Model with rank: 4
+Mean validation score: 0.898 (std: 0.033)
+Parameters: {'kernel': 'rbf', 'C': 91, 'gamma': 0.1}
+
+Model with rank: 5
+Mean validation score: 0.898 (std: 0.033)
+Parameters: {'kernel': 'rbf', 'C': 101, 'gamma': 0.1}
+
+Model with rank: 6
+Mean validation score: 0.898 (std: 0.034)
+Parameters: {'kernel': 'linear', 'C': 51}
+
+Model with rank: 7
+Mean validation score: 0.898 (std: 0.034)
+Parameters: {'kernel': 'linear', 'C': 61}
+
+Model with rank: 8
+Mean validation score: 0.898 (std: 0.034)
+Parameters: {'kernel': 'linear', 'C': 71}
+
+Model with rank: 9
+Mean validation score: 0.898 (std: 0.034)
+Parameters: {'kernel': 'linear', 'C': 81}
+
+Model with rank: 10
+Mean validation score: 0.898 (std: 0.034)
+Parameters: {'kernel': 'linear', 'C': 91}
+
+
+Test scores: (0.6578, 0.1178, 0.9133) for DWN0, DWN1, and SVC, respectively.
+Done.
+Training set size: 450 samples
+Test set size: 300 samples
+
+Performing search...
+GridSearchCV took  699.79 seconds.
+
+Grid search over DWN0:
+Model with rank: 1
+Mean validation score: 0.685 (std: 0.130)
+Parameters: {'kernel': 'rbf', 'C': 11, 'gamma': 10.0}
+
+Model with rank: 2
+Mean validation score: 0.673 (std: 0.128)
+Parameters: {'kernel': 'rbf', 'C': 21, 'gamma': 10.0}
+
+Model with rank: 3
+Mean validation score: 0.668 (std: 0.128)
+Parameters: {'kernel': 'rbf', 'C': 1, 'gamma': 10.0}
+
+Model with rank: 4
+Mean validation score: 0.668 (std: 0.123)
+Parameters: {'kernel': 'rbf', 'C': 31, 'gamma': 10.0}
+
+Model with rank: 5
+Mean validation score: 0.666 (std: 0.121)
+Parameters: {'kernel': 'rbf', 'C': 41, 'gamma': 10.0}
+
+Model with rank: 6
+Mean validation score: 0.666 (std: 0.130)
+Parameters: {'kernel': 'poly', 'C': 141, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 7
+Mean validation score: 0.666 (std: 0.130)
+Parameters: {'kernel': 'poly', 'C': 191, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 8
+Mean validation score: 0.666 (std: 0.130)
+Parameters: {'kernel': 'poly', 'C': 181, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 9
+Mean validation score: 0.666 (std: 0.130)
+Parameters: {'kernel': 'poly', 'C': 131, 'gamma': 1.0, 'degree': 3}
+
+Model with rank: 10
+Mean validation score: 0.666 (std: 0.130)
+Parameters: {'kernel': 'poly', 'C': 121, 'gamma': 1.0, 'degree': 3}
+
+
+Grid search for DWN1:
+Model with rank: 1
+Mean validation score: 0.260 (std: 0.032)
+Parameters: {'kernel': 'poly', 'C': 191, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 2
+Mean validation score: 0.259 (std: 0.059)
+Parameters: {'kernel': 'rbf', 'C': 1, 'gamma': 10.0}
+
+Model with rank: 3
+Mean validation score: 0.258 (std: 0.032)
+Parameters: {'kernel': 'poly', 'C': 181, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 4
+Mean validation score: 0.257 (std: 0.032)
+Parameters: {'kernel': 'poly', 'C': 171, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 5
+Mean validation score: 0.255 (std: 0.033)
+Parameters: {'kernel': 'poly', 'C': 161, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 6
+Mean validation score: 0.253 (std: 0.034)
+Parameters: {'kernel': 'poly', 'C': 151, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 7
+Mean validation score: 0.251 (std: 0.035)
+Parameters: {'kernel': 'poly', 'C': 141, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 8
+Mean validation score: 0.248 (std: 0.036)
+Parameters: {'kernel': 'poly', 'C': 131, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 9
+Mean validation score: 0.247 (std: 0.037)
+Parameters: {'kernel': 'poly', 'C': 121, 'gamma': 1.0, 'degree': 4}
+
+Model with rank: 10
+Mean validation score: 0.244 (std: 0.036)
+Parameters: {'kernel': 'poly', 'C': 111, 'gamma': 1.0, 'degree': 4}
+
+
+Grid search for SVC:
+Model with rank: 1
+Mean validation score: 0.942 (std: 0.031)
+Parameters: {'kernel': 'rbf', 'C': 41, 'gamma': 10.0}
+
+Model with rank: 2
+Mean validation score: 0.938 (std: 0.034)
+Parameters: {'kernel': 'rbf', 'C': 31, 'gamma': 10.0}
+
+Model with rank: 3
+Mean validation score: 0.938 (std: 0.032)
+Parameters: {'kernel': 'poly', 'C': 11, 'gamma': 10.0, 'degree': 4}
+
+Model with rank: 4
+Mean validation score: 0.936 (std: 0.024)
+Parameters: {'kernel': 'rbf', 'C': 51, 'gamma': 10.0}
+
+Model with rank: 5
+Mean validation score: 0.933 (std: 0.033)
+Parameters: {'kernel': 'poly', 'C': 11, 'gamma': 10.0, 'degree': 3}
+
+Model with rank: 6
+Mean validation score: 0.933 (std: 0.031)
+Parameters: {'kernel': 'poly', 'C': 21, 'gamma': 10.0, 'degree': 3}
+
+Model with rank: 7
+Mean validation score: 0.933 (std: 0.022)
+Parameters: {'kernel': 'poly', 'C': 21, 'gamma': 10.0, 'degree': 4}
+
+Model with rank: 8
+Mean validation score: 0.931 (std: 0.044)
+Parameters: {'kernel': 'rbf', 'C': 11, 'gamma': 10.0}
+
+Model with rank: 9
+Mean validation score: 0.931 (std: 0.026)
+Parameters: {'kernel': 'rbf', 'C': 61, 'gamma': 10.0}
+
+Model with rank: 10
+Mean validation score: 0.931 (std: 0.029)
+Parameters: {'kernel': 'poly', 'C': 31, 'gamma': 10.0, 'degree': 3}
+
+
+Test scores: (0.7838, 0.1580, 0.9033) for DWN0, DWN1, and SVC, respectively.
+Done.
+Training set size: 675 samples
+Test set size: 450 samples
+
+Performing search...
+GridSearchCV took  1556.96 seconds.
+
+Grid search over DWN0:
+Model with rank: 1
+Mean validation score: 0.825 (std: 0.029)
+Parameters: {'kernel': 'rbf', 'C': 41, 'gamma': 10.0}
+
+Model with rank: 2
+Mean validation score: 0.824 (std: 0.022)
+Parameters: {'kernel': 'rbf', 'C': 71, 'gamma': 10.0}
+
+Model with rank: 3
+Mean validation score: 0.824 (std: 0.024)
+Parameters: {'kernel': 'rbf', 'C': 61, 'gamma': 10.0}
+
+Model with rank: 4
+Mean validation score: 0.824 (std: 0.021)
+Parameters: {'kernel': 'rbf', 'C': 81, 'gamma': 10.0}
+
+Model with rank: 5
+Mean validation score: 0.824 (std: 0.027)
+Parameters: {'kernel': 'rbf', 'C': 51, 'gamma': 10.0}
+
+Model with rank: 6
+Mean validation score: 0.824 (std: 0.029)
+Parameters: {'kernel': 'rbf', 'C': 21, 'gamma': 10.0}
+
+Model with rank: 7
+Mean validation score: 0.824 (std: 0.031)
+Parameters: {'kernel': 'rbf', 'C': 31, 'gamma': 10.0}
+
+Model with rank: 8
+Mean validation score: 0.824 (std: 0.021)
+Parameters: {'kernel': 'rbf', 'C': 91, 'gamma': 10.0}
+
+Model with rank: 9
+Mean validation score: 0.823 (std: 0.021)
+Parameters: {'kernel': 'rbf', 'C': 101, 'gamma': 10.0}
+
+Model with rank: 10
+Mean validation score: 0.822 (std: 0.021)
+Parameters: {'kernel': 'rbf', 'C': 111, 'gamma': 10.0}
+
+
+Grid search for DWN1:
+Model with rank: 1
+Mean validation score: 0.425 (std: 0.165)
+Parameters: {'kernel': 'rbf', 'C': 11, 'gamma': 10.0}
+
+Model with rank: 2
+Mean validation score: 0.419 (std: 0.191)
+Parameters: {'kernel': 'rbf', 'C': 21, 'gamma': 10.0}
+
+Model with rank: 3
+Mean validation score: 0.405 (std: 0.190)
+Parameters: {'kernel': 'rbf', 'C': 31, 'gamma': 10.0}
+
+Model with rank: 4
+Mean validation score: 0.397 (std: 0.188)
+Parameters: {'kernel': 'rbf', 'C': 41, 'gamma': 10.0}
+
+Model with rank: 5
+Mean validation score: 0.382 (std: 0.191)
+Parameters: {'kernel': 'rbf', 'C': 51, 'gamma': 10.0}
+
+Model with rank: 6
+Mean validation score: 0.377 (std: 0.197)
+Parameters: {'kernel': 'rbf', 'C': 61, 'gamma': 10.0}
+
+Model with rank: 7
+Mean validation score: 0.372 (std: 0.202)
+Parameters: {'kernel': 'rbf', 'C': 71, 'gamma': 10.0}
+
+Model with rank: 8
+Mean validation score: 0.370 (std: 0.207)
+Parameters: {'kernel': 'rbf', 'C': 81, 'gamma': 10.0}
+
+Model with rank: 9
+Mean validation score: 0.369 (std: 0.208)
+Parameters: {'kernel': 'rbf', 'C': 91, 'gamma': 10.0}
+
+Model with rank: 10
+Mean validation score: 0.368 (std: 0.207)
+Parameters: {'kernel': 'rbf', 'C': 111, 'gamma': 10.0}
+
+
+Grid search for SVC:
+Model with rank: 1
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 91, 'gamma': 10.0}
+
+Model with rank: 2
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 101, 'gamma': 10.0}
+
+Model with rank: 3
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 111, 'gamma': 10.0}
+
+Model with rank: 4
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 121, 'gamma': 10.0}
+
+Model with rank: 5
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 131, 'gamma': 10.0}
+
+Model with rank: 6
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 141, 'gamma': 10.0}
+
+Model with rank: 7
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 151, 'gamma': 10.0}
+
+Model with rank: 8
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 161, 'gamma': 10.0}
+
+Model with rank: 9
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 171, 'gamma': 10.0}
+
+Model with rank: 10
+Mean validation score: 0.967 (std: 0.006)
+Parameters: {'kernel': 'rbf', 'C': 181, 'gamma': 10.0}
+
+
+Test scores: (0.9025, 0.6404, 0.9800) for DWN0, DWN1, and SVC, respectively.
+Done.
