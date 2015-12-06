@@ -41,7 +41,7 @@ def main():
 
     data_IDs = list( data.index )
 
-    cols = ['name', 'state', 'CID', 'party', 'DWN-0', 'DWN-1']
+    cols = ['f name', 'l name', 'state', 'party', 'CID', 'DWN-0', 'DWN-1']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
 
     dw0 = []
