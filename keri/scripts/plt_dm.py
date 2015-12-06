@@ -18,7 +18,8 @@ parser.add_argument('--pca', type=int, help='number of PCA'
         'components', default=0)
 args = parser.parse_args()
 
-sns.set(font_scale=.8)
+sns.set(font_scale=1.2)
+sns.set(font='Open Sans')
 sns.set_style(style='white')
 cm = 'coolwarm'
 
@@ -30,12 +31,16 @@ def main():
     df = pd.read_pickle(data_file)
     df_col = df.columns
 
-    cmin = float(df.min().min())
+    cmin = 0 # float(df.min().min())
     cmax = float(df.max().max())
 
-    ax = sns.heatmap(df, vmin=cmin, vmax=cmax, cmap=cm)
-    fig = plt.gcf()
-    plt.xticks(rotation=90)
+    grid_kws = {"height_ratios": (.95, .05), "hspace": .25}
+    fig, (ax, cbar_ax) = plt.subplots(2, gridspec_kw=grid_kws)
+    ax = sns.heatmap(df.T, vmin=cmin, vmax=cmax, cmap=cm, ax=ax, 
+            xticklabels=False, cbar_ax=cbar_ax,
+            cbar_kws={'orientation': 'horizontal'})
+    ax.set_title('Normalized Campaign Contributions by Sector')
+    ax.set_xlabel('Candidate')
     plt.yticks(rotation=0)
     fig.savefig(opref + data_name + '_feature_hm.png', bbox_inches='tight')
 
