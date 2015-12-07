@@ -32,9 +32,9 @@ def main():
         df_raw = pd.read_pickle(df_file)
     else:
         # combine data matrix and score pickles
-        split_files = glob.glob(args.pref + '/split_dm/*' + args.split + '*unnorm*.pkl')
+        split_files = glob.glob(args.pref + 'split_dm/*' + args.split + '*unnorm*.pkl')
         sort_files = natsort.natsorted(split_files)
-        split_scores = glob.glob(args.pref + '/split_dm/*' + args.split + '*scores*.pkl')
+        split_scores = glob.glob(args.pref + 'split_dm/*' + args.split + '*scores*.pkl')
         sort_scores = natsort.natsorted(split_scores)
         for ndx, pf in enumerate(sort_files):
             if ndx == 0:
