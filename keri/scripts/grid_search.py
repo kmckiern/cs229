@@ -36,7 +36,24 @@ def report(grid_scores, n_top=10):
 
 
 def main():
+
+    ## development - use data frames for uniform exclusion of a legislator across all years
     # read in data
+    dfs =  glob.glob('../../data/features/*feat*norm*pkl')
+    d2010, d2012, d2014 = [pd.read_pickle(i) for i in dfs]
+    all_data = pd.read_pickle('../../data/features/cand_2010_2012_2014_fm_trim_normed.pkl')
+    data_matrix = np.array(all_data)
+
+    scores =  glob.glob('../../data/features/*feat*score*pkl')
+    s2010, s2012, s2014 = [pd.read_pickle(i) for i in scores]
+    all_scores = pd.read_pickle('../../data/features/cand_2010_2012_2014_scores.pkl')
+    score_matrix = np.array(all_scores)
+
+    fin_and_dwn = all_data + all_scores
+    # detemine set of candidates in data frames
+    cands = set(set3_df.index)
+    ##
+
     data_2010 = np.array( pd.read_pickle(args.fm) )
     data_2012 = np.array( pd.read_pickle('../../data/features/cand_parse_all_fresh_2012_feat_matrix_trim_normed_pc10.pkl') )
     data_2014 = np.array( pd.read_pickle('../../data/features/cand_parse_all_fresh_2014_feat_matrix_trim_normed_pc10.pkl') )
