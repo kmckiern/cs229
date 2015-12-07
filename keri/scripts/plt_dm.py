@@ -59,7 +59,7 @@ def main():
         ax = sns.heatmap(pc_df, cmap=cm, ax=ax, 
                 xticklabels=False, cbar_ax=cbar_ax,
                 cbar_kws={'orientation': 'horizontal'})
-        ax.set_title('Feature Matric Top Principal Components')
+        ax.set_title('Feature Matrix Principal Components')
         plt.yticks(rotation=0)
         ax.set_xlabel('PC')
         fig.savefig(opref + data_name + '_pc_hm.png', bbox_inches='tight')
