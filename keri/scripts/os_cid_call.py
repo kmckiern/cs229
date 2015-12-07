@@ -21,12 +21,18 @@ import sys
 parser = argparse.ArgumentParser(description='get financial information for an input candidate')
 parser.add_argument('--cid', type=str, help='CRP CID', default='N00007360')
 parser.add_argument('--yr', type=str, help='query year', default='2014')
-parser.add_argument('--ak', type=str, help='api key', default='4db73104ad1a3dc93ad29dda55286997')
-parser.add_argument('--categories', type=str, help='sector code database file', default='../../data/candidates/CRP_Categories.txt')
-parser.add_argument('--write_dicts', action='store_true', help='write candidate data to dat file', default=False)
-parser.add_argument('--pref', type=str, help='output file directory preface', default='../../data/out/examples/npelosi/')
-parser.add_argument('--norm', action='store_true', help='normalize fin data', default=False)
-parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', default=False)
+parser.add_argument('--ak', type=str, help='api key',
+        default='4f6406b36cf5ff37914c6f9f30882cec')
+parser.add_argument('--categories', type=str, help='sector code database file', 
+        default='../../data/candidates/CRP_Categories.txt')
+parser.add_argument('--write_dicts', action='store_true',
+        help='write candidate data to dat file', default=False)
+parser.add_argument('--pref', type=str, help='output file directory preface', 
+        default='../../data/out/examples/npelosi/')
+parser.add_argument('--norm', action='store_true', help='normalize fin data', 
+        default=False)
+parser.add_argument('--ip', action='store_true', help='open ipython after variable declaration', 
+        default=False)
 args, unknown = parser.parse_known_args()
 
 def json_dict(d):

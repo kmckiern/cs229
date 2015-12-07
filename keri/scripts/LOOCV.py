@@ -48,12 +48,14 @@ def main():
         import seaborn as sns 
         import matplotlib.pyplot as plt
         cm = sns.diverging_palette(220, 20, n=2)
-        sns.set(font_scale=.8)
+        sns.set(font='Open Sans')
+        sns.set(font_scale=1.0)
         sns.set_style(style='white')
         party_df = sns.lmplot(x='DWN-0', y='DWN-1', hue='party', data=cands,
-                fit_reg=False, palette=cm, legend=False)
+                fit_reg=False, palette=cm, legend=False, aspect=1.25)
         plt.legend(loc='upper right')
-        plt.title('distribution of DW-NOMINATE scores by party')
+        plt.xlim([-1.5,1.5])
+        plt.title('Distribution of DW-NOMINATE Scores by Party')
         party_df.savefig('../../data/out/dwn.png', dpi=400, bbox_inches='tight')
 
     # training set and tragets 
