@@ -65,94 +65,89 @@ def main():
         # training set and tragets 
         X_raw, DWN_0, DWN_1 = set[0], set[1].T, set[2].T
         percent_train = np.arange(0.1,1.0,0.1)
-        test_error = []
 
-        for p in percent_train:
-            # partition data into training and test set for each dwn score
-            X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X_raw, DWN_0, test_size=p, random_state=0)
-            X_train_2, X_test_2, Y_train_2, Y_test_2 = cross_validation.train_test_split(X_raw, DWN_1, test_size=p, random_state=0)
+        # partition data into training and test set for each dwn score
+        X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X_raw, DWN_0, test_size=0.2, random_state=0)
+        X_train_2, X_test_2, Y_train_2, Y_test_2 = cross_validation.train_test_split(X_raw, DWN_1, test_size=0.2, random_state=0)
 
-            print('Training set size: %d samples' % len(X_train))
-            print('Test set size: %d samples' % len(X_test))
-            print('')
+        print('Training set size: %d samples' % len(X_train))
+        print('Test set size: %d samples' % len(X_test))
+        print('')
 
-            # define grid spacing here
-            Cs = np.arange(1,200,10)
-            gammas = [1e1, 1e0, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6]
+        # define grid spacing here
+        Cs = np.arange(1,101,1)
+        gammas = np.arange(10,210,10)
 
-            # parameter distributions. initially we will just search over
-            # different orders of magnitude of the parameters.
-            param_grid = [{'kernel': ['rbf'], 
-                            'gamma': gammas,
-                                'C': Cs
-                           }
-                         #  {'kernel': ['linear'],
-                         #       'C': Cs
-                         #  },
+        # parameter distributions. initially we will just search over
+        # different orders of magnitude of the parameters.
+        param_grid = [#{'kernel': ['rbf'], 
+                      #  'gamma': gammas,
+                      #      'C': Cs
+                      # },
 
-                         # {'kernel': ['poly'],
-                         #       'C': Cs,
-                         #   'gamma': gammas,  
-                         #  'degree': [2, 3, 4]
-                         #  }
-                         ]
+                       #{'kernel': ['linear'],
+                       #     'C': Cs
+                       #}#,
 
-            # create the search, one for each DWN dimension.
-            grid_search_0 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
-            grid_search_1 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
-            grid_search_SVC = GridSearchCV(svm.SVC(), param_grid, cv=5, n_jobs=4)
-            t0 = time.time()
+                      {'kernel': ['poly'],
+                            'C': Cs,
+                        'gamma': gammas,  
+                        'degree': [2, 3, 4]
+                       }
+                     ]
 
-            # for SVC, need to convert 
-            # dw array to a boolean array for classification
-            Y_train_SVC, Y_test_SVC = [], []
-            
-            for i in range(len(Y_train)):
-                if Y_train[i] > 0: Y_train_SVC.append(1)
-                else: Y_train_SVC.append(0)
+        # create the search, one for each DWN dimension.
+        grid_search_0 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
+        #grid_search_1 = GridSearchCV(svm.SVR(), param_grid, cv=5, n_jobs=4)
+        #grid_search_SVC = GridSearchCV(svm.SVC(), param_grid, cv=5, n_jobs=4)
+        t0 = time.time()
 
-            for i in range(len(Y_test)):   
-                if Y_test[i] > 0: Y_test_SVC.append(1)
-                else: Y_test_SVC.append(0)
-            
-            Y_train_SCV, Y_test_SVC = np.array(Y_train_SVC), np.array(Y_test_SVC)
+        # for SVC, need to convert 
+        # dw array to a boolean array for classification
+        Y_train_SVC, Y_test_SVC = [], []
+        
+        for i in range(len(Y_train)):
+            if Y_train[i] > 0: Y_train_SVC.append(1)
+            else: Y_train_SVC.append(0)
 
-            print('Performing search...')
-            # perform the search on development subset of data
-            grid_search_0.fit(X_train, Y_train)
-            grid_search_1.fit(X_train_2, Y_train_2)
-            grid_search_SVC.fit(X_train, Y_train_SVC)
-            print('GridSearchCV took % .2f seconds.' % (time.time() - t0))
-            print('')
+        for i in range(len(Y_test)):   
+            if Y_test[i] > 0: Y_test_SVC.append(1)
+            else: Y_test_SVC.append(0)
+        
+        Y_train_SCV, Y_test_SVC = np.array(Y_train_SVC), np.array(Y_test_SVC)
 
-            print('Grid search over DWN0:')
-            report(grid_search_0.grid_scores_)
-            print('')
+        print('Performing search...')
+        # perform the search on development subset of data
+        grid_search_0.fit(X_train, Y_train)
+        #grid_search_1.fit(X_train_2, Y_train_2)
+        #grid_search_SVC.fit(X_train, Y_train_SVC)
+        print('GridSearchCV took % .2f seconds.' % (time.time() - t0))
+        print('')
 
-            print('Grid search for DWN1:')
-            report(grid_search_1.grid_scores_)
-            print('')
+        print('Grid search over DWN0:')
+        report(grid_search_0.grid_scores_)
+        print('')
 
-            print('Grid search for SVC:')
-            report(grid_search_SVC.grid_scores_)
-            print('')
+        print('Grid search for DWN1:')
+        #report(grid_search_1.grid_scores_)
+        print('')
 
-            # use best performing training model to estimate the test set error
-            clf_best_0 = grid_search_0.best_estimator_
-            clf_best_1 = grid_search_1.best_estimator_
-            clf_best_SVC = grid_search_SVC.best_estimator_
+        print('Grid search for SVC:')
+        #report(grid_search_SVC.grid_scores_)
+        print('')
 
-            # k-fold cross validation estimates the test score
-            test_score_0 = clf_best_0.score(X_test, Y_test) #np.average( cross_validation.cross_val_score(clf_best_0, X_test, y=Y_test, cv=2) )
-            test_score_1 = clf_best_1.score(X_test, Y_test_2) #np.average( cross_validation.cross_val_score(clf_best_1, X_test_2, y=Y_test_2, cv=2) )
-            test_score_SVC = clf_best_SVC.score(X_test, Y_test_SVC) #np.average( cross_validation.cross_val_score(clf_best_SVC, X_test, y=Y_test_SVC, cv=2) )
-            print('Test scores: (%.4f, %.4f, %.4f) for DWN0, DWN1, and SVC, respectively.' % (test_score_0, test_score_1, test_score_SVC))
-            print('Done.')
-            test_error.append([p, test_score_0, test_score_1, test_score_SVC])
+        # use best performing training model to estimate the test set error
+        clf_best_0 = grid_search_0.best_estimator_
+        #clf_best_1 = grid_search_1.best_estimator_
+        #clf_best_SVC = grid_search_SVC.best_estimator_
 
-        # save test error curve
-        test_error = np.array(test_error) 
-        np.savetxt('test_error.dat',test_error)
+        # k-fold cross validation estimates the test score
+        test_score_0 = clf_best_0.score(X_test, Y_test) #np.average( cross_validation.cross_val_score(clf_best_0, X_test, y=Y_test, cv=2) )
+        test_score_1 = 0.0 #clf_best_1.score(X_test, Y_test_2) #np.average( cross_validation.cross_val_score(clf_best_1, X_test_2, y=Y_test_2, cv=2) )
+        test_score_SVC = 0.0 #clf_best_SVC.score(X_test, Y_test_SVC) #np.average( cross_validation.cross_val_score(clf_best_SVC, X_test, y=Y_test_SVC, cv=2) )
+        print('Test scores: (%.4f, %.4f, %.4f) for DWN0, DWN1, and SVC, respectively.' % (test_score_0, test_score_1, test_score_SVC))
+        print('Done.')
+
 
     if args.ipnb:
         IPython.embed()
