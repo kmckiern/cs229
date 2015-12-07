@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser(description='LOOCV over dataset')
 parser.add_argument('--fm', type=str, help='feature matrix',
         default='../../data/features/cand_parse_all_fresh_2014_feat_matrix_trim_normed.pkl')
 parser.add_argument('--cf', type=str, help='file of candidates and'
-        ' CIDs', default='../../joe/out/split/cand_parse_all_freshG.dat')
+        ' CIDs', default='../../joe/out/split/recombine.dat')
 parser.add_argument('--pltd', action='store_true', help='plot dwn' 
         ' distribution', default=False)
 parser.add_argument('--ipnb', action='store_true', help='open ipython'
@@ -38,7 +38,7 @@ def report(grid_scores, n_top=10):
 def main():
     # read in data
     data = pd.read_pickle(args.fm)
-    cols = ['name', 'state', 'CID', 'party', 'DWN-0', 'DWN-1']
+    cols = ['f name', 'l name', 'state', 'party', 'CID', 'DWN-0', 'DWN-1']
     cands = pd.read_csv(args.cf, sep='\t', names=cols)
     cids = np.array(cands['CID'])
     dwn0 = np.array(cands['DWN-0'])
@@ -47,7 +47,7 @@ def main():
     if args.pltd:
         import seaborn as sns 
         import matplotlib.pyplot as plt
-        cm = sns.diverging_palette(20, 220, n=2)
+        cm = sns.diverging_palette(220, 20, n=2)
         sns.set(font_scale=.8)
         sns.set_style(style='white')
         party_df = sns.lmplot(x='DWN-0', y='DWN-1', hue='party', data=cands,
