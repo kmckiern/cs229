@@ -54,10 +54,14 @@ def main():
         pc_df = pd.DataFrame(PCs.T, columns=cols)
         pc_df.index = df_col
 
-        plt.clf()
-        pc_hm = sns.heatmap(pc_df, cmap=cm)
-        fig = plt.gcf()
+        grid_kws = {"height_ratios": (.95, .05), "hspace": .25}
+        fig, (ax, cbar_ax) = plt.subplots(2, gridspec_kw=grid_kws)
+        ax = sns.heatmap(pc_df, cmap=cm, ax=ax, 
+                xticklabels=False, cbar_ax=cbar_ax,
+                cbar_kws={'orientation': 'horizontal'})
+        ax.set_title('Feature Matric Top Principal Components')
         plt.yticks(rotation=0)
+        ax.set_xlabel('PC')
         fig.savefig(opref + data_name + '_pc_hm.png', bbox_inches='tight')
 
         plt.clf()
