@@ -75,7 +75,7 @@ def main(args):
     top sectors to a candidate/member for indicated period
     '''
     try:
-        top_sect = CRP.candSector.get(cid=cid, cycle=yr)
+        top_sect = CRP.candSector.get(cid=cid, cycle=yr, year=yr)
         sect_fin_data = group_data(cats, top_sect, args.norm)
     except:
         top_sect = np.empty(len(cats))
