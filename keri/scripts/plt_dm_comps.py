@@ -38,13 +38,19 @@ def main():
     cp = sns.color_palette(cm, n_colors=len(lbls))
     df['SV'] = lbls
 
+    all_count = 0
+    sv_count = 0
     xnp = np.array(df)
     for ndx, i in enumerate(xnp):
         if i[-1] == 0:
-            plt.plot(i[:-1], cat_numerical, 's', color='.9', alpha=.1)
+            plt.plot(i[:-1], cat_numerical, 's', color='.9', alpha=.5)
+            all_count += 1
     for ndx, i in enumerate(xnp):
         if i[-1] != 0:
-            plt.plot(i[:-1], cat_numerical, 'o', color=cp[ndx])
+            plt.plot(i[:-1], cat_numerical, '.', color=cp[ndx], alpha=.9)
+            sv_count += 1
+
+    print (all_count, sv_count) 
 
     sns.despine()
     plt.ylim([-1,12])
