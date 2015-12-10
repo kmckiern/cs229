@@ -79,7 +79,7 @@
       <file>final_report.bcf</file>
     </requires>
     <requires type="editable">
-      <file>milestone.bib</file>
+      <file>final_report.bib</file>
     </requires>
   </external>
 </requests>
