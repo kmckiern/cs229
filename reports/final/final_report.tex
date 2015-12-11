@@ -1,4 +1,4 @@
-\documentclass[10]{article}
+\documentclass[12]{article}
 \usepackage[margin=1in]{geometry}
 
 \usepackage{graphicx}
@@ -12,9 +12,6 @@
 \bibliography{final_report}
 
 \begin{document}
-\begin{center}
-\huge{\textbf{CS229 - Final Report}} \\
-\end{center}
 \begin{center}
 \huge{\textbf{Predicting Political Ideology Using Campaign Finance Data}} \\
 \end{center}
@@ -53,7 +50,7 @@ December 12, 2015}
 
 \[ \mathcal{L} = \sum_{t=1}^{T} \sum_{i=1}^{p_t} \sum_{j=1}^{q_t} \sum_{\tau = 1}^{2} C_{ij \tau t} \ln P_{ij \tau t} \]
 
-\noindent where $P_{ij \tau t}$ is the probability of voting for choice $\tau$ (yes or no) and $C_{ij \tau t} = 1$ if that probability accurately predicts the vote \cite{NOMBOOT}. Indexes $j$, $i$, and $t$ sum over roll call votes, legislators, and legislative sessions, respectively. These ideal points are constrained to lie within the interval $\left[ -1,1 \right]$ and are two-dimensional quantities. A common interpretation of the first coordinate is that it reflects the divide between the Republican and Democratic parties, whereas the second coordinate is more highly correlated with intra-party division. It is important to emphasize that these methods seek to estimate ideal points using foll call voting records. While a full congressional voting record would be unavailable for candidates who are new to office, campaign finance data \textit{are}, ideally, readily available. Thus, we think it would be helpful to be able to predict ideal points for candidates even before they have established a congressional voting record. One could then use these scores to predict how legislators will vote on particular pieces of legislation.\\
+\noindent where $P_{ij \tau t}$ is the probability of voting for choice $\tau$ (yes or no) and $C_{ij \tau t} = 1$ if that probability accurately predicts the vote \cite{NOMBOOT}. Indexes $j$, $i$, and $t$ sum over roll call votes, legislators, and legislative sessions, respectively. These ideal points are constrained to lie within the interval $\left[ -1,1 \right]$ and are two-dimensional quantities. A common interpretation of the first coordinate is that it reflects the divide between the Republican and Democratic parties, whereas the second coordinate is more highly correlated with intra-party division. It is important to emphasize that these methods seek to estimate ideal points using roll call voting records. While a full congressional voting record would be unavailable for candidates who are new to office, campaign finance data \textit{are}, ideally, readily available. Thus, we think it would be helpful to be able to predict ideal points for candidates even before they have established a congressional voting record. One could then use these scores to predict how legislators will vote on particular pieces of legislation.\\
 
 \noindent Much previous work has focused on connecting political contributions to specific votes cast in congress \cite{stratmann1991campaign,stratmann1995campaign}. Furthermore, Adam Bonica's has developed a model for predicting DW-NOMINATE scores using data at the resolution of individual contributions to PACs \cite{bonica2013ideology}. This approach is bound to be more computationally expensive than a coarser graining of the space of contributions, and we posit that we can recover the ideal point of a candidate just by using a contribution profile partitioned by sector. We have collated freely available campaign finance [CITE] and DW-NOMINATE ideal point \cite{DWWEB} datasets and performed a principal component analysis on the feature set extracted therefrom. The original scope of our project has been narrowed due to a reduction in the size of our group. Originally we had planned to investigate anomalous voting behavior and the ability to predict it solely by examining campaign finance data, we have shifted our focus on training a model to predict DW-NOMINATE ideal points, which directly reflect ideological stances and inter-/intra-party divisions.\\
 
@@ -91,6 +88,52 @@ TO-DO: COPY/PASTE CONTENT FROM POSTER ABOUT FEATURE SET AND DISTRIBUTION OF DWN 
 % else not covered in the class), you may want to explain your algorithm using
 % several paragraphs. Note: Theory/algorithms projects may have an appendix
 % showing extended proofs (see appendix description below).
+
+The learning algorithm used in this work was epsilon Support Vector Regression
+($\epsilon$-SVR) via a radial basis function (RBF) kernel. In $\epsilon$-SVR, 
+a nonlinear function is determined through the parameterization of a linear 
+function in a higher dimensional inner product space defined by a particular 
+kernel function. This higher dimensional linear function is determined such 
+that all training data is within $\epsilon$ of the target data, and is of the 
+following form: \\
+\begin{equation*}
+f(x) = w^Tx + b \mbox{ s.t. } w \in S, b \in \mathbb{R}
+\end{equation*}
+
+Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$, 
+$\epsilon$-SVR amounts to solving a constrained convex optimization problem, 
+given in its primal form by the following:
+\begin{equation*}
+\min_{w, b, \zeta, \zeta^*} \frac{1}{2} w^T w + C \sum_{i=1}^{n} (\zeta_i + \zeta_i^*)
+\end{equation*}
+\begin{align*}
+\mbox{subject to } & y_i - w^T \phi (x_i) - b \leq \epsilon + \zeta_i, \\
+& w^T \phi (x_i) + b - y_i \leq \epsilon + \zeta_i^*, \\
+& \zeta_i, \zeta_i^* \geq 0, i=1,...,n
+\end{align*}
+Where $C$ determins the degree of regularization, and $\zeta$, $\zeta^*$ are
+slack variables which allow for constraint relaxation in the case it is
+required.
+
+Its dual is
+\begin{equation*}
+\min_{\alpha, \alpha^*} \frac{1}{2} (\alpha - \alpha^*)^T Q (\alpha - \alpha^*) + \varepsilon e^T (\alpha + \alpha^*) - y^T (\alpha - \alpha^*)
+\end{equation*}
+subject to
+\begin{align*}
+& e^T (\alpha - \alpha^*) = 0 \\
+& 0 \leq \alpha_i, \alpha_i^* \leq C, i=1, ..., n
+\end{align*}
+
+where $e$ is the vector of all ones, $C > 0$ is the upper bound,
+$Q$ is an $n$ by $n$ positive semidefinite matrix, $Q_{ij} \equiv K(x_i, x_j) =
+\phi (x_i)^T \phi (x_j)$ is the kernel. Here training vectors are implicitly mapped into a higher
+(maybe infinite) dimensional space by the function $\phi$.
+
+The decision function is:
+\begin{equation}
+\sum_{i=1}^n (\alpha_i - \alpha_i^*) K(x_i, x) + \rho
+\end{equation}
 
 %------------------------------------------------------------------------------%
 \section*{Experiments/Results/Discussion}
