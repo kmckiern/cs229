@@ -2242,6 +2242,7 @@
     <bcf:citekey order="4">stratmann1995campaign</bcf:citekey>
     <bcf:citekey order="5">bonica2013ideology</bcf:citekey>
     <bcf:citekey order="6">DWWEB</bcf:citekey>
+    <bcf:citekey order="7">open_secrets</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty" type="entry" sortscheme="nty">
   <bcf:sorting>

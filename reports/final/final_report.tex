@@ -66,7 +66,12 @@ December 12, 2015}
 % make sure to talk about it. Try to include examples of your data in the report
 % (e.g. include an image, show a waveform, etc.).
 
-TO-DO: COPY/PASTE CONTENT FROM POSTER ABOUT FEATURE SET AND DISTRIBUTION OF DWN SCORES  
+Campaign finance data for a set of 375 candidates (as determined by sampling from
+the DW-NOMINATE scores) over years 2010, 2012, and 2014 were obtained using the 
+Open Secrets python API \cite{open_secrets}. Of the available data, we chose to 
+featurize by sector. For each sector, individual and PAC contributions were 
+combined and normalized on a per candidate basis. A heatmap of the total feature 
+set is illustrated below. 
 
 \begin{figure}[H]
 \centering
@@ -89,19 +94,13 @@ TO-DO: COPY/PASTE CONTENT FROM POSTER ABOUT FEATURE SET AND DISTRIBUTION OF DWN 
 % several paragraphs. Note: Theory/algorithms projects may have an appendix
 % showing extended proofs (see appendix description below).
 
-The learning algorithm used in this work was epsilon-Support Vector Regression
-($\epsilon$-SVR) via a radial basis function (RBF) kernel. In $\epsilon$-SVR,
-a nonlinear function is determined through the training of a linear
-function in a higher dimensional inner product space, $f(x)$. $f(x)$ is
-given by \\
-\begin{equation*}
-f(x) = w^Tx + b \mbox{ s.t. } w \in S, b \in \mathbb{R}
-\end{equation*}
-The inner product space is defined by a kernel function, $K(x_i,x_j)$.
-that all training data is within $\epsilon$ of the target data, and is of the
-following form: \\
+\noindent The learning algorithm used in this work was epsilon-Support Vector Regression
+($\epsilon$-SVR), using a radial basis function (RBF) kernel. In $\epsilon$-SVR,
+a nonlinear function is constructed through the training of a linear
+function, $f(x) = w^Tx + b$, in a higher dimensional inner product space
+defined by a kernel function, $K(x_i,x_j)=\phi (x_i)^T \phi (x_j)$. \\
 
-Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$,
+\noindent Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$,
 $\epsilon$-SVR amounts to solving a constrained convex optimization problem,
 given in its primal form by the following:
 \begin{equation*}
@@ -109,34 +108,26 @@ given in its primal form by the following:
 \zeta_i^*)
 \end{equation*}
 \begin{align*}
-\mbox{subject to } & y_i - w^T \phi (x_i) - b \leq \epsilon + \zeta_i, \\
+\mbox{s.t. } & y_i - w^T \phi (x_i) - b \leq \epsilon + \zeta_i, \\
 & w^T \phi (x_i) + b - y_i \leq \epsilon + \zeta_i^*, \\
 & \zeta_i, \zeta_i^* \geq 0, i=1,...,n
 \end{align*}
-Where $C$ determins the degree of regularization, and $\zeta$, $\zeta^*$ are
-slack variables which allow for constraint relaxation in the case it is
-required.
-
-Its dual is
+where $\phi(x)$ is a mapping to the higher dimension space, $C$ determins the
+degree of regularization, and $\zeta$, $\zeta^*$ are slack variables which
+allow for constraint relaxation in the case it is required. This problem is
+often simpler to solve in its dual form:
 \begin{equation*}
 \min_{\alpha, \alpha^*} \frac{1}{2} (\alpha - \alpha^*)^T Q (\alpha - \alpha^*)
 + \varepsilon e^T (\alpha + \alpha^*) - y^T (\alpha - \alpha^*)
 \end{equation*}
-subject to
 \begin{align*}
-& e^T (\alpha - \alpha^*) = 0 \\
+\mbox{s.t. } & (\alpha - \alpha^*) = 0 \\
 & 0 \leq \alpha_i, \alpha_i^* \leq C, i=1, ..., n
 \end{align*}
-
-where $e$ is the vector of all ones, $C > 0$ is the upper bound,
-$Q$ is an $n$ by $n$ positive semidefinite matrix, $Q_{ij} \equiv K(x_i, x_j) =
-\phi (x_i)^T \phi (x_j)$ is the kernel. Here training vectors are implicitly
-mapped into a higher
-(maybe infinite) dimensional space by the function $\phi$.
-
-The decision function is:
+where $Q_{ij} \equiv K(x_i, x_j)$, and $Q$ is the matrix of these values.  This
+problem can be solved to yield the following:
 \begin{equation}
-\sum_{i=1}^n (\alpha_i - \alpha_i^*) K(x_i, x) + \rho
+f(x) = \sum_{i=1}^n (\alpha_i - \alpha_i^*) K(x_i, x) + b
 \end{equation}
 
 %------------------------------------------------------------------------------%
@@ -164,7 +155,7 @@ The decision function is:
 We chose a final model after performing a randomized optimization in the space of hyperparameters for SVR, for multiple kernel types. This required specifying distributions over which to sample the hyperparameters. We specified a separate exponential distribution for each hyperparameter, and estimated the decay scale of each distribution by first performing an exhaustive grid search over values of the hyperparameters spanning several orders of magnitude. In both the grid and randomized search schemes, the coefficient of determination ($R^2$) was used as the scoring metric for ranking all sampled models and was estimated for each candidate model using 5-fold cross-validation on a randomly sampled set of training data that comprised 80\% of the data set. Each randomized hyperparameter search proceeded for $30,000$ iterations.\\ 
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tabular}{ |c|c|c| } 
  \hline
@@ -191,6 +182,25 @@ We chose a final model after performing a randomized optimization in the space o
 \end{center}
 \end{figure}
 
+In order to evaluate the structure of the feature data set, and gain insight
+into our model, PCA was performed on the full training set.  The top 3
+principal components are depicted below.  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.8\textwidth]{cand_2010_2012_2014_fm_trim_normed_pc_hm.png}
+\caption{\label{fig:pc_all}Heatmap of top 3 principal components}
+\end{figure}
+
+It appears the financial, and labor sectors specify the dimensions of largest
+variance. Where the finance sector is most characteristic of a republican
+candidate, and the labor sector is most characteristic of democratic candidates.
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=.8\textwidth]{totals_by_sector.png}
+% \caption{\label{fig:pc_all}Per party campaign contributions by sector.}
+% \end{figure}
 
 %------------------------------------------------------------------------------%
 \section*{Conclusion/Future Work}

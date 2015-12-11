@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 DEC 2015 23:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 DEC 2015 08:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,7 +668,11 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 LaTeX Warning: Unused global option(s):
     [12].
 
-(./final_report.aux)
+(./final_report.aux
+
+LaTeX Warning: Label `fig:pc_all' multiply defined.
+
+)
 \openout1 = `final_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -829,26 +833,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation 'open_secrets' on page 2 undefined on input line 71.
+
+
 <./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.png, id=22, 568.7649pt x 
 362.7954pt>
 File: ./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.png Graphic file (ty
 pe png)
  <use ./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.png>
 Package pdftex.def Info: ./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.p
-ng used on input line 73.
+ng used on input line 78.
 (pdftex.def)             Requested size: 375.80544pt x 239.71695pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 
  []
 
 [2 <./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
@@ -856,27 +864,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 File: ./figs/learning_curve.png Graphic file (type png)
 
 <use ./figs/learning_curve.png>
-Package pdftex.def Info: ./figs/learning_curve.png used on input line 188.
+Package pdftex.def Info: ./figs/learning_curve.png used on input line 180.
 (pdftex.def)             Requested size: 375.80544pt x 258.36218pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+<./figs/cand_2010_2012_2014_fm_trim_normed_pc_hm.png, id=43, 568.7649pt x 362.7
+954pt>
+File: ./figs/cand_2010_2012_2014_fm_trim_normed_pc_hm.png Graphic file (type pn
+g)
+ <use ./figs/cand_2010_2012_2014_fm_trim_normed_pc_hm.png>
+Package pdftex.def Info: ./figs/cand_2010_2012_2014_fm_trim_normed_pc_hm.png us
+ed on input line 191.
+(pdftex.def)             Requested size: 375.80544pt x 239.71695pt.
+ [4 <./figs/learning_curve.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
 
-LaTeX Warning: Empty bibliography on input line 207.
+LaTeX Warning: Empty bibliography on input line 218.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
-[4 <./figs/learning_curve.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+[5 <./figs/cand_2010_2012_2014_fm_trim_normed_pc_hm.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
  (./final_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `final_report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -886,13 +906,13 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'final_report.run.xml'.
 \openout1 = `final_report.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 14748 strings out of 493089
- 233956 string characters out of 6134842
- 709079 words of memory out of 5000000
- 18045 multiletter control sequences out of 15000+600000
+ 14755 strings out of 493089
+ 234237 string characters out of 6134842
+ 708137 words of memory out of 5000000
+ 18049 multiletter control sequences out of 15000+600000
  7502 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,35p,1432b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -910,10 +930,10 @@ xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (4 pages, 311516 bytes).
+Output written on final_report.pdf (5 pages, 339002 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
