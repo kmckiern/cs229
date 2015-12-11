@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [0] Config.pm:325> INFO - This is Biber 2.1
 [1] Config.pm:328> INFO - Logfile is 'final_report.blg'
 [67] biber:276> INFO - === Fri Dec 11, 2015, 15:14:13
@@ -16,3 +17,20 @@
 [504] bbl.pm:505> INFO - Writing 'final_report.bbl' with encoding 'ascii'
 [507] bbl.pm:596> INFO - Output to final_report.bbl
 [507] Biber.pm:107> INFO - WARNINGS: 2
+=======
+[0] biber-darwin:197> INFO - This is biber 0.9.3
+[0] biber-darwin:198> INFO - Logfile is 'final_report.blg'
+[1] biber-darwin:205> INFO - === Biber version 0.9.3
+[1] biber-darwin:206> INFO - === Fri Dec 11, 2015, 14:49:39
+[1] Biber.pm:320> INFO - Reading final_report.bcf
+[214] Biber.pm:596> INFO - Found 9 citekeys in bib section 0
+[226] Biber.pm:2435> INFO - Processing bib section 0
+[260] Biber.pm:2524> INFO - Looking for bibtex format file 'final_report.bib' for section 0
+[260] bibtex.pm:104> INFO - Found bibtex data file 'final_report.bib'
+[460] Biber.pm:2331> INFO - Sorting list 'MAIN' keys
+[460] Biber.pm:2335> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[482] Biber.pm:2331> INFO - Sorting list 'SHORTHANDS' keys
+[482] Biber.pm:2335> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[502] BBL.pm:392> INFO - Writing 'final_report.bbl' with encoding 'ascii'
+[503] BBL.pm:451> INFO - Output to final_report.bbl
+>>>>>>> 5a526dc0ae2c511b1e792eb61692104ea8ac279a

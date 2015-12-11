@@ -1,10 +1,19 @@
 % $ biblatex auxiliary file $
+<<<<<<< HEAD
 % $ biblatex bbl format version 2.5 $
+=======
+% $ biblatex version 1.5 $
+% $ biber version 0.9.3 $
+>>>>>>> 5a526dc0ae2c511b1e792eb61692104ea8ac279a
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
 % This file may safely be deleted. It will be recreated by
+<<<<<<< HEAD
 % biber as required.
+=======
+% biber or bibtex as required.
+>>>>>>> 5a526dc0ae2c511b1e792eb61692104ea8ac279a
 %
 \begingroup
 \makeatletter
@@ -18,6 +27,7 @@
 
 
 \refsection{0}
+<<<<<<< HEAD
   \sortlist{nty}{nty}
     \entry{bonica2013ideology}{article}{}
       \name{author}{1}{}{%
@@ -153,6 +163,154 @@
       \range{pages}{15}
     \endentry
   \endsortlist
+=======
+  \entry{bonica2013ideology}{article}{}
+    \name{labelname}{1}{}{%
+      {{}{Bonica}{B\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{}{Bonica}{B\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{BA1}
+    \strng{fullhash}{BA1}
+    \field{sortinit}{B}
+    \field{journaltitle}{American Journal of Political Science}
+    \field{number}{2}
+    \field{title}{Ideology and interests in the political marketplace}
+    \field{volume}{57}
+    \field{year}{2013}
+    \field{pages}{294\bibrangedash 311}
+  \endentry
+
+  \entry{NOMBOOT}{article}{}
+    \name{labelname}{5}{}{%
+      {{}{Carroll}{C\bibinitperiod}{Royce}{R\bibinitperiod}{}{}{}{}}%
+      {{}{Lewis}{L\bibinitperiod}{Jeffrey\bibnamedelima B}{J\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      {{}{Lo}{L\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+      {{}{Poole}{P\bibinitperiod}{Keith\bibnamedelima T}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+      {{}{Rosenthal}{R\bibinitperiod}{Howard}{H\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{5}{}{%
+      {{}{Carroll}{C\bibinitperiod}{Royce}{R\bibinitperiod}{}{}{}{}}%
+      {{}{Lewis}{L\bibinitperiod}{Jeffrey\bibnamedelima B}{J\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      {{}{Lo}{L\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+      {{}{Poole}{P\bibinitperiod}{Keith\bibnamedelima T}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+      {{}{Rosenthal}{R\bibinitperiod}{Howard}{H\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {SPM-PMSAPSA}%
+    }
+    \strng{namehash}{CR+1}
+    \strng{fullhash}{CRLJBLJPKTRH1}
+    \field{sortinit}{C}
+    \field{journaltitle}{Political Analysis}
+    \field{number}{3}
+    \field{title}{Measuring bias and uncertainty in DW-NOMINATE ideal point estimates via the parametric bootstrap}
+    \field{volume}{17}
+    \field{year}{2009}
+    \field{pages}{261\bibrangedash 275}
+  \endentry
+
+  \entry{class_svm}{misc}{}
+    \strng{namehash}{1}
+    \strng{fullhash}{1}
+    \field{sortinit}{C}
+    \field{howpublished}{\url{cs229.stanford.edu/materials/notes/cs229-notes3.pdf}}
+    \field{note}{Accessed: 2015-12-11}
+    \field{title}{CS229 class notes on Support Vector Machines}
+  \endentry
+
+  \entry{DWWEB}{misc}{}
+    \strng{namehash}{1}
+    \strng{fullhash}{1}
+    \field{sortinit}{D}
+    \field{howpublished}{\url{http://voteview.com/dwnomin.htm}}
+    \field{note}{Accessed: 2015.10.01}
+    \field{title}{DW-NOMINATE Scores With Bootstrapped Standard Errors}
+  \endentry
+
+  \entry{open_secrets}{misc}{}
+    \strng{namehash}{1}
+    \strng{fullhash}{1}
+    \field{sortinit}{O}
+    \field{howpublished}{\url{http://opensecrets.org}}
+    \field{note}{Accessed: 2015-12-11}
+    \field{title}{OpenSecrets.org}
+  \endentry
+
+  \entry{PR}{book}{}
+    \name{labelname}{2}{}{%
+      {{}{Poole}{P\bibinitperiod}{K.T.}{K\bibinitperiod}{}{}{}{}}%
+      {{}{Rosenthal}{R\bibinitperiod}{H.}{H\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{2}{}{%
+      {{}{Poole}{P\bibinitperiod}{K.T.}{K\bibinitperiod}{}{}{}{}}%
+      {{}{Rosenthal}{R\bibinitperiod}{H.}{H\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{PKRH1}
+    \strng{fullhash}{PKRH1}
+    \field{sortinit}{P}
+    \field{title}{Congress: A Political-Economic History of Roll Call Voting}
+    \field{year}{2000}
+  \endentry
+
+  \entry{scikit_learn_svr}{misc}{}
+    \strng{namehash}{1}
+    \strng{fullhash}{1}
+    \field{sortinit}{S}
+    \field{howpublished}{\url{http://scikit-learn.org/stable/modules/svm.html#svm-implementation-details}}
+    \field{note}{Accessed: 2015-12-11}
+    \field{title}{Scikit-learn SVR implementation documentation}
+  \endentry
+
+  \entry{stratmann1995campaign}{article}{}
+    \name{labelname}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{ST1}
+    \strng{fullhash}{ST1}
+    \field{sortinit}{S}
+    \field{journaltitle}{The Review of Economics and Statistics}
+    \field{title}{Campaign contributions and congressional voting: does the timing of contributions matter?}
+    \field{year}{1995}
+    \field{pages}{127\bibrangedash 136}
+  \endentry
+
+  \entry{stratmann1991campaign}{article}{}
+    \name{labelname}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{ST1}
+    \strng{fullhash}{ST1}
+    \field{sortinit}{S}
+    \field{journaltitle}{Southern Economic Journal}
+    \field{title}{What do campaign contributions buy? Deciphering causal effects of money and votes}
+    \field{year}{1991}
+    \field{pages}{606\bibrangedash 620}
+  \endentry
+
+  \lossort
+  \endlossort
+
+>>>>>>> 5a526dc0ae2c511b1e792eb61692104ea8ac279a
 \endrefsection
 \endinput
 
