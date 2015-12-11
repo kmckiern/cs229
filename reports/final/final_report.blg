@@ -1,15 +1,15 @@
 [0] biber-darwin:197> INFO - This is biber 0.9.3
 [0] biber-darwin:198> INFO - Logfile is 'final_report.blg'
 [0] biber-darwin:205> INFO - === Biber version 0.9.3
-[1] biber-darwin:206> INFO - === Thu Dec 10, 2015, 13:22:08
+[0] biber-darwin:206> INFO - === Thu Dec 10, 2015, 16:47:52
 [1] Biber.pm:320> INFO - Reading final_report.bcf
-[59] Biber.pm:596> INFO - Found 3 citekeys in bib section 0
-[69] Biber.pm:2435> INFO - Processing bib section 0
-[85] Biber.pm:2524> INFO - Looking for bibtex format file 'final_report.bib' for section 0
-[85] bibtex.pm:104> INFO - Found bibtex data file 'final_report.bib'
+[55] Biber.pm:596> INFO - Found 6 citekeys in bib section 0
+[64] Biber.pm:2435> INFO - Processing bib section 0
+[79] Biber.pm:2524> INFO - Looking for bibtex format file 'final_report.bib' for section 0
+[79] bibtex.pm:104> INFO - Found bibtex data file 'final_report.bib'
 [136] Biber.pm:2331> INFO - Sorting list 'MAIN' keys
-[137] Biber.pm:2335> INFO - No sort tailoring available for locale 'en_US.UTF-8'
-[151] Biber.pm:2331> INFO - Sorting list 'SHORTHANDS' keys
-[151] Biber.pm:2335> INFO - No sort tailoring available for locale 'en_US.UTF-8'
-[161] BBL.pm:392> INFO - Writing 'final_report.bbl' with encoding 'ascii'
-[161] BBL.pm:451> INFO - Output to final_report.bbl
+[136] Biber.pm:2335> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[152] Biber.pm:2331> INFO - Sorting list 'SHORTHANDS' keys
+[152] Biber.pm:2335> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[165] BBL.pm:392> INFO - Writing 'final_report.bbl' with encoding 'ascii'
+[165] BBL.pm:451> INFO - Output to final_report.bbl

@@ -19,6 +19,27 @@
 
 
 \refsection{0}
+  \entry{bonica2013ideology}{article}{}
+    \name{labelname}{1}{}{%
+      {{}{Bonica}{B\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{}{Bonica}{B\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{BA1}
+    \strng{fullhash}{BA1}
+    \field{sortinit}{B}
+    \field{journaltitle}{American Journal of Political Science}
+    \field{number}{2}
+    \field{title}{Ideology and interests in the political marketplace}
+    \field{volume}{57}
+    \field{year}{2013}
+    \field{pages}{294\bibrangedash 311}
+  \endentry
+
   \entry{NOMBOOT}{article}{}
     \name{labelname}{5}{}{%
       {{}{Carroll}{C\bibinitperiod}{Royce}{R\bibinitperiod}{}{}{}{}}%
@@ -74,6 +95,44 @@
     \field{sortinit}{P}
     \field{title}{Congress: A Political-Economic History of Roll Call Voting}
     \field{year}{2000}
+  \endentry
+
+  \entry{stratmann1995campaign}{article}{}
+    \name{labelname}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{ST1}
+    \strng{fullhash}{ST1}
+    \field{sortinit}{S}
+    \field{journaltitle}{The Review of Economics and Statistics}
+    \field{title}{Campaign contributions and congressional voting: does the timing of contributions matter?}
+    \field{year}{1995}
+    \field{pages}{127\bibrangedash 136}
+  \endentry
+
+  \entry{stratmann1991campaign}{article}{}
+    \name{labelname}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{}{Stratmann}{S\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{ST1}
+    \strng{fullhash}{ST1}
+    \field{sortinit}{S}
+    \field{journaltitle}{Southern Economic Journal}
+    \field{title}{What do campaign contributions buy? Deciphering causal effects of money and votes}
+    \field{year}{1991}
+    \field{pages}{606\bibrangedash 620}
   \endentry
 
   \lossort
