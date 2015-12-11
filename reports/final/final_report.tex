@@ -97,12 +97,16 @@ set is illustrated below.
 \noindent The learning algorithm used in this work was epsilon-Support Vector Regression
 ($\epsilon$-SVR), using a radial basis function (RBF) kernel. In $\epsilon$-SVR,
 a nonlinear function is constructed through the training of a linear
-function, $f(x) = w^Tx + b$, in a higher dimensional inner product space
-defined by a kernel function, $K(x_i,x_j)=\phi (x_i)^T \phi (x_j)$. \\
+function, $f(x)$, in a higher dimensional inner product space
+defined by a kernel function, $K(x_i,x_j)=\phi (x_i)^T \phi (x_j)$. The
+objective of the function training is to ensure all training data lies
+within $\epsilon$ of all target data. Without supplementary information about a
+particular data set, SV learning algorithms are consider the best
+"off-the-shelf" supervised learning algorithm \cite{class_svm}. \\
 
 \noindent Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$,
-$\epsilon$-SVR amounts to solving a constrained convex optimization problem,
-given in its primal form by the following:
+$\epsilon$-SVR can be formulated into the following convex optimization problem,
+given here in its primal form:
 \begin{equation*}
 \min_{w, b, \zeta, \zeta^*} \frac{1}{2} w^T w + C \sum_{i=1}^{n} (\zeta_i +
 \zeta_i^*)
@@ -112,10 +116,12 @@ given in its primal form by the following:
 & w^T \phi (x_i) + b - y_i \leq \epsilon + \zeta_i^*, \\
 & \zeta_i, \zeta_i^* \geq 0, i=1,...,n
 \end{align*}
-where $\phi(x)$ is a mapping to the higher dimension space, $C$ determins the
-degree of regularization, and $\zeta$, $\zeta^*$ are slack variables which
+where $\phi(x)$ is the mapping to the higher dimension space, $C$ determines the
+degree of regularization (lower $C$ leads to a smoother solution), and $\zeta$, 
+$\zeta^*$ are slack variables which
 allow for constraint relaxation in the case it is required. This problem is
-often simpler to solve in its dual form:
+often simpler to solve in its dual form (derived through the method of Lagrange
+multipliers):
 \begin{equation*}
 \min_{\alpha, \alpha^*} \frac{1}{2} (\alpha - \alpha^*)^T Q (\alpha - \alpha^*)
 + \varepsilon e^T (\alpha + \alpha^*) - y^T (\alpha - \alpha^*)
@@ -129,6 +135,12 @@ problem can be solved to yield the following:
 \begin{equation}
 f(x) = \sum_{i=1}^n (\alpha_i - \alpha_i^*) K(x_i, x) + b
 \end{equation}
+Where the RBF kernel is given by the following:
+\begin{equation}
+K(x_i,x_j) = \exp{\left[-\gamma |x_i - x_j|^2\right]}
+\end{equation}
+where $\gamma$ describes the influence of each individual training example
+\cite{scikit_learn_svr}.
 
 %------------------------------------------------------------------------------%
 \section*{Experiments/Results/Discussion}
