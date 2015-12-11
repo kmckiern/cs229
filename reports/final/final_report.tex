@@ -89,16 +89,17 @@ TO-DO: COPY/PASTE CONTENT FROM POSTER ABOUT FEATURE SET AND DISTRIBUTION OF DWN 
 % several paragraphs. Note: Theory/algorithms projects may have an appendix
 % showing extended proofs (see appendix description below).
 
-The learning algorithm used in this work was epsilon Support Vector Regression
+The learning algorithm used in this work was epsilon-Support Vector Regression
 ($\epsilon$-SVR) via a radial basis function (RBF) kernel. In $\epsilon$-SVR,
-a nonlinear function is determined through the parameterization of a linear
-function in a higher dimensional inner product space defined by a particular
-kernel function. This higher dimensional linear function is determined such
-that all training data is within $\epsilon$ of the target data, and is of the
-following form: \\
+a nonlinear function is determined through the training of a linear
+function in a higher dimensional inner product space, $f(x)$. $f(x)$ is
+given by \\
 \begin{equation*}
 f(x) = w^Tx + b \mbox{ s.t. } w \in S, b \in \mathbb{R}
 \end{equation*}
+The inner product space is defined by a kernel function, $K(x_i,x_j)$.
+that all training data is within $\epsilon$ of the target data, and is of the
+following form: \\
 
 Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$,
 $\epsilon$-SVR amounts to solving a constrained convex optimization problem,
