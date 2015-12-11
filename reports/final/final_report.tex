@@ -86,7 +86,7 @@ set is illustrated below.
   \end{minipage}
 \end{figure}
 
-We also include a plot of the distribution of DW-NOMINATE scores, with democrats and republicans labeled using their traditional party colors. We note that the dataset appears to be linearly separable in the first dimension of the ideal point coordinates. This suggests that a classification algorithm may do well in differentiating between the democrats and republicans, in the event that a regression algorithm fails to quantitatively capture the distribution of scores. Finally, we note that for each party the second dimension of the DW-NOMINATE scores is not as easily separable and instead spans the interval [-1,1]. This would be a natural extension of the present work.
+\noindent We also include a plot of the distribution of DW-NOMINATE scores, with democrats and republicans labeled using their traditional party colors. We note that the dataset appears to be linearly separable in the first dimension of the ideal point coordinates. This suggests that a classification algorithm may do well in differentiating between the democrats and republicans, in the event that a regression algorithm fails to quantitatively capture the distribution of scores. Finally, we note that for each party the second dimension of the DW-NOMINATE scores is not as easily separable and instead spans the interval [-1,1]. This would be a natural extension of the present work.
 
 %\begin{figure}[H]
 %\centering
@@ -179,7 +179,7 @@ where $\gamma$ describes the influence of each individual training example
 % plots should include legends, axis labels, and have font sizes that are
 % readable when printed.
 
-We chose a final model after performing a randomized optimization in the space of hyperparameters for SVR, for multiple kernel types. This required specifying distributions over which to sample the hyperparameters. We specified a separate exponential distribution for each hyperparameter, and estimated the decay scale of each distribution by first performing an exhaustive grid search over values of the hyperparameters spanning several orders of magnitude. In both the grid and randomized search schemes, the coefficient of determination ($R^2$) was used as the scoring metric for ranking all sampled models and was estimated for each candidate model using 5-fold cross-validation on a randomly sampled set of training data that comprised 80\% of the data set. Each randomized hyperparameter search proceeded for $30,000$ iterations.\\ 
+\noindent We chose a final model after performing a randomized optimization in the space of hyperparameters for SVR, for multiple kernel types. This required specifying distributions over which to sample the hyperparameters. We specified a separate exponential distribution for each hyperparameter, and estimated the decay scale of each distribution by first performing an exhaustive grid search over values of the hyperparameters spanning several orders of magnitude. In both the grid and randomized search schemes, the coefficient of determination ($R^2$) was used as the scoring metric for ranking all sampled models and was estimated for each candidate model using 5-fold cross-validation on a randomly sampled set of training data that comprised 80\% of the data set. Each randomized hyperparameter search proceeded for $30,000$ iterations.\\ 
 
 
 \begin{figure}[H]
@@ -227,7 +227,7 @@ by sector.
 \end{minipage}
 \end{figure}
 
-It appears the financial, and labor sectors specify the dimensions of largest
+\noindent It appears the financial, and labor sectors specify the dimensions of largest
 variance. It also appears that donations by the finance sector are heavily skewed 
 toward republicans, while donations by the labor sector are heavily skewed toward
 democrats. Although SVR models are abstract to interpret, this analysis suggests
@@ -245,7 +245,7 @@ ideology.
 
 \noindent We found that the Support Vector regression algorithm with the radial basis function kernel outperformed all other models. The nonlinearity of this problem is not especially surprising given the regional variability of both political ideology and of the contributing industries. We note that the normalization procedure employed here likely washed out some of the variability, as some candidates surely received greater amounts of contributions overall compared to others; however, the unnormalized feature matrix was prohibitively costly to fit to. One future direction may be to look at incorporating this variability in the mode. Moreover...
 
-BLAH BLAH BLAH. \\
+\noindent BLAH BLAH BLAH. \\
 
 \printbibliography
 
