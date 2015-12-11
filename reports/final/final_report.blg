@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+[0] Config.pm:325> INFO - This is Biber 2.1
+[1] Config.pm:328> INFO - Logfile is 'final_report.blg'
+[67] biber:276> INFO - === Fri Dec 11, 2015, 15:14:13
+[68] Biber.pm:334> INFO - Reading 'final_report.bcf'
+[230] Utils.pm:146> WARN - Warning: Found biblatex control file version 2.8, expected version 2.7
+[232] Biber.pm:646> INFO - Found 9 citekeys in bib section 0
+[260] Biber.pm:2978> INFO - Processing section 0
+[282] Biber.pm:3116> INFO - Looking for bibtex format file 'final_report.bib' for section 0
+[284] bibtex.pm:1010> INFO - Decoding LaTeX character macros into UTF-8
+[287] bibtex.pm:884> INFO - Found BibTeX data source 'final_report.bib'
+[300] Utils.pm:146> WARN - The field 'location' in entry 'PR' cannot be null, deleting it
+[470] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[471] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[471] Biber.pm:2855> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[471] Biber.pm:2859> INFO - No sort tailoring available for locale 'en-US'
+[504] bbl.pm:505> INFO - Writing 'final_report.bbl' with encoding 'ascii'
+[507] bbl.pm:596> INFO - Output to final_report.bbl
+[507] Biber.pm:107> INFO - WARNINGS: 2
+=======
 [0] biber-darwin:197> INFO - This is biber 0.9.3
 [0] biber-darwin:198> INFO - Logfile is 'final_report.blg'
 [1] biber-darwin:205> INFO - === Biber version 0.9.3
@@ -13,3 +33,4 @@
 [482] Biber.pm:2335> INFO - No sort tailoring available for locale 'en_US.UTF-8'
 [502] BBL.pm:392> INFO - Writing 'final_report.bbl' with encoding 'ascii'
 [503] BBL.pm:451> INFO - Output to final_report.bbl
+>>>>>>> 5a526dc0ae2c511b1e792eb61692104ea8ac279a

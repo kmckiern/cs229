@@ -33,7 +33,7 @@ December 12, 2015}
 % readers. If you are using your project for multiple classes, add a paragraph
 % explaining which components of the project were used for each class. 
 
-\noindent The public interest has increasingly focused on the effect of money in politics. Specifically, the Citizens United v. FEC Supreme Court ruling maintained the legality of unrestricted political expenditures by corporate and union entities. As a result, there has been a proliferation of super PAC, or `political action committee',  organizations. While these organizations are not permitted to make contributions directly to campaigns, they may engage in unlimited independent spending and there is no restriction on the amount of funds they can accept from donors. Such legal developments beg the question: Can one predict generally the influence of donors over politicians to whom they give? As the flux of money into the political system only continues to increase, this remains a critical question. Our project largely builds on previous research conducted by Poole and Rosenthal (summarized below), and makes use of freely available databases of financial information. We aim to predict quantitative scores of political ideology using campaign contribution profiles; specifically, the input to our algorithm is a matrix of normalized vectors of campaign contribution data, partitioned by industry, and the output is a score for each candidate on the interval $[-1,1]$ indicating a position on the political ideological spectrum.
+\noindent The public interest has increasingly focused on the effect of money in politics. Specifically, the Citizens United v. FEC Supreme Court ruling maintained the legality of unrestricted political expenditures by corporate and union entities. As a result, there has been a proliferation of super PAC, or `political action committee',  organizations. While these organizations are not permitted to make contributions directly to campaigns, they may engage in unlimited independent spending and there is no restriction on the amount of funds they can accept from donors. Such legal developments beg the question: Can one predict generally the influence of donors over politicians to whom they give? As the flux of money into the political system only continues to increase, this remains a critical question. Our project largely builds on previous research conducted by Poole and Rosenthal (summarized below), and makes use of freely available databases of financial information. We aim to predict quantitative scores of political ideology using campaign contribution profiles; specifically, the input to our algorithm is a matrix of normalized vectors of campaign contribution data, partitioned by industry, the learning algorithm used is Support Vector Regression (SVR), and the output is a score for each candidate on the interval $[-1,1]$ indicating a position on the political ideological spectrum.
 
 %------------------------------------------------------------------------------%
 \section*{Related Work}
@@ -209,25 +209,30 @@ We chose a final model after performing a randomized optimization in the space o
 \end{center}
 \end{figure}
 
-In order to evaluate the structure of the feature data set, and gain insight
-into our model, PCA was performed on the full training set.  The top 3
-principal components are depicted below.  
+In order to evaluate the structure of the feature data set, and gain qualitative 
+insight into our model, principal component analysis (PCA) was performed on the 
+full training set. The top 3 principal components are depicted below, along with 
+supplementary data regarding the per party distributions of campaign donations 
+by sector.
 
-\begin{figure}[H]
+\begin{figure}[!tbp]
 \centering
-\includegraphics[width=.8\textwidth]{cand_2010_2012_2014_fm_trim_normed_pc_hm.png}
-\caption{\label{fig:pc_all}Heatmap of top 3 principal components}
+\begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{cand_2010_2012_2014_fm_trim_normed_pc_hm.png}
+    \caption{\label{fig:pc_all}Heatmap of top 3 principal components}
+\end{minipage}
+\begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{totals_by_sector.png}
+    \caption{\label{fig:pc_all}Per party campaign contributions by sector.}
+\end{minipage}
 \end{figure}
 
 It appears the financial, and labor sectors specify the dimensions of largest
-variance. Where the finance sector is most characteristic of a republican
-candidate, and the labor sector is most characteristic of democratic candidates.
-
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=.8\textwidth]{totals_by_sector.png}
-% \caption{\label{fig:pc_all}Per party campaign contributions by sector.}
-% \end{figure}
+variance. It also appears that donations by the finance sector are heavily skewed 
+toward republicans, while donations by the labor sector are heavily skewed toward
+democrats. Although SVR models are abstract to interpret, this analysis suggests
+that these two categories had the largest influence in the prediction of political 
+ideology.
 
 %------------------------------------------------------------------------------%
 \section*{Conclusion/Future Work}
