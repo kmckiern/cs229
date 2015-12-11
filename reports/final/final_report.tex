@@ -135,7 +135,7 @@ We chose a final model after performing a randomized optimization in the space o
 
 \noindent The final hyperparameters for the linear and radial basis function (RBF) kernels are summarized in the table below alongside their corresponding training and test errors. We note that results for the polynomial kernel were not as trustworthy because it proved to be much more computationally intensive and thus was unable to be optimized as exhaustively as the other two kernel types. Therefore, we omit those results. We also note that of the best models identified by the randomized search, for each kernel type there were several distinct sets of hyperparameters that yielded very similar training scores. For the RBF kernel specifically, the hypermarameters we selected represent a compromise between the values of C and $\gamma$. While relatively high values of C tend to correspond to overfitting by overpenalizing large deviations from the target, constraining C too aggressively would encourage the bandwidth of the kernel function, $\gamma$, to expand and potentially overfit the data. Therefore, cross-validation will be critical in evaluating the final selection.\\  
 
-\noindent As expected, the RBF kernel is better able to capture the nonlinearities and regional variation of the data by virtue its implicit infinite-dimensional feature mapping. In order to characterize the performance of the final model further as well as to illustrate the deficiencies of the linear kernel, we compute a learning curve of the test score as a function of fraction of data used for training.
+\noindent As expected, the RBF kernel is better able to capture the nonlinearities and regional variation of the data by virtue of its implicit infinite-dimensional feature mapping. In order to characterize the performance of the final model further and to compare it to the linear kernel model, we compute learning curves for both showing the test score as a function of the fraction of data used for training. The deficiencies of the linear kernel are readily apparent; its score saturates at about $0.65$ to $0.7$, within error, while the RBF kernel acheives $0.8$ to $0.85$, within error. 
 
 \begin{figure}[H]
 \begin{center}
@@ -153,6 +153,10 @@ We chose a final model after performing a randomized optimization in the space o
 % computational resources, what would you explore?
 
 %------------------------------------------------------------------------------%
+
+\noindnet We found that the Support Vector regression algorithm with the radial basis function kernel outperformed all other models. The nonlinearity of this problem is not especially surprising given the regional variability of both political ideology and of the contributing industries. We note that the normalization procedure employed here likely washed out some of the variability, as some candidates surely received greater amounts of contributions overall compared to others; however, the unnormalized feature matrix was prohibitively costly to fit to. One future direction may be to look at incorporating this variability in the mode. Moreover...
+
+BLAH BLAH BLAH. \\
 
 \printbibliography
 
