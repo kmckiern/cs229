@@ -70,7 +70,7 @@ Campaign finance data for a set of 375 candidates (as determined by sampling fro
 the DW-NOMINATE scores) over years 2010, 2012, and 2014 were obtained using the 
 Open Secrets python API \cite{open_secrets}. Of the available data, we chose to 
 featurize by sector. For each sector, individual and PAC contributions were 
-combined and normalized on a per candidate basis. A heatmap of the total feature 
+combined and normalized on a per candidate basis. This amounted to 12 features in total. A heatmap of the total feature 
 set is illustrated below. 
 
 \begin{figure}[!tbp]
@@ -85,6 +85,8 @@ set is illustrated below.
     \caption{\label{fig:dwn}DW-NOMINATE score distribution}
   \end{minipage}
 \end{figure}
+
+We also include a plot of the distribution of DW-NOMINATE scores, with democrats and republicans labeled using their traditional party colors. We note that the dataset appears to be linearly separable in the first dimension of the ideal point coordinates. This suggests that a classification algorithm may do well in differentiating between the democrats and republicans, in the event that a regression algorithm fails to quantitatively capture the distribution of scores. Finally, we note that for each party the second dimension of the DW-NOMINATE scores is not as easily separable and instead spans the interval [-1,1]. This would be a natural extension of the present work.
 
 %\begin{figure}[H]
 %\centering
