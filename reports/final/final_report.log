@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 DEC 2015 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 DEC 2015 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -666,7 +666,7 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 
 
 LaTeX Warning: Unused global option(s):
-    [10].
+    [12].
 
 (./final_report.aux)
 \openout1 = `final_report.aux'.
@@ -775,355 +775,54 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `final_report.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'final_report.bbl' not found.
 
-
-Package biblatex Warning: File 'final_report.bbl' is wrong format version - exp
-ected 2.5.
-
-Package biblatex Info: ... file 'final_report.bbl' found.
-(./final_report.bbl
-! Undefined control sequence.
-\entry ...a@\the \c@refsection @\blx@slist@scheme 
-                                                  @\abx@field@entrykey }\csu...
-l.22   \entry{bonica2013ideology}{article}{}
-                                            
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.41   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.41   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.41   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.41   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.41   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.41   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.41   \endentry
-                
-? 
-! Undefined control sequence.
-\entry ...a@\the \c@refsection @\blx@slist@scheme 
-                                                  @\abx@field@entrykey }\csu...
-l.43   \entry{NOMBOOT}{article}{}
-                                 
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.70   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.70   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.70   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.70   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.70   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.70   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.70   \endentry
-                
-? 
-! Undefined control sequence.
-\entry ...a@\the \c@refsection @\blx@slist@scheme 
-                                                  @\abx@field@entrykey }\csu...
-l.72   \entry{DWWEB}{misc}{}
-                            
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.79   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.79   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.79   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.79   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.79   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.79   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.79   \endentry
-                
-? 
-! Undefined control sequence.
-\entry ...a@\the \c@refsection @\blx@slist@scheme 
-                                                  @\abx@field@entrykey }\csu...
-l.81   \entry{PR}{book}{}
-                         
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.98   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.98   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.98   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.98   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.98   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.98   \endentry
-                
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.98   \endentry
-                
-? 
-! Undefined control sequence.
-\entry ...a@\the \c@refsection @\blx@slist@scheme 
-                                                  @\abx@field@entrykey }\csu...
-l.100   \entry{stratmann1995campaign}{article}{}
-                                                
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.117   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.117   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.117   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.117   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.117   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.117   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.117   \endentry
-                 
-? 
-! Undefined control sequence.
-\entry ...a@\the \c@refsection @\blx@slist@scheme 
-                                                  @\abx@field@entrykey }\csu...
-l.119   \entry{stratmann1991campaign}{article}{}
-                                                
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.136   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...refsection @entry@\blx@slist@scheme 
-                                                  
-l.136   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.136   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.136   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.136   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.136   \endentry
-                 
-? 
-! Undefined control sequence.
-<argument> ...he \c@refsection @\blx@slist@scheme 
-                                                  
-l.136   \endentry
-                 
-? 
-! Undefined control sequence.
-l.138   \lossort
-                
-? 
-! Undefined control sequence.
-l.139   \endlossort
-                   
-? 
-)
+No file final_report.bbl.
 Package biblatex Info: Reference section=0 on input line 14.
 Package biblatex Info: Reference segment=0 on input line 14.
-LaTeX Font Info:    Try loading font information for U+msa on input line 39.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 39.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Citation 'PR' on page 1 undefined on input line 52.
+LaTeX Warning: Citation 'PR' on page 1 undefined on input line 49.
 
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-LaTeX Warning: Citation 'NOMBOOT' on page 1 undefined on input line 52.
+LaTeX Warning: Citation 'NOMBOOT' on page 1 undefined on input line 49.
 
 
-LaTeX Warning: Citation 'NOMBOOT' on page 1 undefined on input line 56.
+LaTeX Warning: Citation 'NOMBOOT' on page 1 undefined on input line 53.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
 LaTeX Warning: Citation 'stratmann1991campaign' on page 1 undefined on input li
-ne 58.
+ne 55.
 
 
 LaTeX Warning: Citation 'stratmann1995campaign' on page 1 undefined on input li
-ne 58.
+ne 55.
 
 
 LaTeX Warning: Citation 'bonica2013ideology' on page 1 undefined on input line 
-58.
+55.
 
 
-LaTeX Warning: Citation 'DWWEB' on page 1 undefined on input line 58.
+LaTeX Warning: Citation 'DWWEB' on page 1 undefined on input line 55.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
@@ -1136,43 +835,48 @@ File: ./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.png Graphic file (ty
 pe png)
  <use ./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.png>
 Package pdftex.def Info: ./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.p
-ng used on input line 76.
+ng used on input line 73.
 (pdftex.def)             Requested size: 375.80544pt x 239.71695pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 92--99
 
  []
 
 [2 <./figs/cand_2010_2012_2014_fm_trim_normed_feature_hm.png>]
-<./figs/learning_curve.png, id=33, 578.16pt x 397.485pt>
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+[3] <./figs/learning_curve.png, id=42, 578.16pt x 397.485pt>
 File: ./figs/learning_curve.png Graphic file (type png)
 
 <use ./figs/learning_curve.png>
-Package pdftex.def Info: ./figs/learning_curve.png used on input line 142.
+Package pdftex.def Info: ./figs/learning_curve.png used on input line 188.
 (pdftex.def)             Requested size: 375.80544pt x 258.36218pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
-LaTeX Warning: Empty bibliography on input line 157.
+ []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 159.
-[3 <./figs/learning_curve.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 159.
+
+LaTeX Warning: Empty bibliography on input line 207.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
+[4 <./figs/learning_curve.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
  (./final_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 159.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 159.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
 Package rerunfilecheck Info: File `final_report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1182,13 +886,13 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'final_report.run.xml'.
 \openout1 = `final_report.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
- 14763 strings out of 493089
- 234276 string characters out of 6134842
- 706993 words of memory out of 5000000
- 18060 multiletter control sequences out of 15000+600000
+ 14748 strings out of 493089
+ 233956 string characters out of 6134842
+ 709079 words of memory out of 5000000
+ 18045 multiletter control sequences out of 15000+600000
  7502 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,35p,1432b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1202,11 +906,14 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on final_report.pdf (3 pages, 285007 bytes).
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on final_report.pdf (4 pages, 311516 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

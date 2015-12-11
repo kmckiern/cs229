@@ -90,21 +90,22 @@ TO-DO: COPY/PASTE CONTENT FROM POSTER ABOUT FEATURE SET AND DISTRIBUTION OF DWN 
 % showing extended proofs (see appendix description below).
 
 The learning algorithm used in this work was epsilon Support Vector Regression
-($\epsilon$-SVR) via a radial basis function (RBF) kernel. In $\epsilon$-SVR, 
-a nonlinear function is determined through the parameterization of a linear 
-function in a higher dimensional inner product space defined by a particular 
-kernel function. This higher dimensional linear function is determined such 
-that all training data is within $\epsilon$ of the target data, and is of the 
+($\epsilon$-SVR) via a radial basis function (RBF) kernel. In $\epsilon$-SVR,
+a nonlinear function is determined through the parameterization of a linear
+function in a higher dimensional inner product space defined by a particular
+kernel function. This higher dimensional linear function is determined such
+that all training data is within $\epsilon$ of the target data, and is of the
 following form: \\
 \begin{equation*}
 f(x) = w^Tx + b \mbox{ s.t. } w \in S, b \in \mathbb{R}
 \end{equation*}
 
-Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$, 
-$\epsilon$-SVR amounts to solving a constrained convex optimization problem, 
+Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$,
+$\epsilon$-SVR amounts to solving a constrained convex optimization problem,
 given in its primal form by the following:
 \begin{equation*}
-\min_{w, b, \zeta, \zeta^*} \frac{1}{2} w^T w + C \sum_{i=1}^{n} (\zeta_i + \zeta_i^*)
+\min_{w, b, \zeta, \zeta^*} \frac{1}{2} w^T w + C \sum_{i=1}^{n} (\zeta_i +
+\zeta_i^*)
 \end{equation*}
 \begin{align*}
 \mbox{subject to } & y_i - w^T \phi (x_i) - b \leq \epsilon + \zeta_i, \\
@@ -117,7 +118,8 @@ required.
 
 Its dual is
 \begin{equation*}
-\min_{\alpha, \alpha^*} \frac{1}{2} (\alpha - \alpha^*)^T Q (\alpha - \alpha^*) + \varepsilon e^T (\alpha + \alpha^*) - y^T (\alpha - \alpha^*)
+\min_{\alpha, \alpha^*} \frac{1}{2} (\alpha - \alpha^*)^T Q (\alpha - \alpha^*)
++ \varepsilon e^T (\alpha + \alpha^*) - y^T (\alpha - \alpha^*)
 \end{equation*}
 subject to
 \begin{align*}
@@ -127,7 +129,8 @@ subject to
 
 where $e$ is the vector of all ones, $C > 0$ is the upper bound,
 $Q$ is an $n$ by $n$ positive semidefinite matrix, $Q_{ij} \equiv K(x_i, x_j) =
-\phi (x_i)^T \phi (x_j)$ is the kernel. Here training vectors are implicitly mapped into a higher
+\phi (x_i)^T \phi (x_j)$ is the kernel. Here training vectors are implicitly
+mapped into a higher
 (maybe infinite) dimensional space by the function $\phi$.
 
 The decision function is:
@@ -197,7 +200,7 @@ We chose a final model after performing a randomized optimization in the space o
 
 %------------------------------------------------------------------------------%
 
-\noindnet We found that the Support Vector regression algorithm with the radial basis function kernel outperformed all other models. The nonlinearity of this problem is not especially surprising given the regional variability of both political ideology and of the contributing industries. We note that the normalization procedure employed here likely washed out some of the variability, as some candidates surely received greater amounts of contributions overall compared to others; however, the unnormalized feature matrix was prohibitively costly to fit to. One future direction may be to look at incorporating this variability in the mode. Moreover...
+\noindent We found that the Support Vector regression algorithm with the radial basis function kernel outperformed all other models. The nonlinearity of this problem is not especially surprising given the regional variability of both political ideology and of the contributing industries. We note that the normalization procedure employed here likely washed out some of the variability, as some candidates surely received greater amounts of contributions overall compared to others; however, the unnormalized feature matrix was prohibitively costly to fit to. One future direction may be to look at incorporating this variability in the mode. Moreover...
 
 BLAH BLAH BLAH. \\
 
