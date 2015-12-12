@@ -52,7 +52,7 @@ December 12, 2015}
 
 \noindent where $P_{ij \tau t}$ is the probability of voting for choice $\tau$ (yes or no) and $C_{ij \tau t} = 1$ if that probability accurately predicts the vote \cite{NOMBOOT}. Indexes $j$, $i$, and $t$ sum over roll call votes, legislators, and legislative sessions, respectively. These ideal points are constrained to lie within the interval $\left[ -1,1 \right]$ and are two-dimensional quantities. A common interpretation of the first coordinate is that it reflects the divide between the Republican and Democratic parties, whereas the second coordinate is more highly correlated with intra-party division. It is important to emphasize that these methods seek to estimate ideal points using roll call voting records. While a full congressional voting record would be unavailable for candidates who are new to office, campaign finance data \textit{are}, ideally, readily available. Thus, we think it would be helpful to be able to predict ideal points for candidates even before they have established a congressional voting record. One could then use these scores to predict how legislators will vote on particular pieces of legislation and to draw quantitative comparisons between them.\\
 
-\noindent Much previous work has focused on connecting political contributions to specific votes cast in congress \cite{stratmann1991campaign,stratmann1995campaign}. Furthermore, Adam Bonica of Stanford has developed a model for predicting DW-NOMINATE scores using data at the resolution of individual contributions to PACs \cite{bonica2013ideology}. This approach is bound to be more computationally expensive than a coarser graining of the space of contributions, and we posit that we can recover the ideal point of a candidate just by using a contribution profile partitioned by sector. We have collated freely available campaign finance \cite{open_secrets} and DW-NOMINATE ideal point \cite{DWWEB} datasets. The original scope of our project has been narrowed due to a reduction in the size of our group. We originally planned to investigate anomalous voting behavior and the ability to predict it solely by examining campaign finance data, but shifted our focus to training a model to predict DW-NOMINATE ideal point coordinates.\\
+\noindent Much previous work has focused on connecting political contributions to specific votes cast in congress \cite{stratmann1991campaign,stratmann1995campaign}. Furthermore, Adam Bonica of Stanford has developed a correspondence analysis model for predicting DW-NOMINATE scores using data at the resolution of individual contributions to PACs \cite{bonica2013ideology}. We think this approach has the deficiency of being computationally expensive compared to a coarser graining of the space of contributions, and we posit that we can recover the ideal point of a candidate just by using a contribution profile partitioned by sector. We have collated freely available campaign finance \cite{open_secrets} and DW-NOMINATE ideal point \cite{DWWEB} datasets. The original scope of our project has been narrowed due to a reduction in the size of our group. We originally planned to investigate anomalous voting behavior and the ability to predict it solely by examining campaign finance data, but shifted our focus to training a model to predict DW-NOMINATE ideal point coordinates.\\
 
 %------------------------------------------------------------------------------%
 \section*{Dataset and Features}
@@ -198,7 +198,7 @@ and where $\gamma$ describes the influence of each individual training example
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{learning_curve.png}
+\includegraphics[width=0.6\linewidth]{learning_curve.png}
 \caption{Learning curve comparison}
 \end{center}
 \end{figure}
@@ -211,14 +211,14 @@ by sector.
 
 \begin{figure}[H]
 \centering
-\begin{minipage}[b]{0.5\textwidth}
-    \includegraphics[width=\textwidth]{cand_2010_2012_2014_fm_trim_normed_pc_hm.png}
+    \includegraphics[width=0.6\textwidth]{cand_2010_2012_2014_fm_trim_normed_pc_hm.png}
     \caption{\label{fig:top_pc}Top 3 principal components}
-\end{minipage}
-\begin{minipage}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{totals_by_sector.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.6\textwidth]{totals_by_sector.png}
     \caption{\label{fig:party_total}Per party campaign contributions}
-\end{minipage}
 \end{figure}
 
 \noindent It appears the financial and labor sectors specify the dimensions of largest
