@@ -33,7 +33,7 @@ December 12, 2015}
 % readers. If you are using your project for multiple classes, add a paragraph
 % explaining which components of the project were used for each class. 
 
-\noindent The public interest has increasingly focused on the effect of money in politics. Specifically, the Citizens United v. FEC Supreme Court ruling maintained the legality of unrestricted political expenditures by corporate and union entities. As a result, there has been a proliferation of super PAC, or `political action committee',  organizations. While these organizations are not permitted to make contributions directly to campaigns, they may engage in unlimited independent spending and there is no restriction on the amount of funds they can accept from donors. Such legal developments beg the question: Can one predict generally the influence of donors over politicians to whom they give? As the flux of money into the political system only continues to increase, this remains a critical question. Our project largely builds on previous research conducted by Poole and Rosenthal (summarized below), and makes use of freely available databases of financial information. We aim to predict quantitative scores of political ideology using campaign contribution profiles; specifically, the input to our algorithm is a matrix of normalized vectors of campaign contribution data, partitioned by industry, and the output is a score for each candidate on the interval $[-1,1]$ indicating a position on the political ideological spectrum.
+\noindent Public interest has become increasingly focused on the role of money in politics. Specifically, the Citizens United v. FEC Supreme Court ruling maintained the legality of unrestricted political expenditures by corporate and union entities. As a result, there has been a proliferation of super PAC, or `political action committee',  organizations. While these organizations are not permitted to make contributions directly to campaigns, they may engage in unlimited independent spending and there is no restriction on the amount of funds they can accept from donors. Such legal developments beg the question: Can one predict generally the influence of donors over politicians to whom they give? As the flux of money into the political system continues to increase, this remains a critical question. Our project builds largely on previous research by Poole and Rosenthal and makes use of freely available databases of campaign finance information. We aim to predict quantitative scores of political ideology using campaign contribution profiles; specifically, the input to our algorithm is a matrix of normalized vectors of campaign contribution data, partitioned by industry, the learning algorithm used is Support Vector Regression (SVR), and the output is a score for each candidate in the interval $[-1,1]$ indicating a position on the political ideological spectrum.
 
 %------------------------------------------------------------------------------%
 \section*{Related Work}
@@ -46,13 +46,13 @@ December 12, 2015}
 % Scholar is very useful for this: https://scholar.google.com/ (you can click
 % "cite" and it generates MLA, APA, BibTeX, etc.)
 
-\noindent The research of Poole and Rosenthal has focused on quantifying the political ideology of politicians \cite{PR}. In particular, they actively develop methods for calculating `ideal points' of candidates. For example, the DW-NOMINATE method calculates a legislator’s overall probability of voting `yea' on a piece of legislation as the sum of a deterministic utility value and a normally distributed random error \cite{NOMBOOT}. It calculates `ideal point' coordinates for legislators by maximizing the log likelihood function
+\noindent The research of Poole and Rosenthal has focused on quantifying the political ideology of politicians \cite{PR}. In particular, they actively develop methods for calculating `ideal points' for candidates. For example, the DW-NOMINATE method calculates a legislator's overall probability of voting `yea' on a piece of legislation as the sum of a deterministic utility value and a normally distributed random error \cite{NOMBOOT}. It calculates `ideal point' coordinates for legislators by maximizing the log likelihood function
 
 \[ \mathcal{L} = \sum_{t=1}^{T} \sum_{i=1}^{p_t} \sum_{j=1}^{q_t} \sum_{\tau = 1}^{2} C_{ij \tau t} \ln P_{ij \tau t} \]
 
-\noindent where $P_{ij \tau t}$ is the probability of voting for choice $\tau$ (yes or no) and $C_{ij \tau t} = 1$ if that probability accurately predicts the vote \cite{NOMBOOT}. Indexes $j$, $i$, and $t$ sum over roll call votes, legislators, and legislative sessions, respectively. These ideal points are constrained to lie within the interval $\left[ -1,1 \right]$ and are two-dimensional quantities. A common interpretation of the first coordinate is that it reflects the divide between the Republican and Democratic parties, whereas the second coordinate is more highly correlated with intra-party division. It is important to emphasize that these methods seek to estimate ideal points using roll call voting records. While a full congressional voting record would be unavailable for candidates who are new to office, campaign finance data \textit{are}, ideally, readily available. Thus, we think it would be helpful to be able to predict ideal points for candidates even before they have established a congressional voting record. One could then use these scores to predict how legislators will vote on particular pieces of legislation.\\
+\noindent where $P_{ij \tau t}$ is the probability of voting for choice $\tau$ (yes or no) and $C_{ij \tau t} = 1$ if that probability accurately predicts the vote \cite{NOMBOOT}. Indexes $j$, $i$, and $t$ sum over roll call votes, legislators, and legislative sessions, respectively. These ideal points are constrained to lie within the interval $\left[ -1,1 \right]$ and are two-dimensional quantities. A common interpretation of the first coordinate is that it reflects the divide between the Republican and Democratic parties, whereas the second coordinate is more highly correlated with intra-party division. It is important to emphasize that these methods seek to estimate ideal points using roll call voting records. While a full congressional voting record would be unavailable for candidates who are new to office, campaign finance data \textit{are}, ideally, readily available. Thus, we think it would be helpful to be able to predict ideal points for candidates even before they have established a congressional voting record. One could then use these scores to predict how legislators will vote on particular pieces of legislation and to draw quantitative comparisons between them.\\
 
-\noindent Much previous work has focused on connecting political contributions to specific votes cast in congress \cite{stratmann1991campaign,stratmann1995campaign}. Furthermore, Adam Bonica's has developed a model for predicting DW-NOMINATE scores using data at the resolution of individual contributions to PACs \cite{bonica2013ideology}. This approach is bound to be more computationally expensive than a coarser graining of the space of contributions, and we posit that we can recover the ideal point of a candidate just by using a contribution profile partitioned by sector. We have collated freely available campaign finance [CITE] and DW-NOMINATE ideal point \cite{DWWEB} datasets and performed a principal component analysis on the feature set extracted therefrom. The original scope of our project has been narrowed due to a reduction in the size of our group. Originally we had planned to investigate anomalous voting behavior and the ability to predict it solely by examining campaign finance data, we have shifted our focus on training a model to predict DW-NOMINATE ideal points, which directly reflect ideological stances and inter-/intra-party divisions.\\
+\noindent Much previous work has focused on connecting political contributions to specific votes cast in congress \cite{stratmann1991campaign,stratmann1995campaign}. Furthermore, Adam Bonica of Stanford has developed a correspondence analysis model for predicting DW-NOMINATE scores using data at the resolution of individual contributions to PACs \cite{bonica2013ideology}. We think this approach has the deficiency of being computationally expensive compared to a coarser graining of the space of contributions, and we posit that we can recover the ideal point of a candidate just by using a contribution profile partitioned by sector. We have collated freely available campaign finance \cite{open_secrets} and DW-NOMINATE ideal point \cite{DWWEB} datasets. The original scope of our project has been narrowed due to a reduction in the size of our group. We originally planned to investigate anomalous voting behavior and the ability to predict it solely by examining campaign finance data, but shifted our focus to training a model to predict DW-NOMINATE ideal point coordinates.\\
 
 %------------------------------------------------------------------------------%
 \section*{Dataset and Features}
@@ -66,17 +66,26 @@ December 12, 2015}
 % make sure to talk about it. Try to include examples of your data in the report
 % (e.g. include an image, show a waveform, etc.).
 
-Campaign finance data for a set of 375 candidates (as determined by sampling from
+\noindent Campaign finance data for 375 candidates (as determined by sampling from
 the DW-NOMINATE scores) over years 2010, 2012, and 2014 were obtained using the 
 Open Secrets python API \cite{open_secrets}. Of the available data, we chose to 
 featurize by sector. For each sector, individual and PAC contributions were 
-combined and normalized on a per candidate basis. A heatmap of the total feature 
-set is illustrated below. 
+combined and normalized on a per candidate basis. This amounted to 12 features in total. A heatmap of the total feature 
+set is illustrated below.\\ 
+
+\noindent We also include a plot of the distribution of DW-NOMINATE scores, labeling Democrats and Republicans using their traditional party colors. We note that the dataset appears linearly separable in the first dimension of the ideal point coordinates. This suggests that a classification algorithm may effectively distinguish between the parties in case regression algorithm fails to quantitatively capture the distribution of scores. Finally, we note that for each party the second dimension of the DW-NOMINATE scores is not as easily separable and instead spans the interval $\left[-1,1\right]$. This would be a natural extension of the present work.\\
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=.8\textwidth]{cand_2010_2012_2014_fm_trim_normed_feature_hm.png}
-\caption{\label{fig:pc_all}Heatmap of complete feature set}
+  \centering
+  \begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{cand_2010_2012_2014_fm_trim_normed_feature_hm.png}
+    \caption{\label{fig:feature_heatmap}Heatmap of complete feature set}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{dwn.png}
+    \caption{\label{fig:dwn}DW-NOMINATE score distribution}
+  \end{minipage}
 \end{figure}
 
 %------------------------------------------------------------------------------%
@@ -97,12 +106,16 @@ set is illustrated below.
 \noindent The learning algorithm used in this work was epsilon-Support Vector Regression
 ($\epsilon$-SVR), using a radial basis function (RBF) kernel. In $\epsilon$-SVR,
 a nonlinear function is constructed through the training of a linear
-function, $f(x) = w^Tx + b$, in a higher dimensional inner product space
-defined by a kernel function, $K(x_i,x_j)=\phi (x_i)^T \phi (x_j)$. \\
+function, $f(x)$, in a higher dimensional inner product space
+defined by a kernel function, $K(x_i,x_j)=\phi (x_i)^T \phi (x_j)$. The
+objective of the function training is to ensure all training data lies
+within $\epsilon$ of all target data. Without supplementary information about a
+particular data set, SV learning algorithms are consider the best
+``off-the-shelf" supervised learning algorithm \cite{class_svm}. \\
 
 \noindent Given a training set, $S = \{(x_0,y_0), ..., (x_n,y_n) | x_i \in \mathbb{R}\}$,
-$\epsilon$-SVR amounts to solving a constrained convex optimization problem,
-given in its primal form by the following:
+$\epsilon$-SVR can be formulated into the following convex optimization problem,
+given here in its primal form:
 \begin{equation*}
 \min_{w, b, \zeta, \zeta^*} \frac{1}{2} w^T w + C \sum_{i=1}^{n} (\zeta_i +
 \zeta_i^*)
@@ -112,10 +125,12 @@ given in its primal form by the following:
 & w^T \phi (x_i) + b - y_i \leq \epsilon + \zeta_i^*, \\
 & \zeta_i, \zeta_i^* \geq 0, i=1,...,n
 \end{align*}
-where $\phi(x)$ is a mapping to the higher dimension space, $C$ determins the
-degree of regularization, and $\zeta$, $\zeta^*$ are slack variables which
+where $\phi(x)$ is the mapping to the higher dimension space, $C$ determines the
+degree of regularization (lower $C$ leads to a smoother solution), and $\zeta$, 
+$\zeta^*$ are slack variables which
 allow for constraint relaxation in the case it is required. This problem is
-often simpler to solve in its dual form:
+often simpler to solve in its dual form (derived through the method of Lagrange
+multipliers):
 \begin{equation*}
 \min_{\alpha, \alpha^*} \frac{1}{2} (\alpha - \alpha^*)^T Q (\alpha - \alpha^*)
 + \varepsilon e^T (\alpha + \alpha^*) - y^T (\alpha - \alpha^*)
@@ -129,6 +144,12 @@ problem can be solved to yield the following:
 \begin{equation}
 f(x) = \sum_{i=1}^n (\alpha_i - \alpha_i^*) K(x_i, x) + b
 \end{equation}
+where the RBF kernel is given by the following:
+\begin{equation}
+K(x_i,x_j) = \exp{\left[-\gamma |x_i - x_j|^2\right]}
+\end{equation}
+and where $\gamma$ describes the influence of each individual training example
+\cite{scikit_learn_svr}.
 
 %------------------------------------------------------------------------------%
 \section*{Experiments/Results/Discussion}
@@ -152,7 +173,7 @@ f(x) = \sum_{i=1}^n (\alpha_i - \alpha_i^*) K(x_i, x) + b
 % plots should include legends, axis labels, and have font sizes that are
 % readable when printed.
 
-We chose a final model after performing a randomized optimization in the space of hyperparameters for SVR, for multiple kernel types. This required specifying distributions over which to sample the hyperparameters. We specified a separate exponential distribution for each hyperparameter, and estimated the decay scale of each distribution by first performing an exhaustive grid search over values of the hyperparameters spanning several orders of magnitude. In both the grid and randomized search schemes, the coefficient of determination ($R^2$) was used as the scoring metric for ranking all sampled models and was estimated for each candidate model using 5-fold cross-validation on a randomly sampled set of training data that comprised 80\% of the data set. Each randomized hyperparameter search proceeded for $30,000$ iterations.\\ 
+\noindent We chose a final model after performing a randomized optimization in the space of hyperparameters for $\epsilon$-SVR, for multiple kernel types. This required specifying distributions over which to sample the hyperparameters. We specified a separate exponential distribution for each hyperparameter, and estimated the decay scale of each distribution by first performing an exhaustive grid search over values of the hyperparameters spanning several orders of magnitude. In both the grid and randomized search schemes, the coefficient of determination ($R^2$) was used as the scoring metric for ranking all sampled models and was estimated for each candidate model using 5-fold cross-validation on a randomly sampled set of training data that comprised 80\% of the data set. Each randomized hyperparameter search proceeded for 30,000 iterations.\\ 
 
 
 \begin{figure}[H]
@@ -171,36 +192,41 @@ We chose a final model after performing a randomized optimization in the space o
 \caption{\label{fig:Results}Summary of hyperparameters and model scores}
 \end{figure}
 
-\noindent The final hyperparameters for the linear and radial basis function (RBF) kernels are summarized in the table below alongside their corresponding training and test errors. We note that results for the polynomial kernel were not as trustworthy because it proved to be much more computationally intensive and thus was unable to be optimized as exhaustively as the other two kernel types. Therefore, we omit those results. We also note that of the best models identified by the randomized search, for each kernel type there were several distinct sets of hyperparameters that yielded very similar training scores. For the RBF kernel specifically, the hypermarameters we selected represent a compromise between the values of C and $\gamma$. While relatively high values of C tend to correspond to overfitting by overpenalizing large deviations from the target, constraining C too aggressively would encourage the bandwidth of the kernel function, $\gamma$, to expand and potentially overfit the data. Therefore, cross-validation will be critical in evaluating the final selection.\\  
+\noindent The final hyperparameters for the linear and radial basis function (RBF) kernels are summarized in the table below alongside their corresponding training and test scores. We omit results for the polynomial kernel because the calculation did not converge and thus results could only be obtained via a cruder randomized search. We also note that of the best models identified by the randomized search, for each kernel type there were several distinct sets of hyperparameters that yielded very similar training scores. For the RBF kernel specifically, the hypermarameters we selected represent a compromise between the values of C and $\gamma$. While relatively high values of C correspond to overfitting by overpenalizing large deviations from the target, constraining C too aggressively would encourage the bandwidth of the kernel function, $\gamma$, to expand and potentially overfit the data. Therefore, cross-validation is critical in evaluating our final selection.\\  
 
-\noindent As expected, the RBF kernel is better able to capture the nonlinearities and regional variation of the data by virtue of its implicit infinite-dimensional feature mapping. In order to characterize the performance of the final model further and to compare it to the linear kernel model, we compute learning curves for both showing the test score as a function of the fraction of data used for training. The deficiencies of the linear kernel are readily apparent; its score saturates at about $0.65$ to $0.7$, within error, while the RBF kernel acheives $0.8$ to $0.85$, within error. 
+\noindent We find that the RBF kernel is better able to capture the nonlinearities and regional variation of the data by virtue of its implicit infinite-dimensional feature mapping. In order to characterize the performance of the final model further and to compare it to the linear kernel model, we compute learning curves for both showing the test score as a function of the fraction of data used for training. Deficiencies of the linear kernel are readily apparent; its score saturates at about $0.65$ to $0.7$, within error, while the RBF kernel acheives $0.8$ to $0.85$, within error. 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{learning_curve.png}
+\includegraphics[width=0.6\linewidth]{learning_curve.png}
 \caption{Learning curve comparison}
 \end{center}
 \end{figure}
 
-In order to evaluate the structure of the feature data set, and gain insight
-into our model, PCA was performed on the full training set.  The top 3
-principal components are depicted below.  
+\noindent In order to evaluate the structure of the feature data set, and gain qualitative 
+insight into our model, principal component analysis (PCA) was performed on the 
+full training set. The top 3 principal components are depicted below, along with 
+supplementary data regarding the per party distributions of campaign donations 
+by sector.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.8\textwidth]{cand_2010_2012_2014_fm_trim_normed_pc_hm.png}
-\caption{\label{fig:pc_all}Heatmap of top 3 principal components}
+    \includegraphics[width=0.6\textwidth]{cand_2010_2012_2014_fm_trim_normed_pc_hm.png}
+    \caption{\label{fig:top_pc}Top 3 principal components}
 \end{figure}
 
-It appears the financial, and labor sectors specify the dimensions of largest
-variance. Where the finance sector is most characteristic of a republican
-candidate, and the labor sector is most characteristic of democratic candidates.
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.6\textwidth]{totals_by_sector.png}
+    \caption{\label{fig:party_total}Per party campaign contributions \cite{open_secrets}}
+\end{figure}
 
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=.8\textwidth]{totals_by_sector.png}
-% \caption{\label{fig:pc_all}Per party campaign contributions by sector.}
-% \end{figure}
+\noindent It appears the financial and labor sectors specify the dimensions of largest
+variance. It also appears that donations from the finance sector are heavily skewed 
+towards Republican candidates, while donations from the labor sector are heavily skewed towards
+Democrats. Although SVR models are abstract to interpret, this analysis suggests
+that these two categories had the largest influence in the prediction of political 
+ideology.
 
 %------------------------------------------------------------------------------%
 \section*{Conclusion/Future Work}
@@ -209,11 +235,10 @@ candidate, and the labor sector is most characteristic of democratic candidates.
 % others? For future work, if you had more time, more team members, or more
 % computational resources, what would you explore?
 
+We found that the Support Vector regression algorithm with the radial basis function kernel outperformed all other models, achieving a score of 0.8 to 0.85, within error. We think the model would have been even better if we had access to additionl years of data. The nonlinearity of this problem is not especially surprising given the regional variability of both political ideology and of the contributing industries. We note that the normalization procedure employed here likely washed out some of the variability, as some candidates surely received greater amounts of contributions overall compared to others; however, the unnormalized feature matrix was prohibitively costly to fit to. One future direction may be to look at incorporating this variability in the model. More time could be invested in exploring alternative and more representative normalization methods. Additionally, a way to circumvent the feature set normalization issue would be to use an unsupervised learning algorithm such as a neural network.\\
+
+\noindent Had we had an additional group memeber, we would have liked to explore the correlation of `anomylous' voting behavior, i.e. votes that are not well predicted by DW-NOMINATE scores, and a higher-resolution feature set of individual contributions. Such an analysis would probably also benefit from further degmentation of donations into personal and PAC contributions.\\
 %------------------------------------------------------------------------------%
-
-\noindent We found that the Support Vector regression algorithm with the radial basis function kernel outperformed all other models. The nonlinearity of this problem is not especially surprising given the regional variability of both political ideology and of the contributing industries. We note that the normalization procedure employed here likely washed out some of the variability, as some candidates surely received greater amounts of contributions overall compared to others; however, the unnormalized feature matrix was prohibitively costly to fit to. One future direction may be to look at incorporating this variability in the mode. Moreover...
-
-BLAH BLAH BLAH. \\
 
 \printbibliography
 
