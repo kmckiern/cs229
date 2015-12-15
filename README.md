@@ -1,5 +1,5 @@
 # cs229
-## Stanford Machine Learning F2015
+#### Machine Learning F2015
 
 This repository summarizes our efforts to quantitatively predict political ideology using congressional campaign contribution profiles via Support Vector Regression (SVR) modeling.
 
